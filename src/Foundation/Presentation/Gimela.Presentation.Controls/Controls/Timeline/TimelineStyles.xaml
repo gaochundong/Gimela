@@ -1,0 +1,369 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:controls="clr-namespace:Gimela.Presentation.Controls"
+                    xmlns:timeline="clr-namespace:Gimela.Presentation.Controls.Timeline">
+  <ResourceDictionary.MergedDictionaries>
+    <ResourceDictionary Source="TimelineBrushes.xaml" />
+    <ResourceDictionary Source="TimelineScrollBarStyles.xaml" />
+    <ResourceDictionary Source="TimelineTaskStyles.xaml" />
+  </ResourceDictionary.MergedDictionaries>
+
+  <timeline:DurationToHorizontalAlignmentConverter x:Key="DurationToHorizontalAlignmentConverter" />
+  <timeline:DateTimeFormatConverter x:Key="DateTimeFormatConverter" />
+
+  <DataTemplate x:Key="bigTickTemplate">
+    <DockPanel Margin="0,0,0,0"
+               HorizontalAlignment="Stretch"
+               LastChildFill="True"
+               ToolTip="{Binding Path=Time,
+                                 Converter={StaticResource DateTimeFormatConverter},
+                                 ConverterParameter='f'}">
+      <TextBlock HorizontalAlignment="Stretch"
+                 DockPanel.Dock="Top"
+                 FontSize="14"
+                 Foreground="{DynamicResource ForegroundBrush}"
+                 Text="{Binding Path=Time,
+                                Converter={StaticResource DateTimeFormatConverter},
+                                ConverterParameter='HH:mm'}" />
+      <Border Width="4"
+              Height="55"
+              Margin="0,4,0,0"
+              Background="{DynamicResource TimelineBigTickBorderBackgroundBrush}"
+              DockPanel.Dock="Bottom" />
+    </DockPanel>
+  </DataTemplate>
+  <DataTemplate x:Key="mediumTickTemplate">
+    <DockPanel Margin="0,22,0,0"
+               HorizontalAlignment="Stretch"
+               LastChildFill="True"
+               ToolTip="{Binding Path=Time,
+                                 Converter={StaticResource DateTimeFormatConverter},
+                                 ConverterParameter='f'}">
+      <TextBlock DockPanel.Dock="Top"
+                 FontSize="9"
+                 Foreground="{DynamicResource ForegroundBrush}"
+                 Text="{Binding Path=Time,
+                                Converter={StaticResource DateTimeFormatConverter},
+                                ConverterParameter='mm'}" />
+      <Border Width="2"
+              Height="55"
+              Margin="0,2,0,0"
+              Background="{DynamicResource TimelineMediumTickBorderBackgroundBrush}"
+              DockPanel.Dock="Bottom" />
+    </DockPanel>
+  </DataTemplate>
+  <DataTemplate x:Key="smallTickTemplate">
+    <DockPanel Margin="0,35,0,0"
+               HorizontalAlignment="Stretch"
+               LastChildFill="True"
+               ToolTip="{Binding Path=Time,
+                                 Converter={StaticResource DateTimeFormatConverter},
+                                 ConverterParameter='f'}">
+      <!--  <TextBlock DockPanel.Dock="Top" FontSize="6" Foreground="{DynamicResource ForegroundBrush}" Text="{Binding Path=Time, Converter={StaticResource DateTimeFormatConverter}, ConverterParameter='ss'}" />  -->
+      <Border Width="1"
+              Height="55"
+              Margin="0,0,0,0"
+              Background="{DynamicResource TimelineSmallTickBorderBackgroundBrush}"
+              DockPanel.Dock="Bottom" />
+    </DockPanel>
+  </DataTemplate>
+  <DataTemplate x:Key="longBigTickTemplate">
+    <StackPanel Orientation="Vertical">
+      <Border Width="4"
+              Height="2000"
+              Background="{DynamicResource TimelineLongBigTickBorderBackgroundBrush}" />
+    </StackPanel>
+  </DataTemplate>
+  <DataTemplate x:Key="longMediumTickTemplate">
+    <StackPanel Orientation="Vertical">
+      <Border Width="2"
+              Height="2000"
+              Background="{DynamicResource TimelineLongMediumTickBorderBackgroundBrush}" />
+    </StackPanel>
+  </DataTemplate>
+  <DataTemplate x:Key="longSmallTickTemplate">
+    <StackPanel Orientation="Vertical">
+      <Border Width="1"
+              Height="2000"
+              Background="{DynamicResource TimelineLongSmallTickBorderBackgroundBrush}" />
+    </StackPanel>
+  </DataTemplate>
+
+  <timeline:TimelineTickDataTemplateSelector x:Key="tickDataTemplateSelector"
+                                             BigTickDataTemplate="{StaticResource bigTickTemplate}"
+                                             MediumTickDataTemplate="{StaticResource mediumTickTemplate}"
+                                             SmallTickDataTemplate="{StaticResource smallTickTemplate}" />
+
+  <Style x:Key="ticksTimelineContainerStyle" TargetType="{x:Type ListBoxItem}">
+    <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+    <!--  必须居中保持长线的对齐  -->
+    <Setter Property="HorizontalAlignment" Value="Center" />
+    <Setter Property="timeline:TimelinePanel.StartDateTime" Value="{Binding RelativeSource={RelativeSource Self}, Path=Content.Time}" />
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="ListBoxItem">
+          <Border Name="Border" SnapsToDevicePixels="True">
+            <ContentPresenter />
+          </Border>
+          <ControlTemplate.Triggers>
+            <Trigger Property="IsSelected" Value="True">
+              <!--  选中时背景色为透明  -->
+              <Setter TargetName="Border" Property="Background" Value="Transparent" />
+            </Trigger>
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+
+  <Style x:Key="ticksListBox" TargetType="{x:Type ListBox}">
+    <Setter Property="ItemsPanel">
+      <Setter.Value>
+        <ItemsPanelTemplate>
+          <timeline:TimelinePanel ClipToBounds="False"
+                                  PixelsPerSecond="{Binding Path=Zoom,
+                                                            RelativeSource={RelativeSource FindAncestor,
+                                                                                           AncestorType={x:Type timeline:TimelineBase}}}"
+                                  SizeToFit="False"
+                                  TimelineEndDateTime="{Binding Path=End,
+                                                                RelativeSource={RelativeSource FindAncestor,
+                                                                                               AncestorType={x:Type timeline:TimelineBase}}}"
+                                  TimelineStartDateTime="{Binding Path=Start,
+                                                                  RelativeSource={RelativeSource FindAncestor,
+                                                                                                 AncestorType={x:Type timeline:TimelineBase}}}" />
+        </ItemsPanelTemplate>
+      </Setter.Value>
+    </Setter>
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type ListBox}">
+          <Border Background="Transparent">
+            <ScrollViewer HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden">
+              <ItemsPresenter />
+            </ScrollViewer>
+          </Border>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+
+  <Style x:Key="timelineScrollViewer" TargetType="{x:Type ScrollViewer}">
+    <Setter Property="IsTabStop" Value="False" />
+    <Setter Property="Focusable" Value="False" />
+    <Setter Property="VerticalScrollBarVisibility" Value="Auto" />
+    <Setter Property="HorizontalScrollBarVisibility" Value="Auto" />
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type ScrollViewer}">
+          <Grid Background="{TemplateBinding Background}">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="*" />
+              <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="*" />
+              <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <!--  内容显示区  -->
+            <Grid Background="Transparent">
+              <Grid.RowDefinitions>
+                <RowDefinition Height="55" />
+                <RowDefinition Height="*" />
+              </Grid.RowDefinitions>
+
+              <Grid Grid.Row="0" Background="Transparent">
+                <!--  顶端刻度背景  -->
+                <Border Height="25"
+                        Margin="0,23,0,0"
+                        HorizontalAlignment="Stretch"
+                        VerticalAlignment="Top"
+                        Background="{DynamicResource TimelineScrollViewerTopTickBorderBackgroundBrush}"
+                        DockPanel.Dock="Top" />
+                <!--  顶端刻度  -->
+                <ListBox x:Name="topTicks"
+                         HorizontalAlignment="Stretch"
+                         VerticalAlignment="Stretch"
+                         HorizontalContentAlignment="Center"
+                         VerticalContentAlignment="Stretch"
+                         ItemContainerStyle="{StaticResource ticksTimelineContainerStyle}"
+                         ItemsSource="{Binding Path=TickCollection.Ticks,
+                                               RelativeSource={RelativeSource FindAncestor,
+                                                                              AncestorType={x:Type timeline:Timeline}}}"
+                         ItemTemplateSelector="{StaticResource tickDataTemplateSelector}"
+                         ScrollViewer.CanContentScroll="True"
+                         ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+                         ScrollViewer.VerticalScrollBarVisibility="Hidden"
+                         Style="{StaticResource ticksListBox}" />
+              </Grid>
+
+              <Grid Grid.Row="1" Background="Transparent">
+                <!--  长刻度  -->
+                <ListBox x:Name="longBigTicks"
+                         HorizontalAlignment="Stretch"
+                         VerticalAlignment="Stretch"
+                         HorizontalContentAlignment="Stretch"
+                         VerticalContentAlignment="Stretch"
+                         ItemContainerStyle="{StaticResource ticksTimelineContainerStyle}"
+                         ItemsSource="{Binding Path=TickCollection.BigTicks,
+                                               RelativeSource={RelativeSource FindAncestor,
+                                                                              AncestorType={x:Type timeline:Timeline}}}"
+                         ItemTemplate="{StaticResource longBigTickTemplate}"
+                         ScrollViewer.CanContentScroll="True"
+                         ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+                         ScrollViewer.VerticalScrollBarVisibility="Hidden"
+                         Style="{StaticResource ticksListBox}" />
+              </Grid>
+
+              <Grid Grid.Row="1" Background="Transparent">
+                <!--  长刻度  -->
+                <ListBox x:Name="longMediumTicks"
+                         HorizontalAlignment="Stretch"
+                         VerticalAlignment="Stretch"
+                         HorizontalContentAlignment="Stretch"
+                         VerticalContentAlignment="Stretch"
+                         ItemContainerStyle="{StaticResource ticksTimelineContainerStyle}"
+                         ItemsSource="{Binding Path=TickCollection.MediumTicks,
+                                               RelativeSource={RelativeSource FindAncestor,
+                                                                              AncestorType={x:Type timeline:Timeline}}}"
+                         ItemTemplate="{StaticResource longMediumTickTemplate}"
+                         ScrollViewer.CanContentScroll="True"
+                         ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+                         ScrollViewer.VerticalScrollBarVisibility="Hidden"
+                         Style="{StaticResource ticksListBox}" />
+              </Grid>
+
+              <Grid Grid.Row="1" Background="Transparent">
+                <!--  长刻度  -->
+                <ListBox x:Name="longSmallTicks"
+                         HorizontalAlignment="Stretch"
+                         VerticalAlignment="Stretch"
+                         HorizontalContentAlignment="Stretch"
+                         VerticalContentAlignment="Stretch"
+                         ItemContainerStyle="{StaticResource ticksTimelineContainerStyle}"
+                         ItemsSource="{Binding Path=TickCollection.SmallTicks,
+                                               RelativeSource={RelativeSource FindAncestor,
+                                                                              AncestorType={x:Type timeline:Timeline}}}"
+                         ItemTemplate="{StaticResource longSmallTickTemplate}"
+                         ScrollViewer.CanContentScroll="True"
+                         ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+                         ScrollViewer.VerticalScrollBarVisibility="Hidden"
+                         Style="{StaticResource ticksListBox}" />
+              </Grid>
+
+              <!--  内容显示区  -->
+              <ScrollContentPresenter x:Name="PART_ScrollContentPresenter" Grid.Row="1" />
+
+            </Grid>
+
+            <!--  垂直滚动条  -->
+            <!--  Style="{StaticResource timelineScrollBar}"  -->
+            <!--  Visibility="{TemplateBinding ComputedVerticalScrollBarVisibility}"  -->
+            <ScrollBar x:Name="PART_VerticalScrollBar"
+                       Grid.RowSpan="2"
+                       Grid.Column="1"
+                       Maximum="{TemplateBinding ScrollableHeight}"
+                       ViewportSize="{TemplateBinding ViewportHeight}"
+                       Visibility="Collapsed"
+                       Value="{TemplateBinding VerticalOffset}" />
+
+            <!--  水平滚动条  -->
+            <timeline:TimelineZoomScrollBar x:Name="PART_HorizontalScrollBar"
+                                            Grid.Row="1"
+                                            End="{Binding Path=End,
+                                                          RelativeSource={RelativeSource FindAncestor,
+                                                                                         AncestorType={x:Type timeline:Timeline}}}"
+                                            Maximum="{TemplateBinding ScrollableWidth}"
+                                            Orientation="Horizontal"
+                                            Start="{Binding Path=Start,
+                                                            RelativeSource={RelativeSource FindAncestor,
+                                                                                           AncestorType={x:Type timeline:Timeline}}}"
+                                            Style="{StaticResource timelineZoomScrollBar}"
+                                            ViewportSize="{TemplateBinding ViewportWidth}"
+                                            Visibility="{TemplateBinding ComputedHorizontalScrollBarVisibility}"
+                                            Value="{TemplateBinding HorizontalOffset}" />
+          </Grid>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+
+  <Style x:Key="timelineContainerStyle" TargetType="{x:Type ListBoxItem}">
+    <Setter Property="timeline:TimelinePanel.StartDateTime" Value="{Binding RelativeSource={RelativeSource Self}, Path=Content.StartTime}" />
+    <Setter Property="timeline:TimelinePanel.EndDateTime" Value="{Binding RelativeSource={RelativeSource Self}, Path=Content.EndTime}" />
+    <Setter Property="HorizontalAlignment">
+      <Setter.Value>
+        <MultiBinding Converter="{StaticResource DurationToHorizontalAlignmentConverter}">
+          <MultiBinding.Bindings>
+            <Binding Path="Zoom" RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType={x:Type timeline:TimelineBase}}" />
+            <Binding Path="Content.TimeSpan" RelativeSource="{RelativeSource Mode=Self}" />
+          </MultiBinding.Bindings>
+        </MultiBinding>
+      </Setter.Value>
+    </Setter>
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="ListBoxItem">
+          <Border Name="Border" SnapsToDevicePixels="True">
+            <ContentPresenter />
+          </Border>
+          <ControlTemplate.Triggers>
+            <Trigger Property="IsSelected" Value="True">
+              <!--  选中时背景色为透明  -->
+              <Setter TargetName="Border" Property="Background" Value="Transparent" />
+            </Trigger>
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+
+  <Style x:Key="timelineListBoxStyle" TargetType="{x:Type ListBox}">
+    <Setter Property="ItemsPanel">
+      <Setter.Value>
+        <ItemsPanelTemplate>
+          <!--  重新定义Panel的结构  -->
+          <timeline:TimelinePanel ClipToBounds="False"
+                                  PixelsPerSecond="{Binding Path=Zoom,
+                                                            RelativeSource={RelativeSource FindAncestor,
+                                                                                           AncestorType={x:Type timeline:Timeline}},
+                                                            Mode=TwoWay}"
+                                  SizeToFit="False"
+                                  TimelineEndDateTime="{Binding Path=End,
+                                                                RelativeSource={RelativeSource FindAncestor,
+                                                                                               AncestorType={x:Type timeline:Timeline}},
+                                                                Mode=TwoWay}"
+                                  TimelineStartDateTime="{Binding Path=Start,
+                                                                  RelativeSource={RelativeSource FindAncestor,
+                                                                                                 AncestorType={x:Type timeline:Timeline}},
+                                                                  Mode=TwoWay}" />
+        </ItemsPanelTemplate>
+      </Setter.Value>
+    </Setter>
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type ListBox}">
+          <Border Background="Transparent">
+            <!--  在Style中重新定义两侧滚动条  -->
+            <ScrollViewer Margin="0"
+                          CanContentScroll="True"
+                          Focusable="False"
+                          HorizontalScrollBarVisibility="Visible"
+                          Style="{StaticResource timelineScrollViewer}"
+                          timeline:TimelinePanel.EndDateTime="{Binding Path=End,
+                                                                       RelativeSource={RelativeSource FindAncestor,
+                                                                                                      AncestorType={x:Type timeline:Timeline}}}"
+                          timeline:TimelinePanel.StartDateTime="{Binding Path=Start,
+                                                                         RelativeSource={RelativeSource FindAncestor,
+                                                                                                        AncestorType={x:Type timeline:Timeline}}}"
+                          VerticalScrollBarVisibility="Visible">
+              <!--  滚动内容区  -->
+              <ItemsPresenter />
+            </ScrollViewer>
+          </Border>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+
+</ResourceDictionary>

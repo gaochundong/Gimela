@@ -1,0 +1,127 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:decorators="clr-namespace:Gimela.Presentation.Controls;assembly=Gimela.Presentation.Controls"
+                    xmlns:converters="clr-namespace:Gimela.Presentation.Controls.Converters;assembly=Gimela.Presentation.Controls"
+                    xmlns:ctrl="clr-namespace:Gimela.Presentation.Controls;assembly=Gimela.Presentation.Controls"
+                    >
+    
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/Gimela.Presentation.Skins;component/Styles/Styles.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/Gimela.Presentation.Skins;component/Styles/ToolTipStyles.xaml"/>
+        <ResourceDictionary Source="MessageBoxWindowBrushes.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+    <Style x:Key="MessageBoxWindowCloseButtonStyle" BasedOn="{x:Null}" TargetType="{x:Type Button}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid x:Name="buttonClose">
+                        <Ellipse x:Name="btnEllipse" StrokeThickness="1"
+                                 Stroke="{DynamicResource MessageBoxWindowCloseButtonEllipseStrokeBrush}"
+                                 Fill="{DynamicResource MessageBoxWindowCloseButtonEllipseFillBrush}" />
+                        <Path x:Name="iconX" Width="6.5" Height="7" 
+                              Stretch="Fill" Fill="{DynamicResource MessageBoxWindowCloseButtonIconFillBrush}" 
+                              Data="F1 M 10.126953,9.030762 L 8.261719,7.166016 L 10.126953,5.301758 C 10.429688,5.000000 10.429688,4.508789 10.126953,4.206055 C 9.824219,3.903320 9.332031,3.903320 9.031250,4.206055 L 7.166016,6.070313 L 5.302734,4.206055 C 5.000000,3.903320 4.507813,3.903320 4.205078,4.206055 C 3.902344,4.508789 3.902344,5.000000 4.205078,5.302734 L 6.070313,7.166992 L 4.207031,9.030762 C 3.904297,9.333496 3.902344,9.823730 4.207031,10.126465 C 4.509766,10.429199 5.000000,10.429199 5.302734,10.126465 L 7.166016,8.263184 L 9.029297,10.126465 C 9.332031,10.429199 9.824219,10.429199 10.126953,10.126465 C 10.429688,9.823730 10.429688,9.333496 10.126953,9.030762 Z" />
+                        <ContentPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" 
+                                          HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
+                                          VerticalAlignment="{TemplateBinding VerticalContentAlignment}" 
+                                          RecognizesAccessKey="True" />
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsFocused" Value="True" />
+                        <Trigger Property="IsDefaulted" Value="True" />
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Fill" Value="{DynamicResource MessageBoxWindowCloseButtonEllipseFillMouseOverBrush}" TargetName="btnEllipse" />
+                            <Setter Property="Fill" Value="{DynamicResource MessageBoxWindowCloseButtonIconFillMouseOverBrush}" TargetName="iconX" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True" />
+                        <Trigger Property="IsEnabled" Value="False" />
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <ControlTemplate x:Key="DetailExpanderToggleButton" TargetType="{x:Type ToggleButton}">
+        <Grid>
+            <Rectangle Margin="0,0,0,0" x:Name="Rectangle" 
+                       Stroke="{DynamicResource MessageBoxWindowDetailExpanderToggleButtonRectangleStrokeBrush}"
+                       Fill="{DynamicResource MessageBoxWindowDetailExpanderToggleButtonRectangleFillBrush}"
+                       RadiusX="15" RadiusY="15">
+            </Rectangle>
+            <Path x:Name="Up_Arrow" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                  Fill="{DynamicResource MessageBoxWindowDetailExpanderToggleButtonArrowFillBrush}" 
+                  Data="M 0 0 L 4 4 L 8 0 Z" />
+            <Path x:Name="Down_Arrow" Visibility="Collapsed" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                  Fill="{DynamicResource MessageBoxWindowDetailExpanderToggleButtonArrowFillBrush}" 
+                  Data="M 0 4 L 4 0 L 8 4 Z" />
+        </Grid>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Fill" Value="{DynamicResource MessageBoxWindowDetailExpanderToggleButtonArrowFillMouseOverBrush}" TargetName="Down_Arrow" />
+                <Setter Property="Fill" Value="{DynamicResource MessageBoxWindowDetailExpanderToggleButtonArrowFillMouseOverBrush}" TargetName="Up_Arrow" />
+                <Setter Property="Fill" Value="{DynamicResource MessageBoxWindowDetailExpanderToggleButtonRectangleFillMouseOverBrush}" TargetName="Rectangle" />
+            </Trigger>
+            <Trigger Property="IsPressed" Value="true">
+                <Setter Property="Fill" Value="Black" TargetName="Rectangle" />
+            </Trigger>
+            <Trigger Property="IsChecked" Value="true">
+                <Setter Property="Visibility" Value="Visible" TargetName="Down_Arrow" />
+                <Setter Property="Visibility" Value="Collapsed" TargetName="Up_Arrow" />
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <Style x:Key="DetailExpander" TargetType="{x:Type Expander}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Expander}">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Border Grid.Row="0" x:Name="Border" 
+                                Background="{TemplateBinding Background}" 
+                                BorderBrush="{TemplateBinding BorderBrush}" 
+                                BorderThickness="{TemplateBinding BorderThickness}" 
+                                CornerRadius="2,2,0,0">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="20" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <ToggleButton Template="{DynamicResource DetailExpanderToggleButton}" 
+                                              IsChecked="{Binding Path=IsExpanded, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}" 
+                                              OverridesDefaultStyle="True" 
+                                              HorizontalAlignment="Center" VerticalAlignment="Center" 
+                                              Width="15" Height="15" />
+                                <ContentPresenter Grid.Column="1" Margin="2" RecognizesAccessKey="True" ContentSource="Header" />
+                            </Grid>
+                        </Border>
+                        
+                        <!--渐进显示装饰器-->
+                        <decorators:RevealDecorator x:Name="revealDecorator" IsExpanded="False" Grid.Row="1" Margin="0,15,0,0" VerticalAlignment="Stretch">
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
+                                              VerticalAlignment="{TemplateBinding VerticalContentAlignment}" 
+                                              Focusable="False" />
+                        </decorators:RevealDecorator>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsExpanded" Value="True">
+                            <Setter TargetName="revealDecorator" Property="IsExpanded" Value="True" />
+                            <Setter Property="Header" Value="{DynamicResource Presentation_Windows_MessageBoxWindow_HideDetail}" />
+                        </Trigger>
+                        <Trigger Property="IsExpanded" Value="False">
+                            <Setter Property="Header" Value="{DynamicResource Presentation_Windows_MessageBoxWindow_ShowDetail}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="revealDecorator" Property="IsExpanded" Value="False" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+</ResourceDictionary>

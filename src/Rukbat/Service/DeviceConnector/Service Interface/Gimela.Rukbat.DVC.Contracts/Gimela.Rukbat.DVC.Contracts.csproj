@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A6594801-BCE8-4A61-B3DF-9ACB9DB74676}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Gimela.Rukbat.DVC.Contracts</RootNamespace>
+    <AssemblyName>Gimela.Rukbat.DVC.Contracts</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\..\..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Gimela.Common.ExceptionHandling, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Gimela.ServiceModel.ManagedService, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CallbackContracts\NotifyCameraCreatedRequest.cs" />
+    <Compile Include="CallbackContracts\NotifyCameraDeletedRequest.cs" />
+    <Compile Include="CallbackContracts\NotifyCameraUnpublishedRequest.cs" />
+    <Compile Include="CallbackContracts\NotifyCameraPublishedRequest.cs" />
+    <Compile Include="DataContracts\CameraData.cs" />
+    <Compile Include="DataContracts\Filters\CameraFilterData.cs" />
+    <Compile Include="DataContracts\Filters\CameraFilterDataCollection.cs" />
+    <Compile Include="DataContracts\CameraDataCollection.cs" />
+    <Compile Include="DataContracts\CameraProfileData.cs" />
+    <Compile Include="DataContracts\CameraStatusData.cs" />
+    <Compile Include="DataContracts\CameraConfigData.cs" />
+    <Compile Include="DataContracts\ResolutionData.cs" />
+    <Compile Include="DataContracts\Filters\FilterTypeData.cs" />
+    <Compile Include="DataContracts\PublishedCameraDataCollection.cs" />
+    <Compile Include="DataContracts\PublishedCameraData.cs" />
+    <Compile Include="DataContracts\PublishDestinationData.cs" />
+    <Compile Include="DataContracts\Filters\DesktopFilterData.cs" />
+    <Compile Include="DataContracts\Filters\DesktopFilterDataCollection.cs" />
+    <Compile Include="FaultContracts\DeviceConnectorServiceFault.cs" />
+    <Compile Include="MessageContracts\KeepPublishedCameraAliveRequest.cs" />
+    <Compile Include="MessageContracts\KeepPublishedCameraAliveResponse.cs" />
+    <Compile Include="MessageContracts\UpdateCameraRequest.cs" />
+    <Compile Include="MessageContracts\UpdateCameraResponse.cs" />
+    <Compile Include="MessageContracts\GetPublishedCamerasRequest.cs" />
+    <Compile Include="MessageContracts\GetPublishedCamerasResponse.cs" />
+    <Compile Include="MessageContracts\UnpublishCameraRequest.cs" />
+    <Compile Include="MessageContracts\UnpublishCameraResponse.cs" />
+    <Compile Include="MessageContracts\PublishCameraRequest.cs" />
+    <Compile Include="MessageContracts\PublishCameraResponse.cs" />
+    <Compile Include="MessageContracts\GetCameraSnapshotRequest.cs" />
+    <Compile Include="MessageContracts\GetCameraSnapshotResponse.cs" />
+    <Compile Include="MessageContracts\PingCameraRequest.cs" />
+    <Compile Include="MessageContracts\PingCameraResponse.cs" />
+    <Compile Include="MessageContracts\GetCameraRequest.cs" />
+    <Compile Include="MessageContracts\GetCameraResponse.cs" />
+    <Compile Include="MessageContracts\CreateCameraRequest.cs" />
+    <Compile Include="MessageContracts\CreateCameraResponse.cs" />
+    <Compile Include="MessageContracts\DeleteCameraRequest.cs" />
+    <Compile Include="MessageContracts\DeleteCameraResponse.cs" />
+    <Compile Include="MessageContracts\GetCamerasRequest.cs" />
+    <Compile Include="MessageContracts\GetCamerasResponse.cs" />
+    <Compile Include="MessageContracts\GetCameraFiltersRequest.cs" />
+    <Compile Include="MessageContracts\GetCameraFiltersResponse.cs" />
+    <Compile Include="MessageContracts\GetDesktopFiltersRequest.cs" />
+    <Compile Include="MessageContracts\GetDesktopFiltersResponse.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceContracts\IDeviceConnectorService.cs" />
+    <Compile Include="ServiceContracts\IDeviceConnectorCallbackService.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

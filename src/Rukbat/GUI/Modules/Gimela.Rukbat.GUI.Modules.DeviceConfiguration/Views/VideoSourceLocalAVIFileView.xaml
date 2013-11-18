@@ -1,0 +1,146 @@
+﻿<UserControl x:Class="Gimela.Rukbat.GUI.Modules.DeviceConfiguration.Views.VideoSourceLocalAVIFileView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:c="clr-namespace:Gimela.Rukbat.GUI.ValidationRules.Converters;assembly=Gimela.Rukbat.GUI.ValidationRules"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:v="clr-namespace:Gimela.Rukbat.GUI.ValidationRules;assembly=Gimela.Rukbat.GUI.ValidationRules"
+             d:DesignHeight="300"
+             d:DesignWidth="626"
+             mc:Ignorable="d">
+  <UserControl.Resources>
+    <c:InvalidMultiValidationRuleToBooleanMultiConverter x:Key="InvalidMultiValidationRuleToBooleanMultiConverter" />
+  </UserControl.Resources>
+  <Grid Style="{DynamicResource GridStyle}">
+    <Grid x:Name="bgGrid" Margin="5,0,5,0">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="50" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="100" />
+      </Grid.RowDefinitions>
+
+      <Label Grid.Row="0"
+             Grid.Column="0"
+             Grid.ColumnSpan="2"
+             Margin="30,0,0,0"
+             HorizontalAlignment="Left"
+             VerticalAlignment="Center"
+             Content="{DynamicResource DeviceConfiguration_VideoSourceLocalAVIFileView_ConfigCameraSource}"
+             FontSize="14"
+             FontWeight="Bold" />
+      <Line Grid.Row="0"
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            Margin="0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center"
+            Stroke="{DynamicResource LineStrokeBrush}"
+            StrokeThickness="2"
+            X1="0"
+            X2="{Binding ElementName=bgGrid,
+                         Path=ActualWidth}"
+            Y1="35"
+            Y2="35" />
+
+      <Grid Grid.Row="1" Grid.Column="0">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="50" />
+          <RowDefinition Height="50" />
+          <RowDefinition Height="50" />
+          <RowDefinition Height="50" />
+          <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="50" />
+          <ColumnDefinition Width="150" />
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="50" />
+        </Grid.ColumnDefinitions>
+
+        <Label Name="textBlockSourceTitle"
+               Grid.Row="0"
+               Grid.Column="0"
+               Grid.ColumnSpan="3"
+               HorizontalAlignment="Left"
+               VerticalAlignment="Center"
+               Content="{DynamicResource DeviceConfiguration_VideoSourceLocalAVIFileView_SelectAVISource}" />
+
+        <Label Name="textBlockFilePath"
+               Grid.Row="1"
+               Grid.Column="1"
+               HorizontalAlignment="Right"
+               VerticalAlignment="Center"
+               Content="{DynamicResource DeviceConfiguration_VideoSourceLocalAVIFileView_AVISourceFile}" />
+        <Label Grid.Row="1"
+               Grid.Column="1"
+               Margin="0"
+               HorizontalAlignment="Right"
+               VerticalAlignment="Center"
+               Content="*"
+               Foreground="{DynamicResource ErrorForegroundBrush}" />
+        <StackPanel Grid.Row="1"
+                    Grid.Column="2"
+                    Orientation="Horizontal">
+          <TextBox x:Name="textBoxFilePath"
+                   Width="300"
+                   Height="23"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Center"
+                   Style="{DynamicResource TextBoxStyle}"
+                   Tag="{DynamicResource DeviceConfiguration_VideoSourceLocalAVIFileView_PromoteInfoAVISourceFile}">
+            <TextBox.Text>
+              <Binding Mode="TwoWay"
+                       Path="SelectedFilePath"
+                       UpdateSourceTrigger="PropertyChanged">
+                <Binding.ValidationRules>
+                  <v:InvalidDirectoryAndFileExistValidationRule />
+                </Binding.ValidationRules>
+              </Binding>
+            </TextBox.Text>
+          </TextBox>
+          <Button Name="btnSelectFile"
+                  Width="30"
+                  Height="20"
+                  Margin="5,0,0,0"
+                  HorizontalAlignment="Left"
+                  VerticalAlignment="Center"
+                  Command="{Binding Path=SelectFileCommand}"
+                  Content="..."
+                  Style="{DynamicResource ButtonStyle}" />
+        </StackPanel>
+
+      </Grid>
+      <Grid Grid.Row="2" Grid.Column="0">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="50" />
+          <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Button Name="btnCancel"
+                Grid.Column="0"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center"
+                Command="{Binding Path=CancelCommand}"
+                Content="{DynamicResource Common_Button_Cancel}"
+                IsCancel="True"
+                Style="{DynamicResource ButtonStyle}" />
+        <Button Name="btnOK"
+                Grid.Column="2"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                Command="{Binding Path=OKCommand}"
+                Content="{DynamicResource Common_Button_OK}"
+                IsDefault="True"
+                Style="{DynamicResource ButtonStyle}">
+          <Button.IsEnabled>
+            <MultiBinding Converter="{StaticResource InvalidMultiValidationRuleToBooleanMultiConverter}" ConverterParameter="directoryandfileexist">
+              <Binding ElementName="textBoxFilePath"
+                       Mode="OneWay"
+                       Path="Text" />
+            </MultiBinding>
+          </Button.IsEnabled>
+        </Button>
+      </Grid>
+    </Grid>
+  </Grid>
+</UserControl>

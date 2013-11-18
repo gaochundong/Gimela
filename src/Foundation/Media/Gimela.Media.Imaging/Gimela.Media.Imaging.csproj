@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9C5B2986-F210-4A9E-BB3A-6A1F9BA36AFF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Gimela.Media.Imaging</RootNamespace>
+    <AssemblyName>Gimela.Media.Imaging</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DocumentationFile>..\..\..\..\bin\Debug\Gimela.Media.Imaging.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Blob\Blob.cs" />
+    <Compile Include="Blob\BlobCounter.cs" />
+    <Compile Include="Blob\BlobCounterBase.cs" />
+    <Compile Include="Helpers\DrawingHelper.cs" />
+    <Compile Include="Filters\BaseFilter.cs" />
+    <Compile Include="Filters\BaseUsingCopyPartialFilter.cs" />
+    <Compile Include="Filters\Color Filters\Grayscale.cs" />
+    <Compile Include="Filters\IFilter.cs" />
+    <Compile Include="Filters\IFilterInformation.cs" />
+    <Compile Include="Filters\IInPlaceFilter.cs" />
+    <Compile Include="Filters\IInPlacePartialFilter.cs" />
+    <Compile Include="Filters\Morphology\SpecificOptimizations\BinaryDilatation3x3.cs" />
+    <Compile Include="Filters\Morphology\SpecificOptimizations\BinaryErosion3x3.cs" />
+    <Compile Include="Colors\HSL.cs" />
+    <Compile Include="Blob\IBlobsFilter.cs" />
+    <Compile Include="Helpers\ImageHelper.cs" />
+    <Compile Include="Core\IntPoint.cs" />
+    <Compile Include="Exceptions\InvalidImagePropertiesException.cs" />
+    <Compile Include="Blob\ObjectsOrder.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Colors\RGB.cs" />
+    <Compile Include="UnmanagedImage.cs" />
+    <Compile Include="Exceptions\UnsupportedImageFormatException.cs" />
+    <Compile Include="Colors\YCbCr.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Gimela.Media.Utilities\Gimela.Media.Utilities.csproj">
+      <Project>{163029EB-02D6-439A-B149-94990E560E5A}</Project>
+      <Name>Gimela.Media.Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

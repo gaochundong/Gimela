@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CB75C7C2-0E98-4CE7-B25D-3DA9B45D08CF}</ProjectGuid>
+    <OutputType>library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Gimela.Rukbat.GUI.ValidationRules</RootNamespace>
+    <AssemblyName>Gimela.Rukbat.GUI.ValidationRules</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Gimela.Common.Cultures, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Gimela.Infrastructure.Patterns, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Gimela.Text.Validation, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Converters\CheckNameExistedResultTypeToImageSourceConverter.cs" />
+    <Compile Include="Converters\CheckNameExistedResultTypeToDescriptionConverter.cs" />
+    <Compile Include="Converters\CheckNameExistedResultTypeToVisibilityConverter.cs" />
+    <Compile Include="Converters\CheckPortAvailableResultTypeToDescriptionConverter.cs" />
+    <Compile Include="Converters\CheckPortAvailableResultTypeToImageSourceConverter.cs" />
+    <Compile Include="Converters\CheckPortAvailableResultTypeToVisibilityConverter.cs" />
+    <Compile Include="InvalidCheckPortAvailableValidationRule.cs" />
+    <Compile Include="Enumerations\CheckNameExistedResultType.cs" />
+    <Compile Include="Converters\InvalidDirectoryAndFileExistValidationRuleToBooleanConverter.cs" />
+    <Compile Include="Converters\InvalidLargerThanZeroIntegerValidationRuleToBooleanConverter.cs" />
+    <Compile Include="Converters\InvalidMultiValidationRuleToBooleanMultiConverter.cs" />
+    <Compile Include="Enumerations\CheckPortAvailableResultResultType.cs" />
+    <Compile Include="InvalidCheckNameExistedValidationRule.cs" />
+    <Compile Include="InvalidDirectoryAndFileExistValidationRule.cs" />
+    <Compile Include="InvalidGreaterThanZeroIntegerValidationRule.cs" />
+    <Compile Include="InvalidIPAddressValidationRule.cs" />
+    <Compile Include="InvalidNumericNullValidationRule.cs" />
+    <Compile Include="InvalidObjectNullValidationRule.cs" />
+    <Compile Include="InvalidStringLengthValidationRule.cs" />
+    <Compile Include="InvalidStringNullOrEmptyValidationRule.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ValidationRuleHelper.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\CheckPortAvailableResultImages\unavailable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\CheckNameExistedResultImages\notexisted.png" />
+    <Resource Include="Resources\Images\CheckNameExistedResultImages\isexisted.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\CheckPortAvailableResultImages\available.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

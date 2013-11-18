@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2821C7FD-524E-4584-941C-2FE3DC3DAEF9}</ProjectGuid>
+    <OutputType>library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Gimela.Presentation.Controls</RootNamespace>
+    <AssemblyName>Gimela.Presentation.Controls</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Controls\ColorPicker\ColorPickerStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Calendars\LunarCalendarStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\MDI\MDIButtonsBrushes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\MDI\MDIBrushes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\MDI\MDIButtonStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\ProgressIndicator\ProgressIndicator.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ProgressIndicator\ProgressIndicatorStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ProgressRing\ProgressRingStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\TreeListView\TreeListViewStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Timeline\TimelineScrollBarStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Timeline\Timeline.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Timeline\TimelineBrushes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Timeline\TimelineStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Timeline\TimelineTaskStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Styles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Resizer\ResizerStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\AsyncWork\AsyncWorkUserControlStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\MDI\MDIStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Waiting\WaitingControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\Calendars\ChineseLunarCalendarFestivalHelper.cs" />
+    <Compile Include="Controls\Calendars\DateTextItem.cs" />
+    <Compile Include="Controls\Calendars\DateTextItemsMultiConverter.cs" />
+    <Compile Include="Controls\Calendars\LunarCalendar.cs" />
+    <Compile Include="Controls\Calendars\StandardGregorianCalendarFestivalHelper.cs" />
+    <Compile Include="Controls\ProgressIndicator\ProgressIndicator.xaml.cs">
+      <DependentUpon>ProgressIndicator.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ProgressRing\ProgressRing.cs" />
+    <Compile Include="Controls\TreeListView\TreeListView.cs" />
+    <Compile Include="Controls\TreeListView\TreeListViewExpander.cs" />
+    <Compile Include="Controls\TreeListView\TreeListViewConverter.cs" />
+    <Compile Include="Controls\PasswordBox\PasswordBoxAssistant.cs" />
+    <Compile Include="Controls\Timeline\Converters\DateTimeFormatConverter.cs" />
+    <Compile Include="Controls\Timeline\Converters\DurationToHorizontalAlignmentConverter.cs" />
+    <Compile Include="Controls\Timeline\Converters\TaskTimeToGridLengthConverter.cs" />
+    <Compile Include="Controls\Timeline\Helpers\DelegateCommand.cs" />
+    <Compile Include="Controls\Timeline\Extensions\DateTimeExtensions.cs" />
+    <Compile Include="Controls\Timeline\Enums\DateTimePrecision.cs" />
+    <Compile Include="Controls\Timeline\Converters\HourPatternConverter.cs" />
+    <Compile Include="Controls\Timeline\Converters\MinDimensionToVisibilityConverter.cs" />
+    <Compile Include="Controls\Timeline\Timeline.Task.cs" />
+    <Compile Include="Controls\Timeline\TimelinePanel\PackingTimelineLayoutContainer.cs" />
+    <Compile Include="Controls\Timeline\TimelinePanel\SimpleTimelineLayoutContainer.cs" />
+    <Compile Include="Controls\Timeline\Timeline.xaml.cs">
+      <DependentUpon>Timeline.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Timeline\TimelineBase.cs" />
+    <Compile Include="Controls\Timeline\TimelinePanel\TimelineLayoutContainer.cs" />
+    <Compile Include="Controls\Timeline\TimelinePanel\TimelineLayoutContainerCollection.cs" />
+    <Compile Include="Controls\Timeline\TimelinePanel\TimelinePanel.cs" />
+    <Compile Include="Controls\Timeline\TimelinePanel\TimelinePanelChild.cs" />
+    <Compile Include="Controls\Timeline\TimelinePanel\TimelinePanelLayer.cs" />
+    <Compile Include="Controls\Timeline\TimelinePanel\TimelinePanelLayerCollection.cs" />
+    <Compile Include="Controls\Timeline\TimelineTask.cs" />
+    <Compile Include="Controls\Timeline\TimelineTick\TimelineTick.cs" />
+    <Compile Include="Controls\Timeline\TimelineTick\TimelineTickCollection.cs" />
+    <Compile Include="Controls\Timeline\TimelineTick\TimelineTickDataTemplateSelector.cs" />
+    <Compile Include="Controls\Timeline\TimelineTick\TimelineTickFrequency.cs" />
+    <Compile Include="Controls\Timeline\Enums\TimelineTickPeriod.cs" />
+    <Compile Include="Controls\Timeline\TimelineTick\TimelineTickStrip.cs" />
+    <Compile Include="Controls\Timeline\Enums\TimelineTickType.cs" />
+    <Compile Include="Controls\Timeline\TimelinePanel\TimelinePanelChildEndTimeComparer.cs" />
+    <Compile Include="Controls\Timeline\TimelinePanel\TimelinePanelChildStartTimeComparer.cs" />
+    <Compile Include="Controls\Timeline\Extensions\UIElementExtensions.cs" />
+    <Compile Include="Controls\Timeline\Enums\TimelineZoomAnchor.cs" />
+    <Compile Include="Controls\Timeline\Helpers\VisualTreeExtraHelper.cs" />
+    <Compile Include="Controls\Timeline\ZoomScrollBar\TimelineZoomScrollBar.cs" />
+    <Compile Include="Controls\Timeline\ZoomScrollBar\TimelineZoomViewportParameters.cs" />
+    <Compile Include="Converters\ByteToColorMultiConverter.cs" />
+    <Compile Include="Converters\ByteToDoubleConverter.cs" />
+    <Compile Include="Converters\ColorToBrushConverter.cs" />
+    <Compile Include="Controls\ColorPicker\ColorPicker.cs" />
+    <Compile Include="Controls\ColorPicker\ColorPickerAutomationPeer.cs" />
+    <Compile Include="Controls\MDI\MDIChildComparer.cs" />
+    <Compile Include="Converters\ColorToGradientConverter.cs" />
+    <Compile Include="Converters\StringListToStringMultiConverter.cs" />
+    <Compile Include="Converters\StringEmptyToBooleanConverter.cs" />
+    <Compile Include="Converters\ReversedBooleanToVisibilityConverter.cs" />
+    <Compile Include="Converters\ObjectNullToBooleanConverter.cs" />
+    <Compile Include="Converters\StringEmptyToVisibilityConverter.cs" />
+    <Compile Include="Converters\StatusToAnimationVisibilityConverter.cs" />
+    <Compile Include="Controls\RevealDecorator\HorizontalRevealMode.cs" />
+    <Compile Include="Controls\RevealDecorator\VerticalRevealMode.cs" />
+    <Compile Include="Controls\RevealDecorator\RevealDecorator.cs" />
+    <Compile Include="Controls\Sprocket\SprocketControl.cs" />
+    <Compile Include="Controls\MDI\MDIClosingEventArgs.cs" />
+    <Compile Include="Controls\MDI\MDIChild.cs" />
+    <Compile Include="Controls\MDI\MDIContainer.cs" />
+    <Compile Include="Controls\MDI\MDILayoutType.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\Waiting\WaitingControl.xaml.cs">
+      <DependentUpon>WaitingControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Resizer\EmptyResizable.cs" />
+    <Compile Include="Controls\Resizer\FrameworkElementResizable.cs" />
+    <Compile Include="Controls\Resizer\IResizable.cs" />
+    <Compile Include="Controls\Resizer\Resizer.cs" />
+    <Compile Include="Controls\Resizer\WindowResizable.cs" />
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Gimela.Presentation.Skins\Gimela.Presentation.Skins.csproj">
+      <Project>{5505B66E-439B-43F4-A03B-9CC0BF198D9D}</Project>
+      <Name>Gimela.Presentation.Skins</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

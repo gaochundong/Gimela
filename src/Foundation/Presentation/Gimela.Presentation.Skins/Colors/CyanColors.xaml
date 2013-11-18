@@ -1,0 +1,26 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Color x:Key="CyanRankColor1">#FFCDE5DF</Color>
+    <Color x:Key="CyanRankColor2">#FFA9C7BF</Color>
+    <Color x:Key="CyanRankColor3">#FF89AAA0</Color>
+    <Color x:Key="CyanRankColor4">#FF698D81</Color>
+    <Color x:Key="CyanRankColor5">#FF4C6F62</Color>
+    <Color x:Key="CyanRankColor6">#FF325247</Color>
+    <Color x:Key="CyanRankColor7">#FF1D342C</Color>
+
+    <LinearGradientBrush x:Key="CyanRankBackgroundBrush" StartPoint="0,0" EndPoint="1,1">
+        <GradientBrush.GradientStops>
+            <GradientStopCollection>
+                <GradientStop Color="{DynamicResource CyanRankColor1}" Offset="0" />
+                <GradientStop Color="{DynamicResource CyanRankColor2}" Offset="0.1" />
+                <GradientStop Color="{DynamicResource CyanRankColor3}" Offset="0.3" />
+                <GradientStop Color="{DynamicResource CyanRankColor4}" Offset="0.5" />
+                <GradientStop Color="{DynamicResource CyanRankColor5}" Offset="0.7" />
+                <GradientStop Color="{DynamicResource CyanRankColor6}" Offset="0.9" />
+                <GradientStop Color="{DynamicResource CyanRankColor7}" Offset="1" />
+            </GradientStopCollection>
+        </GradientBrush.GradientStops>
+    </LinearGradientBrush>
+    
+</ResourceDictionary>

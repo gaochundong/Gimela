@@ -1,0 +1,95 @@
+﻿using System.Reflection;
+using System.Resources;
+using System.Runtime.InteropServices;
+
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+[assembly: AssemblyTitle("Gimela.Presentation.Transitions")]
+[assembly: AssemblyDescription("Gimela.Presentation.Transitions")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("Gimela Technology Co., Ltd.")]
+[assembly: AssemblyProduct("Gimela® Presentation Library")]
+[assembly: AssemblyCopyright("Copyright © 2011-2012 Gimela Technologies Co., Ltd. All rights reserved.")]
+[assembly: AssemblyTrademark("Gimela®")]
+[assembly: AssemblyCulture("")]
+
+// Setting ComVisible to false makes the types in this assembly not visible 
+// to COM components.  If you need to access a type in this assembly from 
+// COM, set the ComVisible attribute to true on that type.
+[assembly: ComVisible(false)]
+
+// The following GUID is for the ID of the typelib if this project is exposed to COM
+[assembly: Guid("0c1d9dc0-3ae3-4ed9-80a7-5f97ce2f46fc")]
+
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Build and Revision Numbers 
+// by using the '*' as shown below:
+// [assembly: AssemblyVersion("1.0.*")]
+[assembly: AssemblyVersion("1.0.0.0")]
+[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: NeutralResourcesLanguageAttribute("")]
+
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", MessageId = "Gimela", Scope = "namespace", Target = "Gimela.Presentation.Transitions")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA2210:AssembliesShouldHaveValidStrongNames")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", MessageId = "Gimela")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1014:MarkAssembliesWithClsCompliant")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1020:AvoidNamespacesWithFewTypes", Scope = "namespace", Target = "XamlGeneratedNamespace")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Scope = "member", Target = "Gimela.Presentation.Transitions.ClothTransition.#BeginTransition3D(Gimela.Presentation.Transitions.TransitionElement,System.Windows.Controls.ContentPresenter,System.Windows.Controls.ContentPresenter,System.Windows.Controls.Viewport3D)")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1062:Validate arguments of public methods", MessageId = "0", Scope = "member", Target = "Gimela.Presentation.Transitions.ClothTransition.#BeginTransition3D(Gimela.Presentation.Transitions.TransitionElement,System.Windows.Controls.ContentPresenter,System.Windows.Controls.ContentPresenter,System.Windows.Controls.Viewport3D)")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1062:Validate arguments of public methods", MessageId = "3", Scope = "member", Target = "Gimela.Presentation.Transitions.DoorTransition.#BeginTransition3D(Gimela.Presentation.Transitions.TransitionElement,System.Windows.Controls.ContentPresenter,System.Windows.Controls.ContentPresenter,System.Windows.Controls.Viewport3D)")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1810:InitializeReferenceTypeStaticFieldsInline", Scope = "member", Target = "Gimela.Presentation.Transitions.ExplosionTransition.#.cctor()")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1804:RemoveUnusedLocals", MessageId = "duration", Scope = "member", Target = "Gimela.Presentation.Transitions.ExplosionTransition.#BeginTransition3D(Gimela.Presentation.Transitions.TransitionElement,System.Windows.Controls.ContentPresenter,System.Windows.Controls.ContentPresenter,System.Windows.Controls.Viewport3D)")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1804:RemoveUnusedLocals", MessageId = "rand", Scope = "member", Target = "Gimela.Presentation.Transitions.ExplosionTransition.#BeginTransition3D(Gimela.Presentation.Transitions.TransitionElement,System.Windows.Controls.ContentPresenter,System.Windows.Controls.ContentPresenter,System.Windows.Controls.Viewport3D)")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1062:Validate arguments of public methods", MessageId = "3", Scope = "member", Target = "Gimela.Presentation.Transitions.ExplosionTransition.#BeginTransition3D(Gimela.Presentation.Transitions.TransitionElement,System.Windows.Controls.ContentPresenter,System.Windows.Controls.ContentPresenter,System.Windows.Controls.Viewport3D)")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1810:InitializeReferenceTypeStaticFieldsInline", Scope = "member", Target = "Gimela.Presentation.Transitions.FadeTransition.#.cctor()")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1062:Validate arguments of public methods", MessageId = "1", Scope = "member", Target = "Gimela.Presentation.Transitions.FadeTransition.#OnTransitionEnded(Gimela.Presentation.Transitions.TransitionElement,System.Windows.Controls.ContentPresenter,System.Windows.Controls.ContentPresenter)")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1062:Validate arguments of public methods", MessageId = "0", Scope = "member", Target = "Gimela.Presentation.Transitions.FlipTransition.#BeginTransition3D(Gimela.Presentation.Transitions.TransitionElement,System.Windows.Controls.ContentPresenter,System.Windows.Controls.ContentPresenter,System.Windows.Controls.Viewport3D)")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1062:Validate arguments of public methods", MessageId = "3", Scope = "member", Target = "Gimela.Presentation.Transitions.FlipTransition.#BeginTransition3D(Gimela.Presentation.Transitions.TransitionElement,System.Windows.Controls.ContentPresenter,System.Windows.Controls.ContentPresenter,System.Windows.Controls.Viewport3D)")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1062:Validate arguments of public methods", MessageId = "0", Scope = "member", Target = "XamlGeneratedNamespace.GeneratedInternalTypeHelper.#AddEventHandler(System.Reflection.EventInfo,System.Object,System.Delegate)")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1062:Validate arguments of public methods", MessageId = "1", Scope = "member", Target = "XamlGeneratedNamespace.GeneratedInternalTypeHelper.#CreateDelegate(System.Type,System.Object,System.String)")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1062:Validate arguments of public methods", MessageId = "0", Scope = "member", Target = "XamlGeneratedNamespace.GeneratedInternalTypeHelper.#GetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Globalization.CultureInfo)")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1062:Validate arguments of public methods", MessageId = "0", Scope = "member", Target = "XamlGeneratedNamespace.GeneratedInternalTypeHelper.#SetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Object,System.Globalization.CultureInfo)")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1062:Validate arguments of public methods", MessageId = "0", Scope = "member", Target = "Gimela.Presentation.Transitions.PageTransition.#BeginTransition3D(Gimela.Presentation.Transitions.TransitionElement,System.Windows.Controls.ContentPresenter,System.Windows.Controls.ContentPresenter,System.Windows.Controls.Viewport3D)")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1062:Validate arguments of public methods", MessageId = "0", Scope = "member", Target = "Gimela.Presentation.Transitions.RotateTransition.#BeginTransition3D(Gimela.Presentation.Transitions.TransitionElement,System.Windows.Controls.ContentPresenter,System.Windows.Controls.ContentPresenter,System.Windows.Controls.Viewport3D)")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1062:Validate arguments of public methods", MessageId = "3", Scope = "member", Target = "Gimela.Presentation.Transitions.RotateTransition.#BeginTransition3D(Gimela.Presentation.Transitions.TransitionElement,System.Windows.Controls.ContentPresenter,System.Windows.Controls.ContentPresenter,System.Windows.Controls.Viewport3D)")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1804:RemoveUnusedLocals", MessageId = "size", Scope = "member", Target = "Gimela.Presentation.Transitions.RotateTransition.#MakeSide(Gimela.Presentation.Transitions.TransitionElement,System.Windows.Controls.ContentPresenter,System.Windows.Media.Media3D.Point3D,System.Windows.Media.Media3D.Vector3D,System.Windows.Media.Media3D.Vector3D,System.Double,System.Windows.Media.Media3D.Point3D,System.Windows.Media.Media3D.Vector3D,System.EventHandler)")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1062:Validate arguments of public methods", MessageId = "1", Scope = "member", Target = "Gimela.Presentation.Transitions.StoryboardTransition.#OnTransitionEnded(Gimela.Presentation.Transitions.TransitionElement,System.Windows.Controls.ContentPresenter,System.Windows.Controls.ContentPresenter)")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1062:Validate arguments of public methods", MessageId = "2", Scope = "member", Target = "Gimela.Presentation.Transitions.StoryboardTransition.#OnTransitionEnded(Gimela.Presentation.Transitions.TransitionElement,System.Windows.Controls.ContentPresenter,System.Windows.Controls.ContentPresenter)")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters", Scope = "member", Target = "Gimela.Presentation.Transitions.Transition.#CreateBrush(Gimela.Presentation.Transitions.TransitionElement,System.Windows.Controls.ContentPresenter)")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA1801:ReviewUnusedParameters", MessageId = "transitionElement", Scope = "member", Target = "Gimela.Presentation.Transitions.Transition.#CreateBrush(Gimela.Presentation.Transitions.TransitionElement,System.Windows.Controls.ContentPresenter)")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1062:Validate arguments of public methods", MessageId = "1", Scope = "member", Target = "Gimela.Presentation.Transitions.Transition.#CreateBrush(Gimela.Presentation.Transitions.TransitionElement,System.Windows.Controls.ContentPresenter)")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1062:Validate arguments of public methods", MessageId = "0", Scope = "member", Target = "Gimela.Presentation.Transitions.Transition.#EndTransition(Gimela.Presentation.Transitions.TransitionElement,System.Windows.Controls.ContentPresenter,System.Windows.Controls.ContentPresenter)")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1810:InitializeReferenceTypeStaticFieldsInline", Scope = "member", Target = "Gimela.Presentation.Transitions.Transition3D.#.cctor()")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1062:Validate arguments of public methods", MessageId = "0", Scope = "member", Target = "Gimela.Presentation.Transitions.Transition3D.#BeginTransition(Gimela.Presentation.Transitions.TransitionElement,System.Windows.Controls.ContentPresenter,System.Windows.Controls.ContentPresenter)")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", MessageId = "fov", Scope = "member", Target = "Gimela.Presentation.Transitions.Transition3D.#CreateCamera(Gimela.Presentation.Transitions.TransitionElement,System.Double)")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1062:Validate arguments of public methods", MessageId = "0", Scope = "member", Target = "Gimela.Presentation.Transitions.Transition3D.#CreateCamera(Gimela.Presentation.Transitions.TransitionElement,System.Double)")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", MessageId = "u", Scope = "member", Target = "Gimela.Presentation.Transitions.Transition3D.#CreateMesh(System.Windows.Media.Media3D.Point3D,System.Windows.Media.Media3D.Vector3D,System.Windows.Media.Media3D.Vector3D,System.Int32,System.Int32,System.Windows.Rect)")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", MessageId = "usteps", Scope = "member", Target = "Gimela.Presentation.Transitions.Transition3D.#CreateMesh(System.Windows.Media.Media3D.Point3D,System.Windows.Media.Media3D.Vector3D,System.Windows.Media.Media3D.Vector3D,System.Int32,System.Int32,System.Windows.Rect)")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", MessageId = "v", Scope = "member", Target = "Gimela.Presentation.Transitions.Transition3D.#CreateMesh(System.Windows.Media.Media3D.Point3D,System.Windows.Media.Media3D.Vector3D,System.Windows.Media.Media3D.Vector3D,System.Int32,System.Int32,System.Windows.Rect)")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", MessageId = "vsteps", Scope = "member", Target = "Gimela.Presentation.Transitions.Transition3D.#CreateMesh(System.Windows.Media.Media3D.Point3D,System.Windows.Media.Media3D.Vector3D,System.Windows.Media.Media3D.Vector3D,System.Int32,System.Int32,System.Windows.Rect)")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1053:StaticHolderTypesShouldNotHaveConstructors", Scope = "type", Target = "Gimela.Presentation.Transitions.ImagePathHolder")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1819:PropertiesShouldNotReturnArrays", Scope = "member", Target = "Gimela.Presentation.Transitions.ImagePathHolder.#BitmapImages")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1819:PropertiesShouldNotReturnArrays", Scope = "member", Target = "Gimela.Presentation.Transitions.ImagePathHolder.#BitmapImages6")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1819:PropertiesShouldNotReturnArrays", Scope = "member", Target = "Gimela.Presentation.Transitions.ImagePathHolder.#ImagePaths")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope = "member", Target = "Gimela.Presentation.Transitions.ListTransitionSelector.#.ctor(Gimela.Presentation.Transitions.Transition,Gimela.Presentation.Transitions.Transition,System.Collections.IList)")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope = "member", Target = "Gimela.Presentation.Transitions.Picture.#.ctor(System.String)")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope = "member", Target = "Gimela.Presentation.Transitions.Picture.#Uri")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope = "member", Target = "Gimela.Presentation.Transitions.Swatch.#.ctor(System.String)")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope = "member", Target = "Gimela.Presentation.Transitions.Swatch.#ColorName")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1810:InitializeReferenceTypeStaticFieldsInline", Scope = "member", Target = "Gimela.Presentation.Transitions.TransitionElement.#.cctor()")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA1801:ReviewUnusedParameters", MessageId = "transition", Scope = "member", Target = "Gimela.Presentation.Transitions.TransitionElement.#OnTransitionCompleted(Gimela.Presentation.Transitions.Transition)")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1810:InitializeReferenceTypeStaticFieldsInline", Scope = "member", Target = "Gimela.Presentation.Transitions.TranslateTransition.#.cctor()")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1062:Validate arguments of public methods", MessageId = "1", Scope = "member", Target = "Gimela.Presentation.Transitions.TranslateTransition.#OnTransitionEnded(Gimela.Presentation.Transitions.TransitionElement,System.Windows.Controls.ContentPresenter,System.Windows.Controls.ContentPresenter)")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1062:Validate arguments of public methods", MessageId = "2", Scope = "member", Target = "Gimela.Presentation.Transitions.TranslateTransition.#OnTransitionEnded(Gimela.Presentation.Transitions.TransitionElement,System.Windows.Controls.ContentPresenter,System.Windows.Controls.ContentPresenter)")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA1801:ReviewUnusedParameters", MessageId = "e", Scope = "member", Target = "Gimela.Presentation.Transitions.TransitionDemo.#OnLoaded(System.Object,System.Object)")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA1801:ReviewUnusedParameters", MessageId = "sender", Scope = "member", Target = "Gimela.Presentation.Transitions.TransitionDemo.#OnLoaded(System.Object,System.Object)")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope = "member", Target = "Gimela.Presentation.Transitions.TransitionDemo.#OnLoaded(System.Object,System.Object)")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope = "member", Target = "Gimela.Presentation.Transitions.TransitionDemo.#OnMouseLeftDown(System.Object,System.Windows.Input.MouseEventArgs)")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope = "member", Target = "Gimela.Presentation.Transitions.TransitionDemo.#OnMouseRightDown(System.Object,System.Windows.Input.MouseEventArgs)")]

@@ -1,0 +1,19 @@
+﻿<Window x:Class="TestCalendar.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:calendar="clr-namespace:Gimela.Presentation.Controls;assembly=Gimela.Presentation.Controls"
+        Title="MainWindow"
+        Width="1024"
+        Height="768">
+
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="*" />
+    </Grid.RowDefinitions>
+
+    <calendar:LunarCalendar x:Name="calendar"
+                            Grid.Row="0"
+                            HorizontalAlignment="Stretch"
+                            VerticalAlignment="Stretch" />
+  </Grid>
+</Window>

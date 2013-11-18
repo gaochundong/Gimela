@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gimela.ServiceModel.ChannelManagement", "Gimela.ServiceModel.ChannelManagement\Gimela.ServiceModel.ChannelManagement.csproj", "{77FF7396-8843-4EFA-A10E-3C70A35A0D63}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gimela.ServiceModel.ManagedDiscovery", "Gimela.ServiceModel.ManagedDiscovery\Gimela.ServiceModel.ManagedDiscovery.csproj", "{77E79E83-CAF7-4F76-80AF-5095EE5F809D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gimela.ServiceModel.ManagedHosting", "Gimela.ServiceModel.ManagedHosting\Gimela.ServiceModel.ManagedHosting.csproj", "{FDC522AB-4E7F-4348-BD0B-7A568C61290D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gimela.ServiceModel.ManagedService", "Gimela.ServiceModel.ManagedService\Gimela.ServiceModel.ManagedService.csproj", "{B1313BEB-BE18-4507-A3C1-C63789F47EF5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{77FF7396-8843-4EFA-A10E-3C70A35A0D63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77FF7396-8843-4EFA-A10E-3C70A35A0D63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77FF7396-8843-4EFA-A10E-3C70A35A0D63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77FF7396-8843-4EFA-A10E-3C70A35A0D63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77E79E83-CAF7-4F76-80AF-5095EE5F809D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77E79E83-CAF7-4F76-80AF-5095EE5F809D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77E79E83-CAF7-4F76-80AF-5095EE5F809D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77E79E83-CAF7-4F76-80AF-5095EE5F809D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDC522AB-4E7F-4348-BD0B-7A568C61290D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDC522AB-4E7F-4348-BD0B-7A568C61290D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDC522AB-4E7F-4348-BD0B-7A568C61290D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDC522AB-4E7F-4348-BD0B-7A568C61290D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1313BEB-BE18-4507-A3C1-C63789F47EF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1313BEB-BE18-4507-A3C1-C63789F47EF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1313BEB-BE18-4507-A3C1-C63789F47EF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1313BEB-BE18-4507-A3C1-C63789F47EF5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

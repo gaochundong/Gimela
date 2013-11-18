@@ -1,0 +1,244 @@
+﻿<UserControl x:Class="Gimela.Rukbat.GUI.Modules.DeviceConfiguration.Views.VideoSourceLocalDesktopView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:c="clr-namespace:Gimela.Rukbat.GUI.ValidationRules.Converters;assembly=Gimela.Rukbat.GUI.ValidationRules"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:v="clr-namespace:Gimela.Rukbat.GUI.ValidationRules;assembly=Gimela.Rukbat.GUI.ValidationRules"
+             d:DesignHeight="383"
+             d:DesignWidth="597"
+             mc:Ignorable="d">
+  <UserControl.Resources>
+    <c:InvalidMultiValidationRuleToBooleanMultiConverter x:Key="InvalidMultiValidationRuleToBooleanMultiConverter" />
+  </UserControl.Resources>
+  <Grid Style="{DynamicResource GridStyle}">
+    <Grid x:Name="bgGrid" Margin="5,0,5,0">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="50" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="100" />
+      </Grid.RowDefinitions>
+
+      <Label Grid.Row="0"
+             Grid.Column="0"
+             Grid.ColumnSpan="2"
+             Margin="30,0,0,0"
+             HorizontalAlignment="Left"
+             VerticalAlignment="Center"
+             Content="{DynamicResource DeviceConfiguration_VideoSourceLocalDesktopView_ConfigCameraSource}"
+             FontSize="14"
+             FontWeight="Bold" />
+      <Line Grid.Row="0"
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            Margin="0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center"
+            Stroke="{DynamicResource LineStrokeBrush}"
+            StrokeThickness="2"
+            X1="0"
+            X2="{Binding ElementName=bgGrid,
+                         Path=ActualWidth}"
+            Y1="35"
+            Y2="35" />
+
+      <Grid Grid.Row="1" Grid.Column="0">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="50" />
+          <RowDefinition Height="50" />
+          <RowDefinition Height="50" />
+          <RowDefinition Height="50" />
+          <RowDefinition Height="50" />
+          <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="50" />
+          <ColumnDefinition Width="150" />
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="50" />
+        </Grid.ColumnDefinitions>
+
+        <Label Name="textBlockSourceTitle"
+               Grid.Row="0"
+               Grid.Column="0"
+               Grid.ColumnSpan="3"
+               HorizontalAlignment="Left"
+               VerticalAlignment="Center"
+               Content="{DynamicResource DeviceConfiguration_VideoSourceLocalDesktopView_SelectLocalDesktopSource}" />
+
+        <Label Name="textBlockScreen"
+               Grid.Row="1"
+               Grid.Column="1"
+               HorizontalAlignment="Right"
+               VerticalAlignment="Center"
+               Content="{DynamicResource DeviceConfiguration_VideoSourceLocalDesktopView_LocalDesktop}" />
+        <Label Grid.Row="1"
+               Grid.Column="1"
+               Margin="0"
+               HorizontalAlignment="Right"
+               VerticalAlignment="Center"
+               Content="*"
+               Foreground="{DynamicResource ErrorForegroundBrush}" />
+        <ComboBox Name="comboBoxScreen"
+                  Grid.Row="1"
+                  Grid.Column="2"
+                  Width="200"
+                  HorizontalAlignment="Left"
+                  VerticalAlignment="Center"
+                  ItemsSource="{Binding VideoFilterCollection}"
+                  SelectedItem="{Binding SelectedVideoFilter,
+                                         Mode=TwoWay}"
+                  Style="{DynamicResource ComboBoxStyle}"
+                  Tag="{DynamicResource DeviceConfiguration_VideoSourceLocalDesktopView_PromoteInfoLocalDesktop}" />
+
+        <Label Name="textBlockFrameInterval"
+               Grid.Row="2"
+               Grid.Column="1"
+               HorizontalAlignment="Right"
+               VerticalAlignment="Center"
+               Content="{DynamicResource DeviceConfiguration_VideoSourceLocalDesktopView_FrameInterval}" />
+        <Label Grid.Row="2"
+               Grid.Column="1"
+               Margin="0"
+               HorizontalAlignment="Right"
+               VerticalAlignment="Center"
+               Content="*"
+               Foreground="{DynamicResource ErrorForegroundBrush}" />
+        <StackPanel Grid.Row="2"
+                    Grid.Column="2"
+                    Orientation="Horizontal">
+          <TextBox x:Name="textBoxFrameInterval"
+                   Width="80"
+                   Height="23"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Center"
+                   Style="{DynamicResource TextBoxStyle}">
+            <TextBox.Text>
+              <Binding Mode="TwoWay"
+                       Path="FrameInterval"
+                       UpdateSourceTrigger="PropertyChanged">
+                <Binding.ValidationRules>
+                  <v:InvalidGreaterThanZeroIntegerValidationRule />
+                </Binding.ValidationRules>
+              </Binding>
+            </TextBox.Text>
+          </TextBox>
+          <Label Name="textBlockInterval"
+                 HorizontalAlignment="Left"
+                 VerticalAlignment="Center"
+                 Content="{DynamicResource DeviceConfiguration_VideoSourceLocalDesktopView_Milliseconds}" />
+        </StackPanel>
+
+        <Label Name="textBlockResizeTo"
+               Grid.Row="3"
+               Grid.Column="1"
+               HorizontalAlignment="Right"
+               VerticalAlignment="Center"
+               Content="{DynamicResource DeviceConfiguration_VideoSourceLocalDesktopView_SetImageSize}" />
+        <Label Grid.Row="3"
+               Grid.Column="1"
+               Margin="0"
+               HorizontalAlignment="Right"
+               VerticalAlignment="Center"
+               Content="*"
+               Foreground="{DynamicResource ErrorForegroundBrush}" />
+        <StackPanel Grid.Row="3"
+                    Grid.Column="2"
+                    Orientation="Horizontal">
+          <Label Name="textBlockSizeWidth"
+                 Margin="0,0,0,0"
+                 HorizontalAlignment="Left"
+                 VerticalAlignment="Center"
+                 Content="{DynamicResource DeviceConfiguration_VideoSourceLocalDesktopView_Width}" />
+          <TextBox x:Name="textBoxSizeWidth"
+                   Width="80"
+                   Height="23"
+                   Margin="10,0,0,0"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Center"
+                   Style="{DynamicResource TextBoxStyle}">
+            <TextBox.Text>
+              <Binding Mode="TwoWay"
+                       Path="FrameWidth"
+                       UpdateSourceTrigger="PropertyChanged">
+                <Binding.ValidationRules>
+                  <v:InvalidGreaterThanZeroIntegerValidationRule />
+                </Binding.ValidationRules>
+              </Binding>
+            </TextBox.Text>
+          </TextBox>
+          <Label Margin="10,0,0,0"
+                 HorizontalAlignment="Left"
+                 VerticalAlignment="Center"
+                 Content="x" />
+          <Label Name="textBlockSizeHeight"
+                 Margin="10,0,0,0"
+                 HorizontalAlignment="Left"
+                 VerticalAlignment="Center"
+                 Content="{DynamicResource DeviceConfiguration_VideoSourceLocalDesktopView_Height}" />
+          <TextBox x:Name="textBoxSizeHeight"
+                   Width="80"
+                   Height="23"
+                   Margin="10,0,0,0"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Center"
+                   Style="{DynamicResource TextBoxStyle}">
+            <TextBox.Text>
+              <Binding Mode="TwoWay"
+                       Path="FrameHeight"
+                       UpdateSourceTrigger="PropertyChanged">
+                <Binding.ValidationRules>
+                  <v:InvalidGreaterThanZeroIntegerValidationRule />
+                </Binding.ValidationRules>
+              </Binding>
+            </TextBox.Text>
+          </TextBox>
+        </StackPanel>
+
+      </Grid>
+
+      <Grid Grid.Row="2" Grid.Column="0">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="50" />
+          <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Button Name="btnCancel"
+                Grid.Column="0"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center"
+                Command="{Binding Path=CancelCommand}"
+                Content="{DynamicResource Common_Button_Cancel}"
+                IsCancel="True"
+                Style="{DynamicResource ButtonStyle}" />
+        <Button Name="btnOK"
+                Grid.Column="2"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                Command="{Binding Path=OKCommand}"
+                Content="{DynamicResource Common_Button_OK}"
+                IsDefault="True"
+                Style="{DynamicResource ButtonStyle}">
+
+          <Button.IsEnabled>
+            <MultiBinding Converter="{StaticResource InvalidMultiValidationRuleToBooleanMultiConverter}" ConverterParameter="objectnull|greaterthanzerointeger|greaterthanzerointeger|greaterthanzerointeger">
+              <Binding ElementName="comboBoxScreen"
+                       Mode="OneWay"
+                       Path="SelectedItem" />
+              <Binding ElementName="textBoxFrameInterval"
+                       Mode="OneWay"
+                       Path="Text" />
+              <Binding ElementName="textBoxSizeWidth"
+                       Mode="OneWay"
+                       Path="Text" />
+              <Binding ElementName="textBoxSizeHeight"
+                       Mode="OneWay"
+                       Path="Text" />
+            </MultiBinding>
+          </Button.IsEnabled>
+
+        </Button>
+      </Grid>
+    </Grid>
+  </Grid>
+</UserControl>

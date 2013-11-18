@@ -1,0 +1,22 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="../Brushes/BorderBrushes.xaml"/>
+        <ResourceDictionary Source="../Brushes/ButtonBrushes.xaml"/>
+        <ResourceDictionary Source="../Brushes/ComboBoxBrushes.xaml"/>
+        <ResourceDictionary Source="../Brushes/ComboBoxItemBrushes.xaml"/>
+        <ResourceDictionary Source="../Brushes/ContextMenuBrushes.xaml"/>
+        <ResourceDictionary Source="../Brushes/ForegroundBrushes.xaml"/>
+        <ResourceDictionary Source="../Brushes/GridBrushes.xaml"/>
+        <ResourceDictionary Source="../Brushes/LabelBrushes.xaml"/>
+        <ResourceDictionary Source="../Brushes/ListViewBrushes.xaml"/>
+        <ResourceDictionary Source="../Brushes/ListViewItemBrushes.xaml"/>
+        <ResourceDictionary Source="../Brushes/MenuItemBrushes.xaml"/>
+        <ResourceDictionary Source="../Brushes/SliderBrushes.xaml"/>
+        <ResourceDictionary Source="../Brushes/ScrollBarBrushes.xaml"/>
+        <ResourceDictionary Source="../Brushes/TextBoxBrushes.xaml"/>
+        <ResourceDictionary Source="../Brushes/ToolTipBrushes.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+</ResourceDictionary>

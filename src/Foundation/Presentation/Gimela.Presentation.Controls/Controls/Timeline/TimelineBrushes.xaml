@@ -1,0 +1,34 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+  <SolidColorBrush x:Key="TimelineBackgroundBrush" Color="{DynamicResource BackgroundLightColor}" />
+
+  <SolidColorBrush x:Key="TimelineBigTickBorderBackgroundBrush" Color="{DynamicResource BorderDarkColor}" />
+  <SolidColorBrush x:Key="TimelineMediumTickBorderBackgroundBrush" Color="{DynamicResource BorderDarkColor}" />
+  <SolidColorBrush x:Key="TimelineSmallTickBorderBackgroundBrush" Color="{DynamicResource BorderDarkColor}" />
+
+  <SolidColorBrush x:Key="TimelineLongBigTickBorderBackgroundBrush" Color="{DynamicResource BorderMediumColor}" />
+  <SolidColorBrush x:Key="TimelineLongMediumTickBorderBackgroundBrush" Color="{DynamicResource BorderMediumColor}" />
+  <SolidColorBrush x:Key="TimelineLongSmallTickBorderBackgroundBrush" Color="{DynamicResource BorderLightColor}" />
+
+  <SolidColorBrush x:Key="TimelineScrollViewerTopTickBorderBackgroundBrush" Color="{DynamicResource BackgroundMediumColor}" />
+
+  <SolidColorBrush x:Key="TimelineScrollBarRectangleStrokeBrush" Color="{DynamicResource MaskForegroundColor}" />
+  <LinearGradientBrush x:Key="TimelineScrollBarRectangleFillBrush" StartPoint="0.5,0" EndPoint="0.5,1">
+    <GradientBrush.GradientStops>
+      <GradientStopCollection>
+        <GradientStop Offset="0" Color="Transparent" />
+        <GradientStop Offset="0.8" Color="Transparent" />
+        <GradientStop Offset="1" Color="{DynamicResource BackgroundLightColor}" />
+      </GradientStopCollection>
+    </GradientBrush.GradientStops>
+  </LinearGradientBrush>
+  <SolidColorBrush x:Key="TimelineScrollBarSpanBorderBackgroundBrush" Color="{DynamicResource BackgroundMediumColor}" />
+
+  <SolidColorBrush x:Key="TimelineScrollBarZoomHorizontalScrollBarBorderBackgroundBrush" Color="{DynamicResource BackgroundMediumColor}" />
+
+  <SolidColorBrush x:Key="TimelineTaskBorderBackgroundBrush" Color="{DynamicResource MaskContentColor}" />
+  <SolidColorBrush x:Key="TimelineTaskBorderBorderBrush" Color="{DynamicResource MaskBorderColor}" />
+  <SolidColorBrush x:Key="TimelineTaskBorderSelectedBackgroundBrush" Color="{DynamicResource MaskContentSelectedColor}" />
+  <SolidColorBrush x:Key="TimelineTaskBorderSelectedBorderBrush" Color="{DynamicResource MaskBorderSelectedColor}" />
+
+</ResourceDictionary>

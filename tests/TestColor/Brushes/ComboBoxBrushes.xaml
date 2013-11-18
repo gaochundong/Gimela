@@ -1,0 +1,91 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="../Skins/Shared.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+    
+    <!--ComboBox ToggleButton-->
+    <LinearGradientBrush x:Key="ComboBoxToggleButtonBorderBorderBrush" StartPoint="0,0" EndPoint="1,1">
+        <GradientBrush.GradientStops>
+            <GradientStopCollection>
+                <GradientStop Color="{StaticResource BorderLightColor}" Offset="0" />
+                <GradientStop Color="{StaticResource BorderMediumColor}" Offset="0.8" />
+                <GradientStop Color="{StaticResource BorderLightColor}" Offset="1" />
+            </GradientStopCollection>
+        </GradientBrush.GradientStops>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="ComboBoxToggleButtonBorderBackgroundBrush" StartPoint="0,0" EndPoint="1,1">
+        <GradientBrush.GradientStops>
+            <GradientStopCollection>
+                <GradientStop Color="{StaticResource ControlLightColor}" Offset="0" />
+                <GradientStop Color="{StaticResource ControlMediumColor}" Offset="1" />
+            </GradientStopCollection>
+        </GradientBrush.GradientStops>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="ComboBoxToggleButtonBorderMouseOverBackgroundBrush" StartPoint="0,0" EndPoint="1,1">
+        <GradientBrush.GradientStops>
+            <GradientStopCollection>
+                <GradientStop Color="{StaticResource ControlMouseOverMediumColor}" Offset="0" />
+                <GradientStop Color="{StaticResource ControlMouseOverDarkColor}" Offset="1" />
+            </GradientStopCollection>
+        </GradientBrush.GradientStops>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="ComboBoxToggleButtonTextBorderBackgroundBrush" StartPoint="0,0" EndPoint="1,1">
+        <GradientBrush.GradientStops>
+            <GradientStopCollection>
+                <GradientStop Color="{StaticResource ReversedSelectedForegroundColor}" Offset="0" />
+                <GradientStop Color="{StaticResource ReversedSelectedForegroundColor}" Offset="1" />
+            </GradientStopCollection>
+        </GradientBrush.GradientStops>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="ComboBoxToggleButtonTextBorderBorderBrush" StartPoint="0,0" EndPoint="1,1">
+        <GradientBrush.GradientStops>
+            <GradientStopCollection>
+                <GradientStop Color="{StaticResource BorderLightColor}" Offset="0" />
+                <GradientStop Color="{StaticResource BorderMediumColor}" Offset="0.8" />
+                <GradientStop Color="{StaticResource BorderDarkColor}" Offset="1" />
+            </GradientStopCollection>
+        </GradientBrush.GradientStops>
+    </LinearGradientBrush>
+    
+    <LinearGradientBrush x:Key="ComboBoxToggleButtonGlyphBrush" StartPoint="0,0" EndPoint="1,1">
+        <GradientBrush.GradientStops>
+            <GradientStopCollection>
+                <GradientStop Color="{StaticResource GlyphColor}" Offset="0" />
+                <GradientStop Color="{StaticResource GlyphColor}" Offset="1" />
+            </GradientStopCollection>
+        </GradientBrush.GradientStops>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="ComboBoxToggleButtonBorderCheckedBackgroundBrush" StartPoint="0,0" EndPoint="1,1">
+        <GradientBrush.GradientStops>
+            <GradientStopCollection>
+                <GradientStop Color="{StaticResource BorderMediumColor}" Offset="0" />
+                <GradientStop Color="{StaticResource BorderLightColor}" Offset="0.5" />
+                <GradientStop Color="{StaticResource BorderMediumColor}" Offset="1" />
+            </GradientStopCollection>
+        </GradientBrush.GradientStops>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="ComboBoxToggleButtonBorderDisabledBackgroundBrush" Color="{StaticResource BorderDarkColor}" />
+    <SolidColorBrush x:Key="ComboBoxToggleButtonBorderDisabledBorderBrush" Color="{StaticResource BorderDarkColor}" />
+
+    <!--ComboBox Popup-->
+    <LinearGradientBrush x:Key="ComboBoxPopupBorderBorderBrush" StartPoint="0,0" EndPoint="0,1">
+        <GradientBrush.GradientStops>
+            <GradientStopCollection>
+                <GradientStop Color="{StaticResource BorderLightColor}" Offset="0" />
+                <GradientStop Color="{StaticResource BorderMediumColor}" Offset="0.5" />
+                <GradientStop Color="{StaticResource BorderLightColor}" Offset="1" />
+            </GradientStopCollection>
+        </GradientBrush.GradientStops>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="ComboBoxPopupBorderBackgroundBrush" StartPoint="0,0" EndPoint="1,1">
+        <GradientBrush.GradientStops>
+            <GradientStopCollection>
+                <GradientStop Color="{StaticResource ControlMouseOverMediumColor}" Offset="0" />
+                <GradientStop Color="{StaticResource ControlMouseOverDarkColor}" Offset="1" />
+            </GradientStopCollection>
+        </GradientBrush.GradientStops>
+    </LinearGradientBrush>
+    
+</ResourceDictionary>

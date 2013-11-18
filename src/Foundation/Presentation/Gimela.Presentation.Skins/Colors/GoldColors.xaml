@@ -1,0 +1,26 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Color x:Key="GoldRankColor1">#FFF2E3CA</Color>
+    <Color x:Key="GoldRankColor2">#FFDBBE89</Color>
+    <Color x:Key="GoldRankColor3">#FFBE9A62</Color>
+    <Color x:Key="GoldRankColor4">#FF966E3D</Color>
+    <Color x:Key="GoldRankColor5">#FF7C5623</Color>
+    <Color x:Key="GoldRankColor6">#E7523615</Color>
+    <Color x:Key="GoldRankColor7">#E3241506</Color>
+
+    <LinearGradientBrush x:Key="GoldRankBackgroundBrush" StartPoint="0,0" EndPoint="1,1">
+        <GradientBrush.GradientStops>
+            <GradientStopCollection>
+                <GradientStop Color="{DynamicResource GoldRankColor1}" Offset="0" />
+                <GradientStop Color="{DynamicResource GoldRankColor2}" Offset="0.1" />
+                <GradientStop Color="{DynamicResource GoldRankColor3}" Offset="0.3" />
+                <GradientStop Color="{DynamicResource GoldRankColor4}" Offset="0.5" />
+                <GradientStop Color="{DynamicResource GoldRankColor5}" Offset="0.7" />
+                <GradientStop Color="{DynamicResource GoldRankColor6}" Offset="0.9" />
+                <GradientStop Color="{DynamicResource GoldRankColor7}" Offset="1" />
+            </GradientStopCollection>
+        </GradientBrush.GradientStops>
+    </LinearGradientBrush>
+    
+</ResourceDictionary>

@@ -1,0 +1,55 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Color x:Key="ForegroundColor">White</Color>
+    <Color x:Key="DisabledForegroundColor">Gray</Color>
+    <Color x:Key="SelectedForegroundColor">Black</Color>
+
+    <Color x:Key="ReversedForegroundColor">Black</Color>
+    <Color x:Key="ReversedDisabledForegroundColor">Gray</Color>
+    <Color x:Key="ReversedSelectedForegroundColor">White</Color>
+
+    <Color x:Key="ErrorForegroundColor">Red</Color>
+    <Color x:Key="ErrorBorderColor">Red</Color>
+
+    <Color x:Key="MaskBackgroundColor">LightGray</Color>
+    <Color x:Key="MaskForegroundColor">Orange</Color>
+    <Color x:Key="MaskBorderColor">Yellow</Color>
+    <Color x:Key="MaskBorderSelectedColor">Orange</Color>
+    <Color x:Key="MaskContentColor">YellowGreen</Color>
+    <Color x:Key="MaskContentSelectedColor">GreenYellow</Color>
+
+    <!--RankColor1-->
+    <Color x:Key="ControlMouseOverLightColor">#FFFFC1E0</Color>
+    <Color x:Key="GlyphMouseOver">#FFFFC1E0</Color>
+    
+    <!--RankColor2-->
+    <Color x:Key="ControlMouseOverMediumColor">#FFFF97CD</Color>
+    <Color x:Key="GlyphColor">#FFFF97CD</Color>
+    
+    <!--RankColor3-->
+    <Color x:Key="ControlMouseOverDarkColor">#FFFF65B4</Color>
+    <Color x:Key="ControlSelectedBackgroundColor">#FFFF65B4</Color>
+    <Color x:Key="BackgroundLightColor">#FFFF65B4</Color>
+
+    <!--RankColor4-->
+    <Color x:Key="ControlLightColor">#FFEF3794</Color>
+    <Color x:Key="ControlDisabledColor">#FFEF3794</Color>
+    <Color x:Key="BorderLightColor">#FFEF3794</Color>
+    <Color x:Key="BackgroundMediumColor">#FFEF3794</Color>
+    
+    <!--RankColor5-->
+    <Color x:Key="ControlMediumColor">#FFEB0F7E</Color>
+    <Color x:Key="ControlPressedLightColor">#FFEB0F7E</Color>
+    <Color x:Key="BorderMediumColor">#FFEB0F7E</Color>
+    <Color x:Key="BackgroundDarkColor">#FFEB0F7E</Color>
+    
+    <!--RankColor6-->
+    <Color x:Key="ControlDarkColor">#FFC40367</Color>
+    <Color x:Key="ControlPressedMediumColor">#FFC40367</Color>
+    <Color x:Key="BorderDarkColor">#FFC40367</Color>
+    
+    <!--RankColor7-->
+    <Color x:Key="ControlPressedDarkColor">#FFA30254</Color>
+
+</ResourceDictionary>

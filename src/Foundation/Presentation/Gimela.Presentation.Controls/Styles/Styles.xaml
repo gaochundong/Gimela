@@ -1,0 +1,13 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ResourceDictionary.MergedDictionaries>
+    <ResourceDictionary Source="../Controls/AsyncWork/AsyncWorkUserControlStyles.xaml" />
+    <ResourceDictionary Source="../Controls/ProgressRing/ProgressRingStyles.xaml" />
+    <ResourceDictionary Source="../Controls/ProgressIndicator/ProgressIndicatorStyles.xaml" />
+    <ResourceDictionary Source="../Controls/Resizer/ResizerStyles.xaml" />
+    <ResourceDictionary Source="../Controls/MDI/MDIStyles.xaml" />
+    <ResourceDictionary Source="../Controls/ColorPicker/ColorPickerStyles.xaml" />
+    <ResourceDictionary Source="../Controls/TreeListView/TreeListViewStyles.xaml" />
+    <ResourceDictionary Source="../Controls/Timeline/TimelineStyles.xaml" />
+    <ResourceDictionary Source="../Controls/Calendars/LunarCalendarStyles.xaml" />
+  </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

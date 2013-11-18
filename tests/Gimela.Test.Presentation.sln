@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestCalendar", "TestCalendar\TestCalendar.csproj", "{7FA7DC83-005F-424D-9722-556B1F10ED35}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestColor", "TestColor\TestColor.csproj", "{7A9EA1BC-B813-4A3F-BC42-103FF2EB0C86}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestTimeline", "TestTimeline\TestTimeline.csproj", "{9DA9C53C-635A-44C6-BAC8-FE5A9AB19D3C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProgressRing", "TestProgressRing\TestProgressRing.csproj", "{79232520-D6BC-4C8F-8A5E-9D6CF3AF212A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7FA7DC83-005F-424D-9722-556B1F10ED35}.Debug|x86.ActiveCfg = Debug|x86
+		{7FA7DC83-005F-424D-9722-556B1F10ED35}.Debug|x86.Build.0 = Debug|x86
+		{7FA7DC83-005F-424D-9722-556B1F10ED35}.Release|x86.ActiveCfg = Release|x86
+		{7FA7DC83-005F-424D-9722-556B1F10ED35}.Release|x86.Build.0 = Release|x86
+		{7A9EA1BC-B813-4A3F-BC42-103FF2EB0C86}.Debug|x86.ActiveCfg = Debug|x86
+		{7A9EA1BC-B813-4A3F-BC42-103FF2EB0C86}.Debug|x86.Build.0 = Debug|x86
+		{7A9EA1BC-B813-4A3F-BC42-103FF2EB0C86}.Release|x86.ActiveCfg = Release|x86
+		{7A9EA1BC-B813-4A3F-BC42-103FF2EB0C86}.Release|x86.Build.0 = Release|x86
+		{9DA9C53C-635A-44C6-BAC8-FE5A9AB19D3C}.Debug|x86.ActiveCfg = Debug|x86
+		{9DA9C53C-635A-44C6-BAC8-FE5A9AB19D3C}.Debug|x86.Build.0 = Debug|x86
+		{9DA9C53C-635A-44C6-BAC8-FE5A9AB19D3C}.Release|x86.ActiveCfg = Release|x86
+		{9DA9C53C-635A-44C6-BAC8-FE5A9AB19D3C}.Release|x86.Build.0 = Release|x86
+		{79232520-D6BC-4C8F-8A5E-9D6CF3AF212A}.Debug|x86.ActiveCfg = Debug|x86
+		{79232520-D6BC-4C8F-8A5E-9D6CF3AF212A}.Debug|x86.Build.0 = Debug|x86
+		{79232520-D6BC-4C8F-8A5E-9D6CF3AF212A}.Release|x86.ActiveCfg = Release|x86
+		{79232520-D6BC-4C8F-8A5E-9D6CF3AF212A}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

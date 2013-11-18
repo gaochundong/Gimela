@@ -1,0 +1,103 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ControlTemplate x:Key="ExpanderToggleButton" TargetType="{x:Type ToggleButton}">
+        <Border
+                Name="Border" 
+                CornerRadius="2,0,0,0"
+                Background="Transparent"
+                BorderBrush="Transparent"
+                BorderThickness="0,0,1,0">
+            <Grid>
+                <Rectangle x:Name="Rectangle" Margin="0,0,0,0" Height="20" Width="20"
+                           Stroke="{DynamicResource ExpanderToggleButtonRectangleStrokeBrush}"
+                           Fill="{DynamicResource ExpanderToggleButtonRectangleFillBrush}"
+                           RadiusX="15" RadiusY="15" Panel.ZIndex="0"
+                           HorizontalAlignment="Center" VerticalAlignment="Center">
+                </Rectangle>
+                <Path HorizontalAlignment="Center" VerticalAlignment="Center"
+                      Name="Arrow" Panel.ZIndex="1"
+                      Fill="{DynamicResource ExpanderToggleButtonGlyphFillBrush}"
+                      Data="M 0 0 L 4 4 L 8 0 Z"/>
+            </Grid>
+        </Border>
+        <ControlTemplate.Triggers>
+            <Trigger Property="ToggleButton.IsMouseOver" Value="true">
+                <Setter TargetName="Rectangle" Property="Fill" Value="{DynamicResource ExpanderToggleButtonRectangleFillMouseOverBrush}" />
+            </Trigger>
+            <Trigger Property="IsPressed" Value="true">
+                <Setter TargetName="Border" Property="Background" Value="{DynamicResource ExpanderToggleButtonBorderPressedBackgroundBrush}" />
+            </Trigger>
+            <Trigger Property="IsChecked" Value="true">
+                <Setter TargetName="Arrow" Property="Data" Value="M 0 4 L 4 0 L 8 4 Z" />
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter TargetName="Border" Property="Background" Value="{DynamicResource ExpanderBorderDisabledBackgroundBrush}" />
+                <Setter TargetName="Border" Property="BorderBrush" Value="{DynamicResource ExpanderBorderDisabledBorderBrush}" />
+                <Setter Property="Foreground" Value="{DynamicResource DisabledForegroundBrush}"/>
+                <Setter TargetName="Arrow" Property="Fill" Value="{DynamicResource DisabledForegroundBrush}" />
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <Style x:Key="ExpanderStyle" TargetType="{x:Type Expander}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Expander">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Name="ContentRow" Height="0"/>
+                        </Grid.RowDefinitions>
+                        <Border 
+                                Name="Border" 
+                                Grid.Row="0" 
+                                Background="{DynamicResource ExpanderBorderBackgroundBrush}"
+                                BorderBrush="{DynamicResource ExpanderBorderBorderBrush}"
+                                BorderThickness="1" 
+                                CornerRadius="2,2,0,0" >
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="20" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <ToggleButton
+                                    IsChecked="{Binding Path=IsExpanded,Mode=TwoWay,
+                                                        RelativeSource={RelativeSource TemplatedParent}}"
+                                                        OverridesDefaultStyle="True" 
+                                                        Template="{StaticResource ExpanderToggleButton}" 
+                                                        Background="{DynamicResource ExpanderToggleButtonBackgroundBrush}" />
+                                <ContentPresenter 
+                                    Grid.Column="1"
+                                    Margin="4" 
+                                    ContentSource="Header" 
+                                    RecognizesAccessKey="True" />
+                            </Grid>
+                        </Border>
+                        <Border 
+                                Name="Content" 
+                                Grid.Row="1" 
+                                Background="{DynamicResource ExpanderBorderBackgroundBrush}"
+                                BorderBrush="{DynamicResource ExpanderBorderBorderBrush}" 
+                                BorderThickness="1,0,1,1" 
+                                CornerRadius="0,0,2,2" >
+                            <ContentPresenter Margin="4" />
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsExpanded" Value="True">
+                            <Setter TargetName="ContentRow" Property="Height" Value="{Binding ElementName=Content,Path=DesiredHeight}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="Border" Property="Background" Value="{DynamicResource ExpanderBorderDisabledBackgroundBrush}" />
+                            <Setter TargetName="Border" Property="BorderBrush" Value="{DynamicResource ExpanderBorderDisabledBorderBrush}" />
+                            <Setter Property="Foreground" Value="{DynamicResource DisabledForegroundBrush}"/>
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

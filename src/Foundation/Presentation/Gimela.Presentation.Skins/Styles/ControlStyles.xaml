@@ -1,0 +1,17 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+  <ResourceDictionary.MergedDictionaries>
+    <ResourceDictionary Source="pack://application:,,,/Gimela.Presentation.Skins;component/Fonts/FontFamily.xaml" />
+  </ResourceDictionary.MergedDictionaries>
+
+  <Style TargetType="{x:Type Control}">
+    <Setter Property="FontFamily" Value="{DynamicResource DefaultFontFamily}" />
+  </Style>
+  <Style TargetType="{x:Type Window}">
+    <Setter Property="FontFamily" Value="{DynamicResource DefaultFontFamily}" />
+  </Style>
+  <Style TargetType="{x:Type TextBlock}">
+    <Setter Property="FontFamily" Value="{DynamicResource DefaultFontFamily}" />
+  </Style>
+
+</ResourceDictionary>

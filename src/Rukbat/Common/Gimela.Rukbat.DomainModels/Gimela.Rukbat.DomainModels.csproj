@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{88AE9ACF-52D2-478C-A6EA-82DFEE0D9BF5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Gimela.Rukbat.DomainModels</RootNamespace>
+    <AssemblyName>Gimela.Rukbat.DomainModels</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Gimela.Common.Consts, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Gimela.Common.Logging, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Gimela.Data.Json, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Gimela.Media.Imaging, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Gimela.Media.Utilities, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Gimela.Media.Video, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Gimela.Media.Video.DirectShow, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Gimela.Media.Vision.Motion, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Gimela.Net.Rtp, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Gimela.Net.Sockets, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Media\Factories\CameraFactory.cs" />
+    <Compile Include="Base\BaseObject.cs" />
+    <Compile Include="Base\SystemObject.cs" />
+    <Compile Include="Base\Interfaces\IBaseObject.cs" />
+    <Compile Include="MediaSource\RtpVideoSource.cs" />
+    <Compile Include="MediaAlarm\MediaAlarm.cs" />
+    <Compile Include="Media\EventArgs\CameraAlarmEventArgs.cs" />
+    <Compile Include="Media\EventArgs\CameraStartedEventArgs.cs" />
+    <Compile Include="Media\EventArgs\CameraStoppedEventArgs.cs" />
+    <Compile Include="Media\Interfaces\ICameraDecorator.cs" />
+    <Compile Include="Media\Interfaces\ICamera.cs" />
+    <Compile Include="Media\Interfaces\IFrame.cs" />
+    <Compile Include="Media\Interfaces\IMediaObject.cs" />
+    <Compile Include="Base\Interfaces\ISystemObject.cs" />
+    <Compile Include="Media\DeviceStatus.cs" />
+    <Compile Include="MediaSource\VideoSourceType.cs" />
+    <Compile Include="MediaSource\Resolution.cs" />
+    <Compile Include="MediaSource\VideoFilters\DesktopFilter.cs" />
+    <Compile Include="MediaSource\VideoFilters\CameraFilter.cs" />
+    <Compile Include="MediaService\MediaService.cs" />
+    <Compile Include="Media\Camera.cs" />
+    <Compile Include="Media\MediaObject.cs" />
+    <Compile Include="MediaSource\VideoSourceDescription.cs" />
+    <Compile Include="MediaSource\Factories\VideoSourceFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

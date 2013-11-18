@@ -1,0 +1,258 @@
+﻿<Window x:Class="Gimela.Presentation.Windows.MessageBoxWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:converters="clr-namespace:Gimela.Presentation.Controls.Converters;assembly=Gimela.Presentation.Controls"
+        xmlns:ctrl="clr-namespace:Gimela.Presentation.Controls;assembly=Gimela.Presentation.Controls"
+        xmlns:local="clr-namespace:Gimela.Presentation.Windows"
+        x:Name="window"
+        Title="Message"
+        Width="360"
+        Height="200"
+        AllowsTransparency="True"
+        Background="Transparent"
+        BorderBrush="Transparent"
+        BorderThickness="0"
+        DataContext="{Binding RelativeSource={RelativeSource Self}}"
+        Opacity="0.9"
+        ResizeMode="NoResize"
+        Topmost="True"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None">
+
+  <Window.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/Gimela.Presentation.Skins;component/Styles/ButtonStyles.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Gimela.Presentation.Skins;component/Styles/ToolTipStyles.xaml" />
+        <ResourceDictionary Source="MessageBoxWindowBrushes.xaml" />
+        <ResourceDictionary Source="MessageBoxWindowStyles.xaml" />
+      </ResourceDictionary.MergedDictionaries>
+
+      <converters:StringEmptyToVisibilityConverter x:Key="StringEmptyToVisibilityConverter" />
+      <local:MessageBoxWindowTypeToImageSourceConverter x:Key="MessageBoxWindowTypeToImageSourceConverter" />
+
+    </ResourceDictionary>
+  </Window.Resources>
+
+  <Grid x:Name="grid">
+    <Rectangle x:Name="backgroundRectangle"
+               Fill="{DynamicResource MessageBoxWindowRectangleFillBrush}"
+               Opacity="0.7"
+               RadiusX="4"
+               RadiusY="4"
+               Stroke="{DynamicResource MessageBoxWindowRectangleStrokeBrush}"
+               StrokeThickness="2" />
+
+    <Grid Width="Auto"
+          Height="Auto"
+          Margin="5">
+      <Grid.RowDefinitions>
+        <RowDefinition x:Name="chromeHeaderRow" Height="25" />
+        <RowDefinition Height="120" />
+        <RowDefinition Height="Auto" />
+      </Grid.RowDefinitions>
+
+      <!--  头部标题  -->
+      <Grid x:Name="layoutHeader"
+            Grid.Row="0"
+            MouseLeftButtonDown="OnLayoutHeaderMouseLeftButtonDown">
+        <Border x:Name="chromeBorder"
+                Width="Auto"
+                Height="Auto"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Background="{DynamicResource MessageBoxWindowHeaderChromeBackgroundBrush}"
+                BorderBrush="{DynamicResource MessageBoxWindowHeaderChromeBorderBrush}"
+                BorderThickness="0,0,0,5"
+                CornerRadius="4,4,0,0" />
+        <TextBlock x:Name="textBlockTitle"
+                   Width="Auto"
+                   MaxWidth="300"
+                   Margin="10,0,0,0"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Center"
+                   FontSize="12"
+                   Foreground="{DynamicResource MessageBoxWindowTitleTextBlockForegroundBrush}"
+                   Text="{Binding Title}"
+                   TextTrimming="CharacterEllipsis"
+                   TextWrapping="NoWrap"
+                   ToolTip="{Binding Title}" />
+        <StackPanel x:Name="stackPanelClose"
+                    Width="Auto"
+                    Margin="0,0,10,0"
+                    HorizontalAlignment="Right"
+                    Orientation="Horizontal">
+          <Button x:Name="buttonWindowClose"
+                  Width="15"
+                  Height="15"
+                  Margin="0,0,0,0"
+                  Click="OnButtonWindowCloseClick"
+                  Cursor="Hand"
+                  IsTabStop="False"
+                  Style="{DynamicResource MessageBoxWindowCloseButtonStyle}" />
+        </StackPanel>
+      </Grid>
+
+      <!--  窗体信息  -->
+      <Border x:Name="messageBorder"
+              Grid.Row="1"
+              HorizontalAlignment="Stretch"
+              VerticalAlignment="Stretch"
+              Background="{DynamicResource MessageBoxWindowMessageBorderBackgroundBrush}"
+              BorderBrush="{DynamicResource MessageBoxWindowMessageBorderBorderBrush}"
+              BorderThickness="1,0,1,1"
+              CornerRadius="0,0,4,4"
+              Padding="10,10,5,10">
+        <Grid>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="40" />
+            <ColumnDefinition Width="*" />
+          </Grid.ColumnDefinitions>
+          <Image Grid.Column="0"
+                 VerticalAlignment="Top"
+                 Source="{Binding WindowType,
+                                  Converter={StaticResource MessageBoxWindowTypeToImageSourceConverter}}" />
+          <ScrollViewer x:Name="topScoller"
+                        Grid.Column="1"
+                        HorizontalScrollBarVisibility="Disabled"
+                        VerticalScrollBarVisibility="Auto">
+            <StackPanel Margin="10,10,0,0"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top">
+              <TextBlock x:Name="textBlockMessage"
+                         VerticalAlignment="Top"
+                         FontSize="12"
+                         FontWeight="Normal"
+                         Foreground="{DynamicResource MessageBoxWindowMessageTextBlockForegroundBrush}"
+                         Padding="2,4,2,4"
+                         ScrollViewer.VerticalScrollBarVisibility="Auto"
+                         Text="{Binding Message}"
+                         TextAlignment="Left"
+                         TextWrapping="Wrap" />
+            </StackPanel>
+          </ScrollViewer>
+        </Grid>
+      </Border>
+
+      <!--  详细描述  -->
+      <Grid Grid.Row="2" Margin="0,15,0,10">
+
+        <Expander x:Name="detailExpander"
+                  Collapsed="OnDetailExpanderCollapsed"
+                  Expanded="OnDetailExpanderExpanded"
+                  FontSize="12"
+                  FontWeight="Normal"
+                  Style="{StaticResource DetailExpander}"
+                  Visibility="{Binding Path=Detail,
+                                       Converter={StaticResource StringEmptyToVisibilityConverter}}">
+          <Grid x:Name="detailGrid"
+                Height="195"
+                VerticalAlignment="Stretch">
+            <Grid.RowDefinitions>
+              <RowDefinition />
+              <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Border Grid.Row="0"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Stretch"
+                    Background="{DynamicResource MessageBoxWindowDetailBorderBackgroundBrush}"
+                    BorderBrush="{DynamicResource MessageBoxWindowDetailBorderBorderBrush}"
+                    BorderThickness="1"
+                    CornerRadius="4">
+              <ScrollViewer x:Name="bottomScroller"
+                            Margin="5"
+                            HorizontalScrollBarVisibility="Disabled"
+                            Padding="4,2,4,2"
+                            VerticalScrollBarVisibility="Auto">
+                <StackPanel>
+                  <TextBlock FontSize="12"
+                             FontWeight="Normal"
+                             Foreground="{DynamicResource MessageBoxWindowDetailTextBlockForegroundBrush}"
+                             ScrollViewer.VerticalScrollBarVisibility="Auto"
+                             Text="{Binding Detail}"
+                             TextAlignment="Left"
+                             TextWrapping="Wrap" />
+                </StackPanel>
+              </ScrollViewer>
+            </Border>
+            <Button x:Name="copyButton"
+                    Grid.Row="1"
+                    Width="150"
+                    Height="23"
+                    Margin="10,6,5,3"
+                    HorizontalAlignment="Right"
+                    Click="OnCopyButtonClick"
+                    Content="{DynamicResource Presentation_Windows_MessageBoxWindow_CopyToClipboard}"
+                    Cursor="Hand"
+                    IsDefault="True"
+                    Style="{StaticResource ButtonStyle}" />
+          </Grid>
+        </Expander>
+
+        <Button x:Name="OkButton"
+                Height="23"
+                Margin="10,0,5,0"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Top"
+                Click="OnOkButtonClick"
+                Content="{DynamicResource Common_Button_OK}"
+                Cursor="Hand"
+                IsDefault="True"
+                Style="{StaticResource ButtonStyle}" />
+
+        <StackPanel x:Name="OkCancelButtons"
+                    Margin="0,0,0,0"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Top"
+                    Orientation="Horizontal"
+                    Visibility="Collapsed">
+          <Button x:Name="ButtonOk"
+                  Height="23"
+                  Margin="10,0,5,0"
+                  VerticalAlignment="Top"
+                  Click="OnOkButtonClick"
+                  Content="{DynamicResource Common_Button_OK}"
+                  Cursor="Hand"
+                  IsDefault="True"
+                  Style="{StaticResource ButtonStyle}" />
+          <Button x:Name="ButtonCancel"
+                  Height="23"
+                  Margin="5,0,5,0"
+                  VerticalAlignment="Top"
+                  Click="OnNoButtonClick"
+                  Content="{DynamicResource Common_Button_Cancel}"
+                  Cursor="Hand"
+                  IsDefault="True"
+                  Style="{StaticResource ButtonStyle}" />
+        </StackPanel>
+
+        <StackPanel x:Name="YesNoButtons"
+                    Margin="0,0,0,0"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Top"
+                    Orientation="Horizontal"
+                    Visibility="Collapsed">
+          <Button x:Name="ButtonYes"
+                  Height="23"
+                  Margin="10,0,5,0"
+                  VerticalAlignment="Top"
+                  Click="OnOkButtonClick"
+                  Content="{DynamicResource Common_Button_Yes}"
+                  Cursor="Hand"
+                  IsDefault="True"
+                  Style="{StaticResource ButtonStyle}" />
+          <Button x:Name="ButtonNo"
+                  Height="23"
+                  Margin="5,0,5,0"
+                  VerticalAlignment="Top"
+                  Click="OnNoButtonClick"
+                  Content="{DynamicResource Common_Button_No}"
+                  Cursor="Hand"
+                  IsDefault="True"
+                  Style="{StaticResource ButtonStyle}" />
+        </StackPanel>
+
+      </Grid>
+    </Grid>
+  </Grid>
+</Window>

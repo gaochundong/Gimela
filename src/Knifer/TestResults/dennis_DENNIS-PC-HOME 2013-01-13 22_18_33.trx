@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="0506d3de-fc99-4246-86b0-5edeec64c731" name="dennis@DENNIS-PC-HOME 2013-01-13 22:18:33" runUser="dennis-pc-home\dennis" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="3bf05aaf-919d-4aad-9469-e9f8513d61a6">
+    <Deployment runDeploymentRoot="dennis_DENNIS-PC-HOME 2013-01-13 22_18_33">
+      <DeploymentItem filename="C:\Gimela\Knifer-master\Bin\Debug\Gimela.Knifer.CommandLines.Foundation.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2013-01-13T22:18:33.6595937+08:00" queuing="2013-01-13T22:18:35.2976874+08:00" start="2013-01-13T22:18:35.4316951+08:00" finish="2013-01-13T22:18:36.5117568+08:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="30" executed="30" passed="30" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="Parse06Test" storage="c:\gimela\knifer-master\gimela.knifer.commandlines.foundation.unittest\bin\debug\gimela.knifer.commandlines.foundation.unittest.dll" id="ca3a207f-0359-10d3-575b-ef51b264b923">
+      <Execution id="b0052c35-8d5d-4784-9688-59dbf903caff" />
+      <TestMethod codeBase="C:/Gimela/Knifer-master/Gimela.Knifer.CommandLines.Foundation.UnitTest/bin/Debug/Gimela.Knifer.CommandLines.Foundation.UnitTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Gimela.Knifer.CommandLines.Foundation.UnitTest.CommandLineParserTest, Gimela.Knifer.CommandLines.Foundation.UnitTest, Version=1.5.8.0, Culture=neutral, PublicKeyToken=null" name="Parse06Test" />
+    </UnitTest>
+    <UnitTest name="Parse02Test" storage="c:\gimela\knifer-master\gimela.knifer.commandlines.foundation.unittest\bin\debug\gimela.knifer.commandlines.foundation.unittest.dll" id="ab992873-948e-ce94-cb3c-04b8cb7e6ccd">
+      <Execution id="100717b0-28d3-42b8-a77f-ebb600fdafe1" />
+      <TestMethod codeBase="C:/Gimela/Knifer-master/Gimela.Knifer.CommandLines.Foundation.UnitTest/bin/Debug/Gimela.Knifer.CommandLines.Foundation.UnitTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Gimela.Knifer.CommandLines.Foundation.UnitTest.CommandLineParserTest, Gimela.Knifer.CommandLines.Foundation.UnitTest, Version=1.5.8.0, Culture=neutral, PublicKeyToken=null" name="Parse02Test" />
+    </UnitTest>
+    <UnitTest name="NextToken02Test" storage="c:\gimela\knifer-master\gimela.knifer.commandlines.foundation.unittest\bin\debug\gimela.knifer.commandlines.foundation.unittest.dll" id="edee48e3-860f-1a22-3bd0-dea06ab3ba4b">
+      <DeploymentItems>
+        <DeploymentItem filename="Gimela.Knifer.CommandLines.Foundation.dll" />
+      </DeploymentItems>
+      <Execution id="f429bf85-4df4-4c79-85a9-54b8e86aa994" />
+      <TestMethod codeBase="C:/Gimela/Knifer-master/Gimela.Knifer.CommandLines.Foundation.UnitTest/bin/Debug/Gimela.Knifer.CommandLines.Foundation.UnitTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Gimela.Knifer.CommandLines.Foundation.UnitTest.CommandLineParserTest, Gimela.Knifer.CommandLines.Foundation.UnitTest, Version=1.5.8.0, Culture=neutral, PublicKeyToken=null" name="NextToken02Test" />
+    </UnitTest>
+    <UnitTest name="IsArgument03Test" storage="c:\gimela\knifer-master\gimela.knifer.commandlines.foundation.unittest\bin\debug\gimela.knifer.commandlines.foundation.unittest.dll" id="ab57c92d-dc1d-e744-5fd3-37c10cf2f40c">
+      <DeploymentItems>
+        <DeploymentItem filename="Gimela.Knifer.CommandLines.Foundation.dll" />
+      </DeploymentItems>
+      <Execution id="c6d6cbd0-fabd-4c47-bca6-aef15c915c04" />
+      <TestMethod codeBase="C:/Gimela/Knifer-master/Gimela.Knifer.CommandLines.Foundation.UnitTest/bin/Debug/Gimela.Knifer.CommandLines.Foundation.UnitTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Gimela.Knifer.CommandLines.Foundation.UnitTest.CommandLineParserTest, Gimela.Knifer.CommandLines.Foundation.UnitTest, Version=1.5.8.0, Culture=neutral, PublicKeyToken=null" name="IsArgument03Test" />
+    </UnitTest>
+    <UnitTest name="Parse21Test" storage="c:\gimela\knifer-master\gimela.knifer.commandlines.foundation.unittest\bin\debug\gimela.knifer.commandlines.foundation.unittest.dll" id="8c12a687-bd6d-5896-cecf-31d4487232fa">
+      <Execution id="f19ecf6a-b15f-40aa-8d51-4350bf2510b3" />
+      <TestMethod codeBase="C:/Gimela/Knifer-master/Gimela.Knifer.CommandLines.Foundation.UnitTest/bin/Debug/Gimela.Knifer.CommandLines.Foundation.UnitTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Gimela.Knifer.CommandLines.Foundation.UnitTest.CommandLineParserTest, Gimela.Knifer.CommandLines.Foundation.UnitTest, Version=1.5.8.0, Culture=neutral, PublicKeyToken=null" name="Parse21Test" />
+    </UnitTest>
+    <UnitTest name="Parse05Test" storage="c:\gimela\knifer-master\gimela.knifer.commandlines.foundation.unittest\bin\debug\gimela.knifer.commandlines.foundation.unittest.dll" id="e34fe3fd-48e4-29d9-e0fb-8d4ced29091f">
+      <Execution id="a58d4b09-f728-40bc-8fc5-72b01998385a" />
+      <TestMethod codeBase="C:/Gimela/Knifer-master/Gimela.Knifer.CommandLines.Foundation.UnitTest/bin/Debug/Gimela.Knifer.CommandLines.Foundation.UnitTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Gimela.Knifer.CommandLines.Foundation.UnitTest.CommandLineParserTest, Gimela.Knifer.CommandLines.Foundation.UnitTest, Version=1.5.8.0, Culture=neutral, PublicKeyToken=null" name="Parse05Test" />
+    </UnitTest>
+    <UnitTest name="NextToken01Test" storage="c:\gimela\knifer-master\gimela.knifer.commandlines.foundation.unittest\bin\debug\gimela.knifer.commandlines.foundation.unittest.dll" id="7f1df0fe-d1c5-6b61-0abe-22731de9c164">
+      <DeploymentItems>
+        <DeploymentItem filename="Gimela.Knifer.CommandLines.Foundation.dll" />
+      </DeploymentItems>
+      <Execution id="a6922705-cccf-4fc8-8676-9437285f150d" />
+      <TestMethod codeBase="C:/Gimela/Knifer-master/Gimela.Knifer.CommandLines.Foundation.UnitTest/bin/Debug/Gimela.Knifer.CommandLines.Foundation.UnitTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Gimela.Knifer.CommandLines.Foundation.UnitTest.CommandLineParserTest, Gimela.Knifer.CommandLines.Foundation.UnitTest, Version=1.5.8.0, Culture=neutral, PublicKeyToken=null" name="NextToken01Test" />
+    </UnitTest>
+    <UnitTest name="Parse16Test" storage="c:\gimela\knifer-master\gimela.knifer.commandlines.foundation.unittest\bin\debug\gimela.knifer.commandlines.foundation.unittest.dll" id="94c1541e-10bd-72ab-6aeb-6deea7e686b1">
+      <Execution id="31322963-28db-4f03-96f5-ae442abfac5d" />
+      <TestMethod codeBase="C:/Gimela/Knifer-master/Gimela.Knifer.CommandLines.Foundation.UnitTest/bin/Debug/Gimela.Knifer.CommandLines.Foundation.UnitTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Gimela.Knifer.CommandLines.Foundation.UnitTest.CommandLineParserTest, Gimela.Knifer.CommandLines.Foundation.UnitTest, Version=1.5.8.0, Culture=neutral, PublicKeyToken=null" name="Parse16Test" />
+    </UnitTest>
+    <UnitTest name="Parse03Test" storage="c:\gimela\knifer-master\gimela.knifer.commandlines.foundation.unittest\bin\debug\gimela.knifer.commandlines.foundation.unittest.dll" id="0c526c3c-868b-6695-1a9e-8ea893da2f7e">
+      <Execution id="c35ca72a-8369-411d-b1cc-7c8b6a10cb22" />
+      <TestMethod codeBase="C:/Gimela/Knifer-master/Gimela.Knifer.CommandLines.Foundation.UnitTest/bin/Debug/Gimela.Knifer.CommandLines.Foundation.UnitTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Gimela.Knifer.CommandLines.Foundation.UnitTest.CommandLineParserTest, Gimela.Knifer.CommandLines.Foundation.UnitTest, Version=1.5.8.0, Culture=neutral, PublicKeyToken=null" name="Parse03Test" />
+    </UnitTest>
+    <UnitTest name="Parse14Test" storage="c:\gimela\knifer-master\gimela.knifer.commandlines.foundation.unittest\bin\debug\gimela.knifer.commandlines.foundation.unittest.dll" id="e4a30699-a5c6-93bd-3c98-bdc3ae239be9">
+      <Execution id="c556e5f0-b902-4be0-8e55-411f4e2cd37c" />
+      <TestMethod codeBase="C:/Gimela/Knifer-master/Gimela.Knifer.CommandLines.Foundation.UnitTest/bin/Debug/Gimela.Knifer.CommandLines.Foundation.UnitTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Gimela.Knifer.CommandLines.Foundation.UnitTest.CommandLineParserTest, Gimela.Knifer.CommandLines.Foundation.UnitTest, Version=1.5.8.0, Culture=neutral, PublicKeyToken=null" name="Parse14Test" />
+    </UnitTest>
+    <UnitTest name="Parse04Test" storage="c:\gimela\knifer-master\gimela.knifer.commandlines.foundation.unittest\bin\debug\gimela.knifer.commandlines.foundation.unittest.dll" id="df6af24d-052d-e8dd-fa7d-71faaa653e17">
+      <Execution id="a3616dc9-f777-42e0-847e-e72562c6e6fd" />
+      <TestMethod codeBase="C:/Gimela/Knifer-master/Gimela.Knifer.CommandLines.Foundation.UnitTest/bin/Debug/Gimela.Knifer.CommandLines.Foundation.UnitTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Gimela.Knifer.CommandLines.Foundation.UnitTest.CommandLineParserTest, Gimela.Knifer.CommandLines.Foundation.UnitTest, Version=1.5.8.0, Culture=neutral, PublicKeyToken=null" name="Parse04Test" />
+    </UnitTest>
+    <UnitTest name="Parse17Test" storage="c:\gimela\knifer-master\gimela.knifer.commandlines.foundation.unittest\bin\debug\gimela.knifer.commandlines.foundation.unittest.dll" id="f8c87e4a-a814-11f0-222e-761635cfe756">
+      <Execution id="ae813c5c-eb3b-49c5-a2ca-043a42c3f7b3" />
+      <TestMethod codeBase="C:/Gimela/Knifer-master/Gimela.Knifer.CommandLines.Foundation.UnitTest/bin/Debug/Gimela.Knifer.CommandLines.Foundation.UnitTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Gimela.Knifer.CommandLines.Foundation.UnitTest.CommandLineParserTest, Gimela.Knifer.CommandLines.Foundation.UnitTest, Version=1.5.8.0, Culture=neutral, PublicKeyToken=null" name="Parse17Test" />
+    </UnitTest>
+    <UnitTest name="Parse00Test" storage="c:\gimela\knifer-master\gimela.knifer.commandlines.foundation.unittest\bin\debug\gimela.knifer.commandlines.foundation.unittest.dll" id="a6426be6-25db-d157-8dfd-ea08c7bf76c8">
+      <Execution id="4298507a-c9f9-4088-9e60-e6831d6abf2e" />
+      <TestMethod codeBase="C:/Gimela/Knifer-master/Gimela.Knifer.CommandLines.Foundation.UnitTest/bin/Debug/Gimela.Knifer.CommandLines.Foundation.UnitTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Gimela.Knifer.CommandLines.Foundation.UnitTest.CommandLineParserTest, Gimela.Knifer.CommandLines.Foundation.UnitTest, Version=1.5.8.0, Culture=neutral, PublicKeyToken=null" name="Parse00Test" />
+    </UnitTest>
+    <UnitTest name="Parse15Test" storage="c:\gimela\knifer-master\gimela.knifer.commandlines.foundation.unittest\bin\debug\gimela.knifer.commandlines.foundation.unittest.dll" id="14827c8c-c681-e869-837f-73c52350aa31">
+      <Execution id="f4987b8e-f0d0-41e3-9de3-5d058b032b8b" />
+      <TestMethod codeBase="C:/Gimela/Knifer-master/Gimela.Knifer.CommandLines.Foundation.UnitTest/bin/Debug/Gimela.Knifer.CommandLines.Foundation.UnitTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Gimela.Knifer.CommandLines.Foundation.UnitTest.CommandLineParserTest, Gimela.Knifer.CommandLines.Foundation.UnitTest, Version=1.5.8.0, Culture=neutral, PublicKeyToken=null" name="Parse15Test" />
+    </UnitTest>
+    <UnitTest name="Parse12Test" storage="c:\gimela\knifer-master\gimela.knifer.commandlines.foundation.unittest\bin\debug\gimela.knifer.commandlines.foundation.unittest.dll" id="ffb9dbc3-82ab-0a6b-70db-2e9b02f7e49a">
+      <Execution id="d8d4d2a4-282c-47a4-b075-61cb182f1e0c" />
+      <TestMethod codeBase="C:/Gimela/Knifer-master/Gimela.Knifer.CommandLines.Foundation.UnitTest/bin/Debug/Gimela.Knifer.CommandLines.Foundation.UnitTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Gimela.Knifer.CommandLines.Foundation.UnitTest.CommandLineParserTest, Gimela.Knifer.CommandLines.Foundation.UnitTest, Version=1.5.8.0, Culture=neutral, PublicKeyToken=null" name="Parse12Test" />
+    </UnitTest>
+    <UnitTest name="Parse20Test" storage="c:\gimela\knifer-master\gimela.knifer.commandlines.foundation.unittest\bin\debug\gimela.knifer.commandlines.foundation.unittest.dll" id="ba28037e-049b-a848-8adc-d6772d958dae">
+      <Execution id="e884becc-61f8-4659-a86f-8cf8de7bf7da" />
+      <TestMethod codeBase="C:/Gimela/Knifer-master/Gimela.Knifer.CommandLines.Foundation.UnitTest/bin/Debug/Gimela.Knifer.CommandLines.Foundation.UnitTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Gimela.Knifer.CommandLines.Foundation.UnitTest.CommandLineParserTest, Gimela.Knifer.CommandLines.Foundation.UnitTest, Version=1.5.8.0, Culture=neutral, PublicKeyToken=null" name="Parse20Test" />
+    </UnitTest>
+    <UnitTest name="Parse11Test" storage="c:\gimela\knifer-master\gimela.knifer.commandlines.foundation.unittest\bin\debug\gimela.knifer.commandlines.foundation.unittest.dll" id="d05245df-e7a2-6eb7-fe94-37f38c9116d4">
+      <Execution id="442e5b3d-76f1-41ef-b934-e1f6463cf15e" />
+      <TestMethod codeBase="C:/Gimela/Knifer-master/Gimela.Knifer.CommandLines.Foundation.UnitTest/bin/Debug/Gimela.Knifer.CommandLines.Foundation.UnitTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Gimela.Knifer.CommandLines.Foundation.UnitTest.CommandLineParserTest, Gimela.Knifer.CommandLines.Foundation.UnitTest, Version=1.5.8.0, Culture=neutral, PublicKeyToken=null" name="Parse11Test" />
+    </UnitTest>
+    <UnitTest name="Parse01Test" storage="c:\gimela\knifer-master\gimela.knifer.commandlines.foundation.unittest\bin\debug\gimela.knifer.commandlines.foundation.unittest.dll" id="e80d0041-ef44-1cf3-790d-1e6352fc0457">
+      <Execution id="4f871d8f-bbbd-4b9e-8c1c-cd3eb55668f7" />
+      <TestMethod codeBase="C:/Gimela/Knifer-master/Gimela.Knifer.CommandLines.Foundation.UnitTest/bin/Debug/Gimela.Knifer.CommandLines.Foundation.UnitTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Gimela.Knifer.CommandLines.Foundation.UnitTest.CommandLineParserTest, Gimela.Knifer.CommandLines.Foundation.UnitTest, Version=1.5.8.0, Culture=neutral, PublicKeyToken=null" name="Parse01Test" />
+    </UnitTest>
+    <UnitTest name="Parse18Test" storage="c:\gimela\knifer-master\gimela.knifer.commandlines.foundation.unittest\bin\debug\gimela.knifer.commandlines.foundation.unittest.dll" id="371dd09f-9706-6e72-0055-dcbea6b74303">
+      <Execution id="a3a84096-0186-4442-a2a9-9d9c3b3fc0d2" />
+      <TestMethod codeBase="C:/Gimela/Knifer-master/Gimela.Knifer.CommandLines.Foundation.UnitTest/bin/Debug/Gimela.Knifer.CommandLines.Foundation.UnitTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Gimela.Knifer.CommandLines.Foundation.UnitTest.CommandLineParserTest, Gimela.Knifer.CommandLines.Foundation.UnitTest, Version=1.5.8.0, Culture=neutral, PublicKeyToken=null" name="Parse18Test" />
+    </UnitTest>
+    <UnitTest name="Parse07Test" storage="c:\gimela\knifer-master\gimela.knifer.commandlines.foundation.unittest\bin\debug\gimela.knifer.commandlines.foundation.unittest.dll" id="4faedf8c-7906-bea4-e1e6-f447bdd14d68">
+      <Execution id="338f75d1-2917-41fe-8cbe-218311891fcc" />
+      <TestMethod codeBase="C:/Gimela/Knifer-master/Gimela.Knifer.CommandLines.Foundation.UnitTest/bin/Debug/Gimela.Knifer.CommandLines.Foundation.UnitTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Gimela.Knifer.CommandLines.Foundation.UnitTest.CommandLineParserTest, Gimela.Knifer.CommandLines.Foundation.UnitTest, Version=1.5.8.0, Culture=neutral, PublicKeyToken=null" name="Parse07Test" />
+    </UnitTest>
+    <UnitTest name="Parse10Test" storage="c:\gimela\knifer-master\gimela.knifer.commandlines.foundation.unittest\bin\debug\gimela.knifer.commandlines.foundation.unittest.dll" id="45f95485-c4a1-343d-e368-5e57350139a6">
+      <Execution id="6cb97422-c4b1-4b14-a5dc-996703f81f98" />
+      <TestMethod codeBase="C:/Gimela/Knifer-master/Gimela.Knifer.CommandLines.Foundation.UnitTest/bin/Debug/Gimela.Knifer.CommandLines.Foundation.UnitTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Gimela.Knifer.CommandLines.Foundation.UnitTest.CommandLineParserTest, Gimela.Knifer.CommandLines.Foundation.UnitTest, Version=1.5.8.0, Culture=neutral, PublicKeyToken=null" name="Parse10Test" />
+    </UnitTest>
+    <UnitTest name="Parse08Test" storage="c:\gimela\knifer-master\gimela.knifer.commandlines.foundation.unittest\bin\debug\gimela.knifer.commandlines.foundation.unittest.dll" id="343fbae5-8973-f155-cd0d-cca6c4285774">
+      <Execution id="62a49dc6-a0c2-472c-9c0a-bbd188f140b0" />
+      <TestMethod codeBase="C:/Gimela/Knifer-master/Gimela.Knifer.CommandLines.Foundation.UnitTest/bin/Debug/Gimela.Knifer.CommandLines.Foundation.UnitTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Gimela.Knifer.CommandLines.Foundation.UnitTest.CommandLineParserTest, Gimela.Knifer.CommandLines.Foundation.UnitTest, Version=1.5.8.0, Culture=neutral, PublicKeyToken=null" name="Parse08Test" />
+    </UnitTest>
+    <UnitTest name="NextToken04Test" storage="c:\gimela\knifer-master\gimela.knifer.commandlines.foundation.unittest\bin\debug\gimela.knifer.commandlines.foundation.unittest.dll" id="03368426-6f61-4072-2d19-7237379455ff">
+      <DeploymentItems>
+        <DeploymentItem filename="Gimela.Knifer.CommandLines.Foundation.dll" />
+      </DeploymentItems>
+      <Execution id="0d35d3ab-0936-41cb-8fd1-8f0b2ab308de" />
+      <TestMethod codeBase="C:/Gimela/Knifer-master/Gimela.Knifer.CommandLines.Foundation.UnitTest/bin/Debug/Gimela.Knifer.CommandLines.Foundation.UnitTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Gimela.Knifer.CommandLines.Foundation.UnitTest.CommandLineParserTest, Gimela.Knifer.CommandLines.Foundation.UnitTest, Version=1.5.8.0, Culture=neutral, PublicKeyToken=null" name="NextToken04Test" />
+    </UnitTest>
+    <UnitTest name="IsArgument02Test" storage="c:\gimela\knifer-master\gimela.knifer.commandlines.foundation.unittest\bin\debug\gimela.knifer.commandlines.foundation.unittest.dll" id="0578b747-fe69-f2fa-6547-d84c57949fba">
+      <DeploymentItems>
+        <DeploymentItem filename="Gimela.Knifer.CommandLines.Foundation.dll" />
+      </DeploymentItems>
+      <Execution id="67f95a4c-0a4b-48aa-9212-ee1e17e1abd4" />
+      <TestMethod codeBase="C:/Gimela/Knifer-master/Gimela.Knifer.CommandLines.Foundation.UnitTest/bin/Debug/Gimela.Knifer.CommandLines.Foundation.UnitTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Gimela.Knifer.CommandLines.Foundation.UnitTest.CommandLineParserTest, Gimela.Knifer.CommandLines.Foundation.UnitTest, Version=1.5.8.0, Culture=neutral, PublicKeyToken=null" name="IsArgument02Test" />
+    </UnitTest>
+    <UnitTest name="Parse19Test" storage="c:\gimela\knifer-master\gimela.knifer.commandlines.foundation.unittest\bin\debug\gimela.knifer.commandlines.foundation.unittest.dll" id="65c8b707-e746-cdca-0808-8fbb2369d75c">
+      <Execution id="1ea6e41e-5668-44d9-9cc8-a4ce6ddd98ed" />
+      <TestMethod codeBase="C:/Gimela/Knifer-master/Gimela.Knifer.CommandLines.Foundation.UnitTest/bin/Debug/Gimela.Knifer.CommandLines.Foundation.UnitTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Gimela.Knifer.CommandLines.Foundation.UnitTest.CommandLineParserTest, Gimela.Knifer.CommandLines.Foundation.UnitTest, Version=1.5.8.0, Culture=neutral, PublicKeyToken=null" name="Parse19Test" />
+    </UnitTest>
+    <UnitTest name="Parse09Test" storage="c:\gimela\knifer-master\gimela.knifer.commandlines.foundation.unittest\bin\debug\gimela.knifer.commandlines.foundation.unittest.dll" id="edccd561-c25e-f273-95e9-9732d2607450">
+      <Execution id="4c5c9459-77aa-420d-b312-77e36c67152f" />
+      <TestMethod codeBase="C:/Gimela/Knifer-master/Gimela.Knifer.CommandLines.Foundation.UnitTest/bin/Debug/Gimela.Knifer.CommandLines.Foundation.UnitTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Gimela.Knifer.CommandLines.Foundation.UnitTest.CommandLineParserTest, Gimela.Knifer.CommandLines.Foundation.UnitTest, Version=1.5.8.0, Culture=neutral, PublicKeyToken=null" name="Parse09Test" />
+    </UnitTest>
+    <UnitTest name="Parse13Test" storage="c:\gimela\knifer-master\gimela.knifer.commandlines.foundation.unittest\bin\debug\gimela.knifer.commandlines.foundation.unittest.dll" id="6ba5acf2-069f-f5dc-0a6c-a52b92a26698">
+      <Execution id="c20a18dc-826a-420c-b9fe-23996f922046" />
+      <TestMethod codeBase="C:/Gimela/Knifer-master/Gimela.Knifer.CommandLines.Foundation.UnitTest/bin/Debug/Gimela.Knifer.CommandLines.Foundation.UnitTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Gimela.Knifer.CommandLines.Foundation.UnitTest.CommandLineParserTest, Gimela.Knifer.CommandLines.Foundation.UnitTest, Version=1.5.8.0, Culture=neutral, PublicKeyToken=null" name="Parse13Test" />
+    </UnitTest>
+    <UnitTest name="NextToken05Test" storage="c:\gimela\knifer-master\gimela.knifer.commandlines.foundation.unittest\bin\debug\gimela.knifer.commandlines.foundation.unittest.dll" id="965df0f7-2c0d-8c01-a300-65af5415938b">
+      <DeploymentItems>
+        <DeploymentItem filename="Gimela.Knifer.CommandLines.Foundation.dll" />
+      </DeploymentItems>
+      <Execution id="6df3443b-4251-44a9-a8f7-3fdcb9dbc76e" />
+      <TestMethod codeBase="C:/Gimela/Knifer-master/Gimela.Knifer.CommandLines.Foundation.UnitTest/bin/Debug/Gimela.Knifer.CommandLines.Foundation.UnitTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Gimela.Knifer.CommandLines.Foundation.UnitTest.CommandLineParserTest, Gimela.Knifer.CommandLines.Foundation.UnitTest, Version=1.5.8.0, Culture=neutral, PublicKeyToken=null" name="NextToken05Test" />
+    </UnitTest>
+    <UnitTest name="IsArgument01Test" storage="c:\gimela\knifer-master\gimela.knifer.commandlines.foundation.unittest\bin\debug\gimela.knifer.commandlines.foundation.unittest.dll" id="35e90754-98d1-60d3-374f-41b3660769cc">
+      <DeploymentItems>
+        <DeploymentItem filename="Gimela.Knifer.CommandLines.Foundation.dll" />
+      </DeploymentItems>
+      <Execution id="37923ad5-f8d2-4417-88b7-9327d3e21670" />
+      <TestMethod codeBase="C:/Gimela/Knifer-master/Gimela.Knifer.CommandLines.Foundation.UnitTest/bin/Debug/Gimela.Knifer.CommandLines.Foundation.UnitTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Gimela.Knifer.CommandLines.Foundation.UnitTest.CommandLineParserTest, Gimela.Knifer.CommandLines.Foundation.UnitTest, Version=1.5.8.0, Culture=neutral, PublicKeyToken=null" name="IsArgument01Test" />
+    </UnitTest>
+    <UnitTest name="NextToken03Test" storage="c:\gimela\knifer-master\gimela.knifer.commandlines.foundation.unittest\bin\debug\gimela.knifer.commandlines.foundation.unittest.dll" id="e8a44131-edbf-c2e5-497c-3e4bc8b2b07f">
+      <DeploymentItems>
+        <DeploymentItem filename="Gimela.Knifer.CommandLines.Foundation.dll" />
+      </DeploymentItems>
+      <Execution id="1befb1ab-f1c3-4d5c-b7da-f5d6789377b5" />
+      <TestMethod codeBase="C:/Gimela/Knifer-master/Gimela.Knifer.CommandLines.Foundation.UnitTest/bin/Debug/Gimela.Knifer.CommandLines.Foundation.UnitTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Gimela.Knifer.CommandLines.Foundation.UnitTest.CommandLineParserTest, Gimela.Knifer.CommandLines.Foundation.UnitTest, Version=1.5.8.0, Culture=neutral, PublicKeyToken=null" name="NextToken03Test" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="03368426-6f61-4072-2d19-7237379455ff" executionId="0d35d3ab-0936-41cb-8fd1-8f0b2ab308de" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0578b747-fe69-f2fa-6547-d84c57949fba" executionId="67f95a4c-0a4b-48aa-9212-ee1e17e1abd4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0c526c3c-868b-6695-1a9e-8ea893da2f7e" executionId="c35ca72a-8369-411d-b1cc-7c8b6a10cb22" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="14827c8c-c681-e869-837f-73c52350aa31" executionId="f4987b8e-f0d0-41e3-9de3-5d058b032b8b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="343fbae5-8973-f155-cd0d-cca6c4285774" executionId="62a49dc6-a0c2-472c-9c0a-bbd188f140b0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="35e90754-98d1-60d3-374f-41b3660769cc" executionId="37923ad5-f8d2-4417-88b7-9327d3e21670" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="371dd09f-9706-6e72-0055-dcbea6b74303" executionId="a3a84096-0186-4442-a2a9-9d9c3b3fc0d2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="45f95485-c4a1-343d-e368-5e57350139a6" executionId="6cb97422-c4b1-4b14-a5dc-996703f81f98" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4faedf8c-7906-bea4-e1e6-f447bdd14d68" executionId="338f75d1-2917-41fe-8cbe-218311891fcc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="65c8b707-e746-cdca-0808-8fbb2369d75c" executionId="1ea6e41e-5668-44d9-9cc8-a4ce6ddd98ed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6ba5acf2-069f-f5dc-0a6c-a52b92a26698" executionId="c20a18dc-826a-420c-b9fe-23996f922046" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7f1df0fe-d1c5-6b61-0abe-22731de9c164" executionId="a6922705-cccf-4fc8-8676-9437285f150d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8c12a687-bd6d-5896-cecf-31d4487232fa" executionId="f19ecf6a-b15f-40aa-8d51-4350bf2510b3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="94c1541e-10bd-72ab-6aeb-6deea7e686b1" executionId="31322963-28db-4f03-96f5-ae442abfac5d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="965df0f7-2c0d-8c01-a300-65af5415938b" executionId="6df3443b-4251-44a9-a8f7-3fdcb9dbc76e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a6426be6-25db-d157-8dfd-ea08c7bf76c8" executionId="4298507a-c9f9-4088-9e60-e6831d6abf2e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ab57c92d-dc1d-e744-5fd3-37c10cf2f40c" executionId="c6d6cbd0-fabd-4c47-bca6-aef15c915c04" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ab992873-948e-ce94-cb3c-04b8cb7e6ccd" executionId="100717b0-28d3-42b8-a77f-ebb600fdafe1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ba28037e-049b-a848-8adc-d6772d958dae" executionId="e884becc-61f8-4659-a86f-8cf8de7bf7da" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ca3a207f-0359-10d3-575b-ef51b264b923" executionId="b0052c35-8d5d-4784-9688-59dbf903caff" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d05245df-e7a2-6eb7-fe94-37f38c9116d4" executionId="442e5b3d-76f1-41ef-b934-e1f6463cf15e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="df6af24d-052d-e8dd-fa7d-71faaa653e17" executionId="a3616dc9-f777-42e0-847e-e72562c6e6fd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e34fe3fd-48e4-29d9-e0fb-8d4ced29091f" executionId="a58d4b09-f728-40bc-8fc5-72b01998385a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e4a30699-a5c6-93bd-3c98-bdc3ae239be9" executionId="c556e5f0-b902-4be0-8e55-411f4e2cd37c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e80d0041-ef44-1cf3-790d-1e6352fc0457" executionId="4f871d8f-bbbd-4b9e-8c1c-cd3eb55668f7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e8a44131-edbf-c2e5-497c-3e4bc8b2b07f" executionId="1befb1ab-f1c3-4d5c-b7da-f5d6789377b5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="edccd561-c25e-f273-95e9-9732d2607450" executionId="4c5c9459-77aa-420d-b312-77e36c67152f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="edee48e3-860f-1a22-3bd0-dea06ab3ba4b" executionId="f429bf85-4df4-4c79-85a9-54b8e86aa994" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f8c87e4a-a814-11f0-222e-761635cfe756" executionId="ae813c5c-eb3b-49c5-a2ca-043a42c3f7b3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ffb9dbc3-82ab-0a6b-70db-2e9b02f7e49a" executionId="d8d4d2a4-282c-47a4-b075-61cb182f1e0c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="0d35d3ab-0936-41cb-8fd1-8f0b2ab308de" testId="03368426-6f61-4072-2d19-7237379455ff" testName="NextToken04Test" computerName="DENNIS-PC-HOME" duration="00:00:00.0270296" startTime="2013-01-13T22:18:35.5217002+08:00" endTime="2013-01-13T22:18:36.0027277+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0d35d3ab-0936-41cb-8fd1-8f0b2ab308de">
+    </UnitTestResult>
+    <UnitTestResult executionId="67f95a4c-0a4b-48aa-9212-ee1e17e1abd4" testId="0578b747-fe69-f2fa-6547-d84c57949fba" testName="IsArgument02Test" computerName="DENNIS-PC-HOME" duration="00:00:00.0012434" startTime="2013-01-13T22:18:36.0127283+08:00" endTime="2013-01-13T22:18:36.0237289+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="67f95a4c-0a4b-48aa-9212-ee1e17e1abd4">
+    </UnitTestResult>
+    <UnitTestResult executionId="c35ca72a-8369-411d-b1cc-7c8b6a10cb22" testId="0c526c3c-868b-6695-1a9e-8ea893da2f7e" testName="Parse03Test" computerName="DENNIS-PC-HOME" duration="00:00:00.0033442" startTime="2013-01-13T22:18:36.0317294+08:00" endTime="2013-01-13T22:18:36.0467302+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c35ca72a-8369-411d-b1cc-7c8b6a10cb22">
+    </UnitTestResult>
+    <UnitTestResult executionId="f4987b8e-f0d0-41e3-9de3-5d058b032b8b" testId="14827c8c-c681-e869-837f-73c52350aa31" testName="Parse15Test" computerName="DENNIS-PC-HOME" duration="00:00:00.0044172" startTime="2013-01-13T22:18:36.0487304+08:00" endTime="2013-01-13T22:18:36.0677314+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f4987b8e-f0d0-41e3-9de3-5d058b032b8b">
+    </UnitTestResult>
+    <UnitTestResult executionId="62a49dc6-a0c2-472c-9c0a-bbd188f140b0" testId="343fbae5-8973-f155-cd0d-cca6c4285774" testName="Parse08Test" computerName="DENNIS-PC-HOME" duration="00:00:00.0002558" startTime="2013-01-13T22:18:36.0837324+08:00" endTime="2013-01-13T22:18:36.0877326+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="62a49dc6-a0c2-472c-9c0a-bbd188f140b0">
+    </UnitTestResult>
+    <UnitTestResult executionId="37923ad5-f8d2-4417-88b7-9327d3e21670" testId="35e90754-98d1-60d3-374f-41b3660769cc" testName="IsArgument01Test" computerName="DENNIS-PC-HOME" duration="00:00:00.0041649" startTime="2013-01-13T22:18:36.0897327+08:00" endTime="2013-01-13T22:18:36.1027334+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="37923ad5-f8d2-4417-88b7-9327d3e21670">
+    </UnitTestResult>
+    <UnitTestResult executionId="a3a84096-0186-4442-a2a9-9d9c3b3fc0d2" testId="371dd09f-9706-6e72-0055-dcbea6b74303" testName="Parse18Test" computerName="DENNIS-PC-HOME" duration="00:00:00.0004542" startTime="2013-01-13T22:18:36.1117340+08:00" endTime="2013-01-13T22:18:36.1177343+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a3a84096-0186-4442-a2a9-9d9c3b3fc0d2">
+    </UnitTestResult>
+    <UnitTestResult executionId="6cb97422-c4b1-4b14-a5dc-996703f81f98" testId="45f95485-c4a1-343d-e368-5e57350139a6" testName="Parse10Test" computerName="DENNIS-PC-HOME" duration="00:00:00.0046583" startTime="2013-01-13T22:18:36.1227346+08:00" endTime="2013-01-13T22:18:36.1377354+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6cb97422-c4b1-4b14-a5dc-996703f81f98">
+    </UnitTestResult>
+    <UnitTestResult executionId="338f75d1-2917-41fe-8cbe-218311891fcc" testId="4faedf8c-7906-bea4-e1e6-f447bdd14d68" testName="Parse07Test" computerName="DENNIS-PC-HOME" duration="00:00:00.0004056" startTime="2013-01-13T22:18:36.1427357+08:00" endTime="2013-01-13T22:18:36.1477360+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="338f75d1-2917-41fe-8cbe-218311891fcc">
+    </UnitTestResult>
+    <UnitTestResult executionId="1ea6e41e-5668-44d9-9cc8-a4ce6ddd98ed" testId="65c8b707-e746-cdca-0808-8fbb2369d75c" testName="Parse19Test" computerName="DENNIS-PC-HOME" duration="00:00:00.0002670" startTime="2013-01-13T22:18:36.1517362+08:00" endTime="2013-01-13T22:18:36.1647370+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1ea6e41e-5668-44d9-9cc8-a4ce6ddd98ed">
+    </UnitTestResult>
+    <UnitTestResult executionId="c20a18dc-826a-420c-b9fe-23996f922046" testId="6ba5acf2-069f-f5dc-0a6c-a52b92a26698" testName="Parse13Test" computerName="DENNIS-PC-HOME" duration="00:00:00.0002607" startTime="2013-01-13T22:18:36.1677372+08:00" endTime="2013-01-13T22:18:36.1797378+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c20a18dc-826a-420c-b9fe-23996f922046">
+    </UnitTestResult>
+    <UnitTestResult executionId="a6922705-cccf-4fc8-8676-9437285f150d" testId="7f1df0fe-d1c5-6b61-0abe-22731de9c164" testName="NextToken01Test" computerName="DENNIS-PC-HOME" duration="00:00:00.0003244" startTime="2013-01-13T22:18:36.1897384+08:00" endTime="2013-01-13T22:18:36.1977389+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a6922705-cccf-4fc8-8676-9437285f150d">
+    </UnitTestResult>
+    <UnitTestResult executionId="f19ecf6a-b15f-40aa-8d51-4350bf2510b3" testId="8c12a687-bd6d-5896-cecf-31d4487232fa" testName="Parse21Test" computerName="DENNIS-PC-HOME" duration="00:00:00.0005781" startTime="2013-01-13T22:18:36.2117397+08:00" endTime="2013-01-13T22:18:36.2157399+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f19ecf6a-b15f-40aa-8d51-4350bf2510b3">
+    </UnitTestResult>
+    <UnitTestResult executionId="31322963-28db-4f03-96f5-ae442abfac5d" testId="94c1541e-10bd-72ab-6aeb-6deea7e686b1" testName="Parse16Test" computerName="DENNIS-PC-HOME" duration="00:00:00.0003534" startTime="2013-01-13T22:18:36.2247404+08:00" endTime="2013-01-13T22:18:36.2337409+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="31322963-28db-4f03-96f5-ae442abfac5d">
+    </UnitTestResult>
+    <UnitTestResult executionId="6df3443b-4251-44a9-a8f7-3fdcb9dbc76e" testId="965df0f7-2c0d-8c01-a300-65af5415938b" testName="NextToken05Test" computerName="DENNIS-PC-HOME" duration="00:00:00.0011667" startTime="2013-01-13T22:18:36.2517420+08:00" endTime="2013-01-13T22:18:36.2557422+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6df3443b-4251-44a9-a8f7-3fdcb9dbc76e">
+    </UnitTestResult>
+    <UnitTestResult executionId="4298507a-c9f9-4088-9e60-e6831d6abf2e" testId="a6426be6-25db-d157-8dfd-ea08c7bf76c8" testName="Parse00Test" computerName="DENNIS-PC-HOME" duration="00:00:00.0006099" startTime="2013-01-13T22:18:36.2587424+08:00" endTime="2013-01-13T22:18:36.2687429+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4298507a-c9f9-4088-9e60-e6831d6abf2e">
+    </UnitTestResult>
+    <UnitTestResult executionId="c6d6cbd0-fabd-4c47-bca6-aef15c915c04" testId="ab57c92d-dc1d-e744-5fd3-37c10cf2f40c" testName="IsArgument03Test" computerName="DENNIS-PC-HOME" duration="00:00:00.0010813" startTime="2013-01-13T22:18:36.2757433+08:00" endTime="2013-01-13T22:18:36.2897441+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c6d6cbd0-fabd-4c47-bca6-aef15c915c04">
+    </UnitTestResult>
+    <UnitTestResult executionId="100717b0-28d3-42b8-a77f-ebb600fdafe1" testId="ab992873-948e-ce94-cb3c-04b8cb7e6ccd" testName="Parse02Test" computerName="DENNIS-PC-HOME" duration="00:00:00.0002544" startTime="2013-01-13T22:18:36.3067451+08:00" endTime="2013-01-13T22:18:36.3157456+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="100717b0-28d3-42b8-a77f-ebb600fdafe1">
+    </UnitTestResult>
+    <UnitTestResult executionId="e884becc-61f8-4659-a86f-8cf8de7bf7da" testId="ba28037e-049b-a848-8adc-d6772d958dae" testName="Parse20Test" computerName="DENNIS-PC-HOME" duration="00:00:00.0061338" startTime="2013-01-13T22:18:36.3197459+08:00" endTime="2013-01-13T22:18:36.3437472+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e884becc-61f8-4659-a86f-8cf8de7bf7da">
+    </UnitTestResult>
+    <UnitTestResult executionId="b0052c35-8d5d-4784-9688-59dbf903caff" testId="ca3a207f-0359-10d3-575b-ef51b264b923" testName="Parse06Test" computerName="DENNIS-PC-HOME" duration="00:00:00.0008336" startTime="2013-01-13T22:18:36.3547479+08:00" endTime="2013-01-13T22:18:36.3597481+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b0052c35-8d5d-4784-9688-59dbf903caff">
+    </UnitTestResult>
+    <UnitTestResult executionId="442e5b3d-76f1-41ef-b934-e1f6463cf15e" testId="d05245df-e7a2-6eb7-fe94-37f38c9116d4" testName="Parse11Test" computerName="DENNIS-PC-HOME" duration="00:00:00.0009162" startTime="2013-01-13T22:18:36.3627483+08:00" endTime="2013-01-13T22:18:36.3737489+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="442e5b3d-76f1-41ef-b934-e1f6463cf15e">
+    </UnitTestResult>
+    <UnitTestResult executionId="a3616dc9-f777-42e0-847e-e72562c6e6fd" testId="df6af24d-052d-e8dd-fa7d-71faaa653e17" testName="Parse04Test" computerName="DENNIS-PC-HOME" duration="00:00:00.0009092" startTime="2013-01-13T22:18:36.3777492+08:00" endTime="2013-01-13T22:18:36.3877497+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a3616dc9-f777-42e0-847e-e72562c6e6fd">
+    </UnitTestResult>
+    <UnitTestResult executionId="a58d4b09-f728-40bc-8fc5-72b01998385a" testId="e34fe3fd-48e4-29d9-e0fb-8d4ced29091f" testName="Parse05Test" computerName="DENNIS-PC-HOME" duration="00:00:00.0008780" startTime="2013-01-13T22:18:36.3917500+08:00" endTime="2013-01-13T22:18:36.4017505+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a58d4b09-f728-40bc-8fc5-72b01998385a">
+    </UnitTestResult>
+    <UnitTestResult executionId="c556e5f0-b902-4be0-8e55-411f4e2cd37c" testId="e4a30699-a5c6-93bd-3c98-bdc3ae239be9" testName="Parse14Test" computerName="DENNIS-PC-HOME" duration="00:00:00.0003520" startTime="2013-01-13T22:18:36.4137512+08:00" endTime="2013-01-13T22:18:36.4187515+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c556e5f0-b902-4be0-8e55-411f4e2cd37c">
+    </UnitTestResult>
+    <UnitTestResult executionId="4f871d8f-bbbd-4b9e-8c1c-cd3eb55668f7" testId="e80d0041-ef44-1cf3-790d-1e6352fc0457" testName="Parse01Test" computerName="DENNIS-PC-HOME" duration="00:00:00.0002463" startTime="2013-01-13T22:18:36.4217517+08:00" endTime="2013-01-13T22:18:36.4247519+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4f871d8f-bbbd-4b9e-8c1c-cd3eb55668f7">
+    </UnitTestResult>
+    <UnitTestResult executionId="1befb1ab-f1c3-4d5c-b7da-f5d6789377b5" testId="e8a44131-edbf-c2e5-497c-3e4bc8b2b07f" testName="NextToken03Test" computerName="DENNIS-PC-HOME" duration="00:00:00.0002869" startTime="2013-01-13T22:18:36.4277520+08:00" endTime="2013-01-13T22:18:36.4307522+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1befb1ab-f1c3-4d5c-b7da-f5d6789377b5">
+    </UnitTestResult>
+    <UnitTestResult executionId="4c5c9459-77aa-420d-b312-77e36c67152f" testId="edccd561-c25e-f273-95e9-9732d2607450" testName="Parse09Test" computerName="DENNIS-PC-HOME" duration="00:00:00.0002701" startTime="2013-01-13T22:18:36.4337524+08:00" endTime="2013-01-13T22:18:36.4357525+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4c5c9459-77aa-420d-b312-77e36c67152f">
+    </UnitTestResult>
+    <UnitTestResult executionId="f429bf85-4df4-4c79-85a9-54b8e86aa994" testId="edee48e3-860f-1a22-3bd0-dea06ab3ba4b" testName="NextToken02Test" computerName="DENNIS-PC-HOME" duration="00:00:00.0003426" startTime="2013-01-13T22:18:36.4397527+08:00" endTime="2013-01-13T22:18:36.4437529+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f429bf85-4df4-4c79-85a9-54b8e86aa994">
+    </UnitTestResult>
+    <UnitTestResult executionId="ae813c5c-eb3b-49c5-a2ca-043a42c3f7b3" testId="f8c87e4a-a814-11f0-222e-761635cfe756" testName="Parse17Test" computerName="DENNIS-PC-HOME" duration="00:00:00.0004080" startTime="2013-01-13T22:18:36.4467531+08:00" endTime="2013-01-13T22:18:36.4507533+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ae813c5c-eb3b-49c5-a2ca-043a42c3f7b3">
+    </UnitTestResult>
+    <UnitTestResult executionId="d8d4d2a4-282c-47a4-b075-61cb182f1e0c" testId="ffb9dbc3-82ab-0a6b-70db-2e9b02f7e49a" testName="Parse12Test" computerName="DENNIS-PC-HOME" duration="00:00:00.0005217" startTime="2013-01-13T22:18:36.4587538+08:00" endTime="2013-01-13T22:18:36.4627540+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d8d4d2a4-282c-47a4-b075-61cb182f1e0c">
+    </UnitTestResult>
+  </Results>
+</TestRun>

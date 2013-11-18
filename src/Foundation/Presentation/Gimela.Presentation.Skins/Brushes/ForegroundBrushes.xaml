@@ -1,0 +1,13 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <SolidColorBrush x:Key="ForegroundBrush" Color="{DynamicResource ForegroundColor}" />
+    <SolidColorBrush x:Key="DisabledForegroundBrush" Color="{DynamicResource DisabledForegroundColor}" />
+    <SolidColorBrush x:Key="SelectedForegroundBrush" Color="{DynamicResource SelectedForegroundColor}" />
+    <SolidColorBrush x:Key="ErrorForegroundBrush" Color="{DynamicResource ErrorForegroundColor}" />
+
+    <SolidColorBrush x:Key="ReversedForegroundBrush" Color="{DynamicResource ReversedForegroundColor}" />
+    <SolidColorBrush x:Key="ReversedDisabledForegroundBrush" Color="{DynamicResource ReversedDisabledForegroundColor}" />
+    <SolidColorBrush x:Key="ReversedSelectedForegroundBrush" Color="{DynamicResource ReversedSelectedForegroundColor}" />
+
+</ResourceDictionary>

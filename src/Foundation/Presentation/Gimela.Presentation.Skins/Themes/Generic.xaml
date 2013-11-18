@@ -1,0 +1,12 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+  <ResourceDictionary.MergedDictionaries>
+    <ResourceDictionary Source="pack://application:,,,/Gimela.Presentation.Skins;component/Skins/Skin.xaml" />
+    <ResourceDictionary Source="pack://application:,,,/Gimela.Presentation.Skins;component/Styles/Styles.xaml" />
+    <ResourceDictionary Source="pack://application:,,,/Gimela.Presentation.Skins;component/Styles/MenuItemStyles.xaml" />
+    <ResourceDictionary Source="pack://application:,,,/Gimela.Presentation.Skins;component/Styles/LabelStyles.xaml" />
+    <ResourceDictionary Source="pack://application:,,,/Gimela.Presentation.Skins;component/Styles/ListViewStyles.xaml" />
+    <ResourceDictionary Source="pack://application:,,,/Gimela.Presentation.Skins;component/Styles/ToolTipStyles.xaml" />
+  </ResourceDictionary.MergedDictionaries>
+
+</ResourceDictionary>

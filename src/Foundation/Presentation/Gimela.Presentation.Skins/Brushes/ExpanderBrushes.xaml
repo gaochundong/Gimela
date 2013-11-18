@@ -1,0 +1,31 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <SolidColorBrush x:Key="ExpanderToggleButtonRectangleStrokeBrush" Color="{DynamicResource BorderMediumColor}" />
+    <SolidColorBrush x:Key="ExpanderToggleButtonRectangleFillBrush" Color="{DynamicResource ControlLightColor}" />
+    <SolidColorBrush x:Key="ExpanderToggleButtonRectangleFillMouseOverBrush" Color="{DynamicResource ControlMouseOverMediumColor}" />
+
+    <SolidColorBrush x:Key="ExpanderToggleButtonGlyphFillBrush" Color="#FFEEEEEE" />
+    <SolidColorBrush x:Key="ExpanderToggleButtonGlyphFillMouseOverBrush" Color="#FFEEEEEE" />
+
+    <SolidColorBrush x:Key="ExpanderToggleButtonBorderBrush" Color="{DynamicResource BorderDarkColor}" />
+    <SolidColorBrush x:Key="ExpanderToggleButtonBorderPressedBackgroundBrush" Color="{DynamicResource BackgroundDarkColor}" />
+    <SolidColorBrush x:Key="ExpanderBorderDisabledBackgroundBrush" Color="{DynamicResource BackgroundDarkColor}" />
+    <SolidColorBrush x:Key="ExpanderBorderDisabledBorderBrush" Color="{DynamicResource BackgroundDarkColor}" />
+    
+    <LinearGradientBrush x:Key="ExpanderBorderBackgroundBrush" StartPoint="0,0" EndPoint="1,1">
+        <GradientBrush.GradientStops>
+            <GradientStopCollection>
+                <GradientStop Color="{DynamicResource BackgroundDarkColor}" Offset="0" />
+                <GradientStop Color="{DynamicResource BackgroundMediumColor}" Offset="0.25" />
+                <GradientStop Color="{DynamicResource BackgroundLightColor}" Offset="0.5" />
+                <GradientStop Color="{DynamicResource BackgroundMediumColor}" Offset="0.75" />
+                <GradientStop Color="{DynamicResource BackgroundDarkColor}" Offset="1" />
+            </GradientStopCollection>
+        </GradientBrush.GradientStops>
+    </LinearGradientBrush>
+
+    <SolidColorBrush x:Key="ExpanderBorderBorderBrush" Color="{DynamicResource BorderDarkColor}" />
+    <SolidColorBrush x:Key="ExpanderToggleButtonBackgroundBrush" Color="{DynamicResource BackgroundLightColor}" />
+    
+</ResourceDictionary>

@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FCBF1971-029D-4F3C-83D2-E74CC6B65436}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Gimela.Presentation.Transitions</RootNamespace>
+    <AssemblyName>Gimela.Presentation.Transitions</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="TransitionDemo.xaml.cs">
+      <DependentUpon>TransitionDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Transitions\3D\ClothTransition.cs" />
+    <Compile Include="Transitions\3D\DoorTransition.cs" />
+    <Compile Include="Transitions\3D\ExplosionTransition.cs" />
+    <Compile Include="Transitions\FadeTransition.cs" />
+    <Compile Include="Transitions\3D\FlipTransition.cs" />
+    <Compile Include="Transitions\3D\PageTransition.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Enumerations\RotateDirection.cs" />
+    <Compile Include="Transitions\3D\RotateTransition.cs" />
+    <Compile Include="Transitions\StoryboardTransition.cs" />
+    <Compile Include="Transition.cs" />
+    <Compile Include="Transition3D.cs" />
+    <Compile Include="Enumerations\TransitionDirection.cs" />
+    <Compile Include="TransitionElement.cs" />
+    <Compile Include="Selectors\TransitionSelector.cs" />
+    <Compile Include="Transitions\2D\TranslateTransition.cs" />
+    <Compile Include="Selectors\TwoWayTransitionSelector.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TransitionClassDiagram.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="TransitionDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

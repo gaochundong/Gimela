@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>
+    <Root>$(MSBuildStartupDirectory)</Root>
+  </PropertyGroup>
+
+  <Target Name="Build">
+
+    <!-- Compile -->
+    <ItemGroup>
+	
+	  <ProjectToBuild Include="$(Root)\..\src\Rukbat\Common\Gimela.Rukbat.Common.sln" />
+	  <ProjectToBuild Include="$(Root)\..\src\Rukbat\Service\ServiceDiscovery\ServiceDiscovery.sln" />
+	  <ProjectToBuild Include="$(Root)\..\src\Rukbat\Service\DeviceConnector\DeviceConnector.sln" />
+	  <ProjectToBuild Include="$(Root)\..\src\Rukbat\Service\MediaPublisher\MediaPublisher.sln" />
+	  <ProjectToBuild Include="$(Root)\..\src\Rukbat\Service\DeviceProfile\DeviceProfile.sln" />
+	  
+    </ItemGroup>
+    <MSBuild Projects="@(ProjectToBuild)" Targets="Build" Properties="Configuration=Debug;">
+      <Output TaskParameter="TargetOutputs" ItemName="AssembliesBuiltByChildProjects" />
+    </MSBuild>
+	
+  </Target>
+</Project>

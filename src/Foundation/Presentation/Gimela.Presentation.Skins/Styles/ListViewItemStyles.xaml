@@ -1,0 +1,50 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+  <Style x:Key="ListViewItemStyle" TargetType="{x:Type ListViewItem}">
+    <Setter Property="Control.Background" Value="{DynamicResource ListViewItemBackgroundBrush}" />
+    <Setter Property="Control.Foreground" Value="{DynamicResource ReversedForegroundBrush}" />
+    <Setter Property="Control.HorizontalContentAlignment" Value="Left" />
+    <Setter Property="Control.VerticalContentAlignment" Value="Center" />
+    <Setter Property="FrameworkElement.MinHeight" Value="25" />
+    <Setter Property="FrameworkElement.Margin" Value="0" />
+    <Setter Property="Control.FontSize" Value="12" />
+    <Setter Property="Control.Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type ListViewItem}">
+          <Border Name="Bd"
+                  Background="{TemplateBinding Control.Background}"
+                  BorderBrush="LightGray"
+                  BorderThickness="0,0,0,1"
+                  SnapsToDevicePixels="true">
+            <GridViewRowPresenter VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}" />
+          </Border>
+          <ControlTemplate.Triggers>
+            <Trigger Property="ListBoxItem.IsSelected" Value="True">
+              <Setter TargetName="Bd" Property="Border.BorderBrush" Value="{DynamicResource ListViewItemSelectedBorderBrush}" />
+              <Setter TargetName="Bd" Property="Border.Background" Value="{DynamicResource ListViewItemSelectedBackgroundBrush}" />
+            </Trigger>
+            <Trigger Property="UIElement.IsMouseOver" Value="True">
+              <Setter TargetName="Bd" Property="Border.Background" Value="{DynamicResource ListViewItemMouseOverBackgroundBrush}" />
+            </Trigger>
+            <MultiTrigger>
+              <MultiTrigger.Conditions>
+                <Condition Property="ListBoxItem.IsSelected" Value="True" />
+                <Condition Property="Selector.IsSelectionActive" Value="True" />
+              </MultiTrigger.Conditions>
+              <Setter TargetName="Bd" Property="Border.Background" Value="{DynamicResource ListViewItemSelectedBackgroundBrush}" />
+              <Setter TargetName="Bd" Property="Border.BorderBrush" Value="{DynamicResource ListViewItemSelectedBorderBrush}" />
+              <Setter Property="Control.Foreground" Value="{DynamicResource ReversedSelectedForegroundBrush}" />
+            </MultiTrigger>
+            <Trigger Property="ItemsControl.AlternationIndex" Value="0">
+              <Setter Property="Background" Value="{DynamicResource ListViewItemAlternativeIndex0BackgroundBrush}" />
+            </Trigger>
+            <Trigger Property="ItemsControl.AlternationIndex" Value="1">
+              <Setter Property="Background" Value="{DynamicResource ListViewItemAlternativeIndex1BackgroundBrush}" />
+            </Trigger>
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+
+</ResourceDictionary>

@@ -1,0 +1,104 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+  <ResourceDictionary.MergedDictionaries>
+    <ResourceDictionary Source="pack://application:,,,/Gimela.Presentation.Skins;component/Styles/ToolTipStyles.xaml"/>
+    <ResourceDictionary Source="HeaderWindowBrushes.xaml"/>
+  </ResourceDictionary.MergedDictionaries>
+
+  <Style x:Key="HeaderWindowCloseButtonStyle" BasedOn="{x:Null}" TargetType="{x:Type Button}">
+    <Setter Property="ToolTip" Value="{DynamicResource Presentation_Windows_HeaderWindow_Close}" />
+    <Setter Property="IsTabStop" Value="False" />
+    <Setter Property="Margin" Value="0,0,0,0" />
+    <Setter Property="Width" Value="19" />
+    <Setter Property="Height" Value="19" />
+    <Setter Property="Cursor" Value="Hand" />
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type Button}">
+          <Grid x:Name="buttonClose">
+            <Ellipse x:Name="btnEllipse" StrokeThickness="1" Stroke="{DynamicResource HeaderWindowButtonEllipseStrokeBrush}" Fill="{DynamicResource HeaderWindowCloseButtonEllipseFillBrush}"/>
+            <Path x:Name="iconX" Width="8.50003" Height="8.50006" Stretch="Fill" Fill="{DynamicResource HeaderWindowCloseButtonIconFillBrush}" Data="F1 M 401.281,299.818L 398.795,297.333L 401.281,294.847C 401.684,294.445 401.684,293.79 401.281,293.386C 400.877,292.982 400.222,292.982 399.82,293.386L 397.334,295.872L 394.848,293.386C 394.445,292.982 393.79,292.982 393.386,293.386C 392.982,293.79 392.982,294.445 393.386,294.848L 395.872,297.334L 393.387,299.818C 392.984,300.222 392.982,300.876 393.387,301.281C 393.791,301.684 394.445,301.683 394.848,301.279L 397.333,298.795L 399.818,301.281C 400.222,301.684 400.877,301.684 401.281,301.281C 401.684,300.877 401.684,300.222 401.281,299.818 Z " />
+            <ContentPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True" />
+          </Grid>
+          <ControlTemplate.Triggers>
+            <Trigger Property="IsFocused" Value="True" />
+            <Trigger Property="IsDefaulted" Value="True" />
+            <Trigger Property="IsMouseOver" Value="True">
+              <Setter Property="Fill" Value="{DynamicResource HeaderWindowCloseButtonEllipseFillMouseOverBrush}" TargetName="btnEllipse" />
+              <Setter Property="Fill" Value="{DynamicResource HeaderWindowCloseButtonIconFillMouseOverBrush}" TargetName="iconX" />
+            </Trigger>
+            <Trigger Property="IsPressed" Value="True" />
+            <Trigger Property="IsEnabled" Value="False" />
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style x:Key="HeaderWindowMinimizeButtonStyle" BasedOn="{x:Null}" TargetType="{x:Type Button}">
+    <Setter Property="ToolTip" Value="{DynamicResource Presentation_Windows_HeaderWindow_Minimize}" />
+    <Setter Property="IsTabStop" Value="False" />
+    <Setter Property="Margin" Value="0,0,4,0" />
+    <Setter Property="Width" Value="19" />
+    <Setter Property="Height" Value="19" />
+    <Setter Property="Cursor" Value="Hand" />
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type Button}">
+          <Grid x:Name="buttonClose">
+            <Ellipse x:Name="btnEllipse" StrokeThickness="1" Stroke="{DynamicResource HeaderWindowButtonEllipseStrokeBrush}" Fill="{DynamicResource HeaderWindowMinimizeButtonEllipseFillBrush}" />
+            <Path x:Name="iconMin" Width="11.1641" Height="2.06641" Canvas.Left="3.97266" Canvas.Top="8.51962" Stretch="Fill" Fill="{DynamicResource HeaderWindowMinimizeButtonIconFillBrush}" Data="F1 M 5.00659,8.51962C 4.43613,8.51831 3.97266,8.98184 3.97266,9.55347C 3.97266,10.1238 4.435,10.586 5.00659,10.586L 14.1028,10.586C 14.6733,10.586 15.1353,10.1238 15.1367,9.55215C 15.1367,8.98056 14.6733,8.51962 14.1028,8.51962L 5.00659,8.51962 Z " />
+            <ContentPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True" />
+          </Grid>
+          <ControlTemplate.Triggers>
+            <Trigger Property="IsFocused" Value="True" />
+            <Trigger Property="IsDefaulted" Value="True" />
+            <Trigger Property="IsMouseOver" Value="True">
+              <Setter Property="Fill" Value="{DynamicResource HeaderWindowMinimizeButtonEllipseFillMouseOverBrush}" TargetName="btnEllipse" />
+              <Setter Property="Fill" Value="{DynamicResource HeaderWindowMinimizeButtonIconFillMouseOverBrush}" TargetName="iconMin" />
+            </Trigger>
+            <Trigger Property="IsPressed" Value="True" />
+            <Trigger Property="IsEnabled" Value="False" />
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style x:Key="HeaderWindowRestoreButtonStyle" BasedOn="{x:Null}" TargetType="{x:Type ToggleButton}">
+    <Setter Property="IsTabStop" Value="False" />
+    <Setter Property="Margin" Value="0,0,4,0" />
+    <Setter Property="Width" Value="19" />
+    <Setter Property="Height" Value="19" />
+    <Setter Property="Cursor" Value="Hand" />
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type ToggleButton}">
+          <Grid>
+            <Ellipse x:Name="btnEllipse" StrokeThickness="1" Stroke="{DynamicResource HeaderWindowButtonEllipseStrokeBrush}" Fill="{DynamicResource HeaderWindowMaximizeButtonEllipseFillBrush}" />
+            <Path x:Name="iconMax" Width="12.4011" Height="9.93359" Stretch="Fill" Fill="{DynamicResource HeaderWindowMaximizeButtonIconFillBrush}" Data="F1 M 390.641,289.034C 389.073,289.034 387.8,290.308 387.8,291.875L 387.8,296.125C 387.8,297.692 389.073,298.967 390.641,298.967L 397.362,298.967C 398.927,298.967 400.201,297.692 400.201,296.125L 400.201,291.875C 400.201,290.308 398.927,289.034 397.362,289.034L 390.641,289.034 Z M 389.399,296.125L 389.399,291.875C 389.399,291.19 389.956,290.634 390.641,290.634L 397.362,290.634C 398.045,290.634 398.602,291.19 398.602,291.875L 398.602,296.125C 398.602,296.81 398.045,297.367 397.362,297.367L 390.641,297.367C 389.956,297.367 389.399,296.81 389.399,296.125 Z " />
+            <Path x:Name="iconRestore" Visibility="Collapsed" Width="11.6719" Height="9.48242" Stretch="Fill" Fill="{DynamicResource HeaderWindowMaximizeButtonIconFillBrush}" Data="F1 M 411.826,302.421C 411.802,301.775 411.28,301.259 410.629,301.259L 404.483,301.259C 403.836,301.257 403.312,301.775 403.286,302.421L 403.277,302.421C 403.277,302.421 403.277,303.254 403.277,304.177L 407.126,304.177C 407.984,304.177 408.679,304.853 408.722,305.728L 408.722,307.822L 410.629,307.822C 411.294,307.822 411.834,307.283 411.836,306.615C 411.836,306.507 411.836,302.421 411.836,302.421L 411.826,302.421 Z M 407.126,304.956L 400.979,304.956C 400.545,304.955 400.19,305.301 400.164,305.728L 400.164,309.925C 400.164,310.374 400.531,310.741 400.981,310.741L 407.126,310.741C 407.575,310.741 407.942,310.374 407.944,309.923L 407.934,305.742C 407.918,305.301 407.565,304.956 407.126,304.956 Z " />
+            <ContentPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True" />
+          </Grid>
+          <ControlTemplate.Triggers>
+            <Trigger Property="IsFocused" Value="True" />
+            <Trigger Property="IsMouseOver" Value="True">
+              <Setter Property="Fill" Value="{DynamicResource HeaderWindowMaximizeButtonEllipseFillMouseOverBrush}" TargetName="btnEllipse" />
+              <Setter Property="Fill" Value="{DynamicResource HeaderWindowMaximizeButtonIconFillMouseOverBrush}" TargetName="iconMax" />
+            </Trigger>
+            <Trigger Property="IsPressed" Value="True" />
+            <Trigger Property="IsEnabled" Value="False" />
+            <Trigger Property="IsChecked" Value="True">
+              <Setter TargetName="iconMax" Property="Visibility" Value="Collapsed" />
+              <Setter TargetName="iconRestore" Property="Visibility" Value="Visible" />
+              <Setter Property="ToolTip" Value="{DynamicResource Presentation_Windows_HeaderWindow_RestoreDown}" />
+            </Trigger>
+            <Trigger Property="IsChecked" Value="False">
+              <Setter Property="ToolTip" Value="{DynamicResource Presentation_Windows_HeaderWindow_Maximize}" />
+            </Trigger>
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+
+</ResourceDictionary>

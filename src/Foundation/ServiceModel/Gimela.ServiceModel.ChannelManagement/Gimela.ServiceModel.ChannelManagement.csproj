@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{77FF7396-8843-4EFA-A10E-3C70A35A0D63}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Gimela.ServiceModel.ChannelManagement</RootNamespace>
+    <AssemblyName>Gimela.ServiceModel.ChannelManagement</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>..\..\..\..\bin\Debug\Gimela.ServiceModel.ChannelManagement.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Gimela.Common.ExceptionHandling, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Gimela.Common.Logging, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Gimela.Infrastructure.ResourceLocation, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AsynchronousConnections\AsynchronousConnectionBase.cs" />
+    <Compile Include="AsynchronousConnections\AsynchronousConnectionWrapper.cs" />
+    <Compile Include="AsynchronousConnections\IAsynchronousConnectionWrapper.cs" />
+    <Compile Include="AsynchronousConnections\IAsynchronousConnectionMonitor.cs" />
+    <Compile Include="ChannelManagers\CallbackChannelManager.cs" />
+    <Compile Include="Channels\ProxyDuplexChannel.cs" />
+    <Compile Include="Entities\ClientData.cs" />
+    <Compile Include="Entities\ContractInfo.cs" />
+    <Compile Include="Entities\ClientInfo.cs" />
+    <Compile Include="Events\ChannelConnectionEventType.cs" />
+    <Compile Include="Events\ChannelEstablishedEventArgs.cs" />
+    <Compile Include="Events\ChannelConnectedEventArgs.cs" />
+    <Compile Include="Events\ChannelDisconnectedEventArgs.cs" />
+    <Compile Include="Events\ChannelExceptionRaisedEventArgs.cs" />
+    <Compile Include="Factories\ProxyChannelFactory.cs" />
+    <Compile Include="Factories\ProxyChannelManagerFactory.cs" />
+    <Compile Include="Factories\TransportManagerFactory.cs" />
+    <Compile Include="Properties\GlobalSuppressions.cs" />
+    <Compile Include="Interfaces\IProxyChannel.cs" />
+    <Compile Include="Interfaces\IProxyChannelManager.cs" />
+    <Compile Include="Interfaces\ITransportManager.cs" />
+    <Compile Include="MessageSender.cs" />
+    <Compile Include="MessageSenderActions.cs" />
+    <Compile Include="ServiceIdentity\CustomizedMessageBehavior.cs" />
+    <Compile Include="ServiceIdentity\CustomizedMessageHeaderConstants.cs" />
+    <Compile Include="ServiceIdentity\MessageFixer.cs" />
+    <Compile Include="ServiceIdentity\CustomizedMessageHeaderData.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Channels\ProxyChannel.cs" />
+    <Compile Include="ChannelManagers\ProxyChannelManager.cs" />
+    <Compile Include="ChannelManagers\ProxyDuplexChannelManager.cs" />
+    <Compile Include="Exceptions\SendMessageFailedException.cs" />
+    <Compile Include="Transports\TransportManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Gimela.ServiceModel.ManagedDiscovery\Gimela.ServiceModel.ManagedDiscovery.csproj">
+      <Project>{77E79E83-CAF7-4F76-80AF-5095EE5F809D}</Project>
+      <Name>Gimela.ServiceModel.ManagedDiscovery</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

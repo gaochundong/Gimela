@@ -1,0 +1,106 @@
+﻿<UserControl x:Class="Gimela.Rukbat.GUI.Modules.DeviceConfiguration.Views.ServiceSelectionView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:converters="clr-namespace:Gimela.Presentation.Controls.Converters;assembly=Gimela.Presentation.Controls"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             d:DesignHeight="364"
+             d:DesignWidth="699"
+             Style="{DynamicResource AsyncWorkUserControlStyle}"
+             mc:Ignorable="d">
+
+  <UserControl.Resources>
+    <converters:ObjectNullToBooleanConverter x:Key="ObjectNullToBooleanConverter" />
+  </UserControl.Resources>
+
+  <Grid Style="{DynamicResource GridStyle}">
+    <Grid x:Name="bgGrid" Margin="5,0,5,0">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="50" />
+        <RowDefinition Height="40" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="5" />
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="90" />
+        <ColumnDefinition Width="90" />
+      </Grid.ColumnDefinitions>
+
+      <Label Grid.Row="0"
+             Grid.Column="0"
+             Grid.ColumnSpan="3"
+             Margin="30,0,0,0"
+             HorizontalAlignment="Left"
+             VerticalAlignment="Center"
+             Content="{DynamicResource DeviceConfiguration_ServiceSelectionView_SelectService}"
+             FontSize="14"
+             FontWeight="Bold" />
+      <Line Grid.Row="0"
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            Margin="0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center"
+            Stroke="{DynamicResource LineStrokeBrush}"
+            StrokeThickness="2"
+            X1="0"
+            X2="{Binding ElementName=bgGrid,
+                         Path=ActualWidth}"
+            Y1="35"
+            Y2="35" />
+
+      <Label Name="textBlockTitle"
+             Grid.Row="1"
+             Grid.Column="0"
+             HorizontalAlignment="Left"
+             VerticalAlignment="Center"
+             Content="{DynamicResource DeviceConfiguration_ServiceSelectionView_SelectServiceDescription}" />
+
+      <Button Name="btnRefresh"
+              Grid.Row="1"
+              Grid.Column="1"
+              Margin="0,0,0,0"
+              HorizontalAlignment="Center"
+              VerticalAlignment="Center"
+              Command="{Binding Path=RefreshServiceCommand}"
+              Content="{DynamicResource DeviceConfiguration_ServiceSelectionView_RefreshService}"
+              IsDefault="True"
+              IsEnabled="True"
+              Style="{DynamicResource ButtonStyle}" />
+
+      <Button Name="btnSelect"
+              Grid.Row="1"
+              Grid.Column="2"
+              Margin="0,0,0,0"
+              HorizontalAlignment="Center"
+              VerticalAlignment="Center"
+              Command="{Binding Path=ConnectServiceCommand}"
+              Content="{DynamicResource DeviceConfiguration_ServiceSelectionView_ConnectService}"
+              IsDefault="True"
+              IsEnabled="{Binding SelectedService,
+                                  Converter={StaticResource ObjectNullToBooleanConverter}}"
+              Style="{DynamicResource ButtonStyle}" />
+
+      <ListView x:Name="domainList"
+                Grid.Row="2"
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                ItemContainerStyle="{DynamicResource ListViewItemStyle}"
+                ItemsSource="{Binding ServiceCollection}"
+                SelectedItem="{Binding Path=SelectedService,
+                                       Mode=TwoWay}"
+                SelectionMode="Single"
+                Style="{DynamicResource ListViewStyle}">
+        <ListView.View>
+          <GridView>
+            <GridViewColumn DisplayMemberBinding="{Binding HostName}" Header="{DynamicResource DeviceConfiguration_ServiceSelectionView_ServiceHostName}" />
+            <GridViewColumn DisplayMemberBinding="{Binding ContractName}" Header="{DynamicResource DeviceConfiguration_ServiceSelectionView_ServiceName}" />
+            <GridViewColumn DisplayMemberBinding="{Binding Uri}" Header="{DynamicResource DeviceConfiguration_ServiceSelectionView_ServiceUri}" />
+          </GridView>
+        </ListView.View>
+      </ListView>
+
+    </Grid>
+  </Grid>
+</UserControl>

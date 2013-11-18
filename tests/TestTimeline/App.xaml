@@ -1,0 +1,19 @@
+﻿<Application x:Class="TestTimeline.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="TimelineWindow.xaml">
+  <Application.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/Gimela.Presentation.Skins;component/Skins/Cyan.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Gimela.Presentation.Skins;component/Themes/Generic.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Gimela.Presentation.Skins;component/Styles/MenuItemStyles.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Gimela.Presentation.Skins;component/Styles/LabelStyles.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Gimela.Presentation.Skins;component/Styles/ListViewStyles.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Gimela.Presentation.Skins;component/Styles/ToolTipStyles.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Gimela.Presentation.Controls;component/Themes/Generic.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Gimela.Presentation.Windows;component/Themes/Generic.xaml" />
+      </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+  </Application.Resources>
+</Application>

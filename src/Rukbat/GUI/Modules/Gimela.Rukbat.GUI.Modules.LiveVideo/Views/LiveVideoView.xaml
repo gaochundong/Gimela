@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="Gimela.Rukbat.GUI.Modules.LiveVideo.Views.LiveVideoView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:camera="clr-namespace:Gimela.Rukbat.GUI.Controls;assembly=Gimela.Rukbat.GUI.Controls"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             d:DesignHeight="300"
+             d:DesignWidth="300"
+             mc:Ignorable="d">
+
+  <Grid Style="{DynamicResource GridStyle}">
+    <Grid x:Name="bgGrid" Margin="0,0,0,0">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="*" />
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*" />
+      </Grid.ColumnDefinitions>
+
+      <Grid Grid.Row="0" Grid.Column="0">
+        <camera:CameraPresenter x:Name="cameraControl" TargetCamera="{Binding TargetCamera}" />
+      </Grid>
+
+    </Grid>
+  </Grid>
+
+</UserControl>

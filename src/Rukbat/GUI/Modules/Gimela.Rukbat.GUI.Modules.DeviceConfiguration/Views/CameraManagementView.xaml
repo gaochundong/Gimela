@@ -1,0 +1,165 @@
+﻿<UserControl x:Class="Gimela.Rukbat.GUI.Modules.DeviceConfiguration.Views.CameraManagementView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:converters="clr-namespace:Gimela.Presentation.Controls.Converters;assembly=Gimela.Presentation.Controls"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             d:DesignHeight="318"
+             d:DesignWidth="632"
+             Style="{DynamicResource AsyncWorkUserControlStyle}"
+             mc:Ignorable="d">
+
+  <UserControl.Resources>
+    <converters:ObjectNullToBooleanConverter x:Key="ObjectNullToBooleanConverter" />
+  </UserControl.Resources>
+
+  <Grid Style="{DynamicResource GridStyle}">
+    <Grid x:Name="bgGrid" Margin="5,0,5,0">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="50" />
+        <RowDefinition Height="40" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="5" />
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*" />
+      </Grid.ColumnDefinitions>
+
+      <Label Grid.Row="0"
+             Grid.Column="0"
+             Grid.ColumnSpan="2"
+             Margin="30,0,0,0"
+             HorizontalAlignment="Left"
+             VerticalAlignment="Center"
+             Content="{DynamicResource DeviceConfiguration_CameraManagementView_ManageCamera}"
+             FontSize="14"
+             FontWeight="Bold" />
+      <Line Grid.Row="0"
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            Margin="0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center"
+            Stroke="{DynamicResource LineStrokeBrush}"
+            StrokeThickness="2"
+            X1="0"
+            X2="{Binding ElementName=bgGrid,
+                         Path=ActualWidth}"
+            Y1="35"
+            Y2="35" />
+
+      <Grid Grid.Row="1">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="90" />
+          <ColumnDefinition Width="90" />
+          <ColumnDefinition Width="90" />
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="90" />
+          <ColumnDefinition Width="90" />
+        </Grid.ColumnDefinitions>
+
+        <Button Name="btnAddCamera"
+                Grid.Row="1"
+                Grid.Column="0"
+                Width="80"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Command="{Binding Path=CreateCommand}"
+                Content="{DynamicResource DeviceConfiguration_CameraManagementView_NewCamera}"
+                Style="{DynamicResource ButtonStyle}" />
+        <Button Name="btnUpdateCamera"
+                Grid.Row="1"
+                Grid.Column="1"
+                Width="80"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Command="{Binding Path=UpdateCommand}"
+                Content="{DynamicResource DeviceConfiguration_CameraManagementView_EditCamera}"
+                IsEnabled="{Binding SelectedCamera,
+                                    Converter={StaticResource ObjectNullToBooleanConverter}}"
+                Style="{DynamicResource ButtonStyle}" />
+        <Button Name="btnRemoveCamera"
+                Grid.Row="1"
+                Grid.Column="2"
+                Width="80"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Command="{Binding Path=DeleteCommand}"
+                Content="{DynamicResource DeviceConfiguration_CameraManagementView_DeleteCamera}"
+                IsEnabled="{Binding SelectedCamera,
+                                    Converter={StaticResource ObjectNullToBooleanConverter}}"
+                Style="{DynamicResource ButtonStyle}" />
+        <Button Name="btnRefresh"
+                Grid.Row="1"
+                Grid.Column="4"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Command="{Binding Path=RefreshCommand}"
+                Content="{DynamicResource DeviceConfiguration_CameraManagementView_RefreshCamera}"
+                IsCancel="True"
+                Style="{DynamicResource ButtonStyle}" />
+        <Button Name="btnCancel"
+                Grid.Row="1"
+                Grid.Column="5"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Command="{Binding Path=CancelCommand}"
+                Content="{DynamicResource DeviceConfiguration_CameraManagementView_SwitchService}"
+                IsCancel="True"
+                Style="{DynamicResource ButtonStyle}" />
+      </Grid>
+
+      <Grid Grid.Row="2">
+        <ListView Name="listViewCameraList"
+                  ItemContainerStyle="{DynamicResource ListViewItemStyle}"
+                  ItemsSource="{Binding CameraCollection}"
+                  SelectedItem="{Binding SelectedCamera,
+                                         Mode=TwoWay}"
+                  SelectionMode="Single"
+                  Style="{DynamicResource ListViewStyle}">
+          <ListView.View>
+            <GridView>
+              <GridViewColumn Header="{DynamicResource DeviceConfiguration_CameraManagementView_CameraPropertyThumbnail}">
+                <GridViewColumn.CellTemplate>
+                  <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                      <Image Width="70"
+                             Height="50"
+                             Margin="5"
+                             HorizontalAlignment="Left"
+                             VerticalAlignment="Center"
+                             Source="{Binding ThumbnailSource}">
+                        <Image.ToolTip>
+                          <StackPanel>
+                            <Image Width="640"
+                                   Height="480"
+                                   Margin="1"
+                                   HorizontalAlignment="Left"
+                                   VerticalAlignment="Center"
+                                   Source="{Binding ThumbnailSource}" />
+                          </StackPanel>
+                        </Image.ToolTip>
+                      </Image>
+                    </StackPanel>
+                  </DataTemplate>
+                </GridViewColumn.CellTemplate>
+              </GridViewColumn>
+              <GridViewColumn DisplayMemberBinding="{Binding Id}" Header="{DynamicResource DeviceConfiguration_CameraManagementView_CameraPropertyId}" />
+              <GridViewColumn DisplayMemberBinding="{Binding Name}" Header="{DynamicResource DeviceConfiguration_CameraManagementView_CameraPropertyName}" />
+              <GridViewColumn DisplayMemberBinding="{Binding VideoSourceDescription.SourceType}" Header="{DynamicResource DeviceConfiguration_CameraManagementView_CameraPropertySourceType}" />
+              <GridViewColumn DisplayMemberBinding="{Binding VideoSourceDescription.FriendlyName}" Header="{DynamicResource DeviceConfiguration_CameraManagementView_CameraPropertySourceName}" />
+              <GridViewColumn DisplayMemberBinding="{Binding HostName}" Header="{DynamicResource DeviceConfiguration_CameraManagementView_CameraPropertyService}" />
+              <GridViewColumn DisplayMemberBinding="{Binding Description}" Header="{DynamicResource DeviceConfiguration_CameraManagementView_CameraPropertyDescription}" />
+              <GridViewColumn DisplayMemberBinding="{Binding Tags}" Header="{DynamicResource DeviceConfiguration_CameraManagementView_CameraPropertyTags}" />
+              <GridViewColumn DisplayMemberBinding="{Binding VideoSourceDescription.OriginalSourceString}" Header="{DynamicResource DeviceConfiguration_CameraManagementView_CameraPropertySourceDescription}" />
+            </GridView>
+          </ListView.View>
+        </ListView>
+      </Grid>
+
+    </Grid>
+  </Grid>
+</UserControl>

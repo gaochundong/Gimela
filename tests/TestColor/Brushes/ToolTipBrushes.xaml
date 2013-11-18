@@ -1,0 +1,27 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="../Skins/Shared.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+    
+    <LinearGradientBrush x:Key="ToolTipBackgroundBrush" StartPoint="0,0" EndPoint="1,1">
+        <LinearGradientBrush.GradientStops>
+            <GradientStopCollection>
+                <GradientStop Color="{StaticResource ControlLightColor}" Offset="0" />
+                <GradientStop Color="{StaticResource ControlMouseOverDarkColor}" Offset="0.7" />
+                <GradientStop Color="{StaticResource ControlLightColor}" Offset="1" />
+            </GradientStopCollection>
+        </LinearGradientBrush.GradientStops>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="ToolTipBorderBrush" StartPoint="0,0" EndPoint="1,1">
+        <LinearGradientBrush.GradientStops>
+            <GradientStopCollection>
+                <GradientStop Color="{StaticResource BorderMediumColor}" Offset="0" />
+                <GradientStop Color="{StaticResource BorderLightColor}" Offset="0.6" />
+                <GradientStop Color="{StaticResource BorderMediumColor}" Offset="1" />
+            </GradientStopCollection>
+        </LinearGradientBrush.GradientStops>
+    </LinearGradientBrush>
+    
+</ResourceDictionary>

@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4E650459-8750-48ED-9C0C-5D6CFF2A30A3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Gimela.Rukbat.DVC.BusinessLogic</RootNamespace>
+    <AssemblyName>Gimela.Rukbat.DVC.BusinessLogic</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\..\..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Gimela.Common.Consts, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Gimela.Common.ExceptionHandling, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Gimela.Common.Logging, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Gimela.Data.Json, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Gimela.Data.MagpieDatabase, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Gimela.Data.Repository, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Gimela.Infrastructure.ResourceLocation, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Gimela.Media.Video, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Gimela.Media.Video.DirectShow, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Gimela.Net.Rtp, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Gimela.Net.Sockets, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CameraBuilder.cs" />
+    <Compile Include="DomainObjects\Camera.cs" />
+    <Compile Include="DomainObjects\ICamera.cs" />
+    <Compile Include="DomainObjects\ICameraStream.cs" />
+    <Compile Include="DomainObjects\IStreamSender.cs" />
+    <Compile Include="DomainObjects\PublishedCamera.cs" />
+    <Compile Include="DomainObjects\StreamPacket.cs" />
+    <Compile Include="Exceptions\CameraNotFoundException.cs" />
+    <Compile Include="Exceptions\CameraBusyException.cs" />
+    <Compile Include="DeviceController.cs" />
+    <Compile Include="CameraManager.cs" />
+    <Compile Include="Exceptions\FilterNotFoundException.cs" />
+    <Compile Include="Interfaces\IDeviceController.cs" />
+    <Compile Include="UdpStreamSender.cs" />
+    <Compile Include="StreamSenderFactory.cs" />
+    <Compile Include="Interfaces\IStreamingManager.cs" />
+    <Compile Include="FilterManager.cs" />
+    <Compile Include="Interfaces\ICameraManager.cs" />
+    <Compile Include="Interfaces\IFilterManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StreamingManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Resource Access\Gimela.Rukbat.DVC.DataAccess\Gimela.Rukbat.DVC.DataAccess.csproj">
+      <Project>{33654C57-E45E-4156-BF9C-11A9710A4006}</Project>
+      <Name>Gimela.Rukbat.DVC.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Gimela.Rukbat.DVC.BusinessEntities\Gimela.Rukbat.DVC.BusinessEntities.csproj">
+      <Project>{7C13E662-4CEB-4DE7-AAEA-BAE55DA00EC6}</Project>
+      <Name>Gimela.Rukbat.DVC.BusinessEntities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

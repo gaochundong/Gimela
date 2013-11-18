@@ -1,0 +1,67 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Color x:Key="ForegroundColor">White</Color>
+    <Color x:Key="DisabledForegroundColor">Gray</Color>
+    <Color x:Key="SelectedForegroundColor">Black</Color>
+
+    <Color x:Key="ReversedForegroundColor">Black</Color>
+    <Color x:Key="ReversedDisabledForegroundColor">Gray</Color>
+    <Color x:Key="ReversedSelectedForegroundColor">White</Color>
+
+    <Color x:Key="ErrorForegroundColor">Yellow</Color>
+    <Color x:Key="ErrorBorderColor">Yellow</Color>
+
+    <Color x:Key="MaskBackgroundColor">LightGray</Color>
+    <Color x:Key="MaskForegroundColor">Orange</Color>
+    <Color x:Key="MaskBorderColor">Yellow</Color>
+    <Color x:Key="MaskBorderSelectedColor">Orange</Color>
+    <Color x:Key="MaskContentColor">YellowGreen</Color>
+    <Color x:Key="MaskContentSelectedColor">GreenYellow</Color>
+
+    <!--RankColor1-->
+    <Color x:Key="ControlMouseOverLightColor">#FFCFADFF</Color>
+    <!--RankColor2-->
+    <Color x:Key="ControlMouseOverMediumColor">#FFA680DE</Color>
+    <!--RankColor3-->
+    <Color x:Key="ControlMouseOverDarkColor">#FF9067CE</Color>
+
+    <!--RankColor4-->
+    <Color x:Key="ControlLightColor">#FF754CB4</Color>
+    <!--RankColor5-->
+    <Color x:Key="ControlMediumColor">#FF593193</Color>
+    <!--RankColor6-->
+    <Color x:Key="ControlDarkColor">#FF431C79</Color>
+
+    <!--RankColor5-->
+    <Color x:Key="ControlPressedLightColor">#FF593193</Color>
+    <!--RankColor6-->
+    <Color x:Key="ControlPressedMediumColor">#FF431C79</Color>
+    <!--RankColor7-->
+    <Color x:Key="ControlPressedDarkColor">#FF290A58</Color>
+
+    <!--RankColor3-->
+    <Color x:Key="ControlSelectedBackgroundColor">#FF9067CE</Color>
+    <!--RankColor4-->
+    <Color x:Key="ControlDisabledColor">#FF754CB4</Color>
+
+    <!--RankColor1-->
+    <Color x:Key="GlyphMouseOver">#FFCFADFF</Color>
+    <!--RankColor2-->
+    <Color x:Key="GlyphColor">#FFA680DE</Color>
+
+    <!--RankColor4-->
+    <Color x:Key="BorderLightColor">#FF754CB4</Color>
+    <!--RankColor5-->
+    <Color x:Key="BorderMediumColor">#FF593193</Color>
+    <!--RankColor6-->
+    <Color x:Key="BorderDarkColor">#FF431C79</Color>
+
+    <!--RankColor3-->
+    <Color x:Key="BackgroundLightColor">#FF9067CE</Color>
+    <!--RankColor4-->
+    <Color x:Key="BackgroundMediumColor">#FF754CB4</Color>
+    <!--RankColor5-->
+    <Color x:Key="BackgroundDarkColor">#FF593193</Color>
+
+</ResourceDictionary>

@@ -1,0 +1,12 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Color x:Key="RankColor1">#FFB3DBF5</Color>
+    <Color x:Key="RankColor2">#FF9ACEEB</Color>
+    <Color x:Key="RankColor3">#FF77BFE2</Color>
+    <Color x:Key="RankColor4">#FF53A6D1</Color>
+    <Color x:Key="RankColor5">#FF3D98C7</Color>
+    <Color x:Key="RankColor6">#FF2078A7</Color>
+    <Color x:Key="RankColor7">#FF074C72</Color>
+
+</ResourceDictionary>

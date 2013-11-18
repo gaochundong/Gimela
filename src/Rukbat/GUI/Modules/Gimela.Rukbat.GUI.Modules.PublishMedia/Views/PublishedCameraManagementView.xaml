@@ -1,0 +1,146 @@
+﻿<UserControl x:Class="Gimela.Rukbat.GUI.Modules.PublishMedia.Views.PublishedCameraManagementView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:converters="clr-namespace:Gimela.Presentation.Controls.Converters;assembly=Gimela.Presentation.Controls"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             d:DesignHeight="318"
+             d:DesignWidth="632"
+             Style="{DynamicResource AsyncWorkUserControlStyle}"
+             mc:Ignorable="d">
+
+  <UserControl.Resources>
+    <converters:ObjectNullToBooleanConverter x:Key="ObjectNullToBooleanConverter" />
+  </UserControl.Resources>
+
+  <Grid Style="{DynamicResource GridStyle}">
+    <Grid x:Name="bgGrid" Margin="5,0,5,0">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="50" />
+        <RowDefinition Height="40" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="5" />
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*" />
+      </Grid.ColumnDefinitions>
+
+      <Label Name="labelViewPrompt"
+             Grid.Row="0"
+             Grid.Column="0"
+             Grid.ColumnSpan="2"
+             Margin="30,0,0,0"
+             HorizontalAlignment="Left"
+             VerticalAlignment="Center"
+             Content="{DynamicResource PublishMedia_PublishedCameraManagementView_ManagePublishedCamera}"
+             FontSize="14"
+             FontWeight="Bold" />
+      <Line Name="lineViewPrompt"
+            Grid.Row="0"
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            Margin="0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center"
+            Stroke="{DynamicResource LineStrokeBrush}"
+            StrokeThickness="2"
+            X1="0"
+            X2="{Binding ElementName=bgGrid,
+                         Path=ActualWidth}"
+            Y1="35"
+            Y2="35" />
+
+      <Grid Grid.Row="1">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="90" />
+          <ColumnDefinition Width="90" />
+          <ColumnDefinition Width="90" />
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="90" />
+          <ColumnDefinition Width="90" />
+        </Grid.ColumnDefinitions>
+
+        <Button Name="btnAddCamera"
+                Grid.Row="1"
+                Grid.Column="0"
+                Width="80"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Command="{Binding Path=CreateCommand}"
+                Content="{DynamicResource PublishMedia_PublishedCameraManagementView_NewPublishedCamera}"
+                Style="{DynamicResource ButtonStyle}" />
+        <Button Name="btnRemoveCamera"
+                Grid.Row="1"
+                Grid.Column="1"
+                Width="80"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Command="{Binding Path=DeleteCommand}"
+                Content="{DynamicResource PublishMedia_PublishedCameraManagementView_DeletePublishedCamera}"
+                IsEnabled="{Binding SelectedPublishedCamera,
+                                    Converter={StaticResource ObjectNullToBooleanConverter}}"
+                Style="{DynamicResource ButtonStyle}" />
+        <Button Name="btnRefresh"
+                Grid.Row="1"
+                Grid.Column="5"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Command="{Binding Path=RefreshCommand}"
+                Content="{DynamicResource PublishMedia_PublishedCameraManagementView_RefreshPublishedCamera}"
+                IsCancel="False"
+                Style="{DynamicResource ButtonStyle}" />
+      </Grid>
+
+      <Grid Grid.Row="2">
+        <ListView Name="listViewPublishedCameraList"
+                  ItemContainerStyle="{DynamicResource ListViewItemStyle}"
+                  ItemsSource="{Binding PublishedCameraCollection}"
+                  SelectedItem="{Binding SelectedPublishedCamera,
+                                         Mode=TwoWay}"
+                  SelectionMode="Single"
+                  Style="{DynamicResource ListViewStyle}">
+          <ListView.View>
+            <GridView>
+              <GridViewColumn Header="{DynamicResource PublishMedia_PublishedCameraManagementView_PublishedCameraPropertyThumbnail}">
+                <GridViewColumn.CellTemplate>
+                  <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                      <Image Width="70"
+                             Height="50"
+                             Margin="5"
+                             HorizontalAlignment="Left"
+                             VerticalAlignment="Center"
+                             Source="{Binding Profile.CameraThumbnailSource}">
+                        <Image.ToolTip>
+                          <StackPanel>
+                            <Image Width="640"
+                                   Height="480"
+                                   Margin="1"
+                                   HorizontalAlignment="Left"
+                                   VerticalAlignment="Center"
+                                   Source="{Binding Profile.CameraThumbnailSource}" />
+                          </StackPanel>
+                        </Image.ToolTip>
+                      </Image>
+                    </StackPanel>
+                  </DataTemplate>
+                </GridViewColumn.CellTemplate>
+              </GridViewColumn>
+              <GridViewColumn DisplayMemberBinding="{Binding Profile.CameraId}" Header="{DynamicResource PublishMedia_PublishedCameraManagementView_PublishedCameraPropertyId}" />
+              <GridViewColumn DisplayMemberBinding="{Binding Profile.CameraName}" Header="{DynamicResource PublishMedia_PublishedCameraManagementView_PublishedCameraPropertyName}" />
+              <GridViewColumn DisplayMemberBinding="{Binding Destination.Port}" Header="{DynamicResource PublishMedia_PublishedCameraManagementView_PublishedCameraPropertyPort}" />
+              <GridViewColumn DisplayMemberBinding="{Binding PublishServiceHostName}" Header="{DynamicResource PublishMedia_PublishedCameraManagementView_PublishedCameraPropertyPublishServiceHostName}" />
+              <GridViewColumn DisplayMemberBinding="{Binding PublishServiceUri}" Header="{DynamicResource PublishMedia_PublishedCameraManagementView_PublishedCameraPropertyPublishServiceUri}" />
+              <GridViewColumn DisplayMemberBinding="{Binding Profile.DeviceServiceHostName}" Header="{DynamicResource PublishMedia_PublishedCameraManagementView_PublishedCameraPropertyDeviceServiceHostName}" />
+              <GridViewColumn DisplayMemberBinding="{Binding Profile.DeviceServiceUri}" Header="{DynamicResource PublishMedia_PublishedCameraManagementView_PublishedCameraPropertyDeviceServiceUri}" />
+            </GridView>
+          </ListView.View>
+        </ListView>
+      </Grid>
+
+    </Grid>
+  </Grid>
+</UserControl>

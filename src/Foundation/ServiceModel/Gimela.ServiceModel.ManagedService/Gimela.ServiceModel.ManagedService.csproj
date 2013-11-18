@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B1313BEB-BE18-4507-A3C1-C63789F47EF5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Gimela.ServiceModel.ManagedService</RootNamespace>
+    <AssemblyName>Gimela.ServiceModel.ManagedService</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\..\..\..\bin\Debug\Gimela.ServiceModel.ManagedService.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Gimela.Common.ExceptionHandling, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Gimela.Common.Logging, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Channels" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attributes\ManagedServiceContractAssemblyAttribute.cs" />
+    <Compile Include="Attributes\ManagedServiceContractAttribute.cs" />
+    <Compile Include="Attributes\ManagedServiceAssemblyAttribute.cs" />
+    <Compile Include="Attributes\ManagedServiceAttribute.cs" />
+    <Compile Include="Contracts\DataContracts\HeartBeatStatus.cs" />
+    <Compile Include="Contracts\DataContracts\ServiceState.cs" />
+    <Compile Include="Contracts\MessageContracts\PingRequest.cs" />
+    <Compile Include="Contracts\MessageContracts\PingResponse.cs" />
+    <Compile Include="Contracts\MessageContracts\ServiceStateResponse.cs" />
+    <Compile Include="IHeartBeat.cs" />
+    <Compile Include="IManagedService.cs" />
+    <Compile Include="ManagedServiceBase.cs" />
+    <Compile Include="ManagedServiceHostActivator.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Gimela.ServiceModel.ManagedDiscovery\Gimela.ServiceModel.ManagedDiscovery.csproj">
+      <Project>{77E79E83-CAF7-4F76-80AF-5095EE5F809D}</Project>
+      <Name>Gimela.ServiceModel.ManagedDiscovery</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Gimela.ServiceModel.ManagedHosting\Gimela.ServiceModel.ManagedHosting.csproj">
+      <Project>{FDC522AB-4E7F-4348-BD0B-7A568C61290D}</Project>
+      <Name>Gimela.ServiceModel.ManagedHosting</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

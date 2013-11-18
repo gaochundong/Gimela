@@ -1,0 +1,26 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Color x:Key="PinkRankColor1">#FFFFC1E0</Color>
+    <Color x:Key="PinkRankColor2">#FFFF97CD</Color>
+    <Color x:Key="PinkRankColor3">#FFFF65B4</Color>
+    <Color x:Key="PinkRankColor4">#FFEF3794</Color>
+    <Color x:Key="PinkRankColor5">#FFEB0F7E</Color>
+    <Color x:Key="PinkRankColor6">#FFC40367</Color>
+    <Color x:Key="PinkRankColor7">#FFA30254</Color>
+
+    <LinearGradientBrush x:Key="PinkRankBackgroundBrush" StartPoint="0,0" EndPoint="1,1">
+        <GradientBrush.GradientStops>
+            <GradientStopCollection>
+                <GradientStop Color="{DynamicResource PinkRankColor1}" Offset="0" />
+                <GradientStop Color="{DynamicResource PinkRankColor2}" Offset="0.1" />
+                <GradientStop Color="{DynamicResource PinkRankColor3}" Offset="0.3" />
+                <GradientStop Color="{DynamicResource PinkRankColor4}" Offset="0.5" />
+                <GradientStop Color="{DynamicResource PinkRankColor5}" Offset="0.7" />
+                <GradientStop Color="{DynamicResource PinkRankColor6}" Offset="0.9" />
+                <GradientStop Color="{DynamicResource PinkRankColor7}" Offset="1" />
+            </GradientStopCollection>
+        </GradientBrush.GradientStops>
+    </LinearGradientBrush>
+    
+</ResourceDictionary>

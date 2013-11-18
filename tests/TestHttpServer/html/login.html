@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title>我的视频</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <link rel="apple-touch-startup-image" href="/img/camera.jpg" />
+  <link rel="apple-touch-icon" href="/img/camera.jpg" />
+  <link rel="stylesheet" href="/css/jquery-mobile-1-3-2.css" />
+  <script type="text/javascript" src="/js/jquery-2-0-3.js"></script>
+  <script type="text/javascript" src="/js/jquery-mobile-1-3-2.js"></script>
+</head>
+<body>
+  <div data-role="page" data-theme="b" id="mainpage">
+    <div data-role="header" data-theme="b">
+      <h1>
+        登录</h1>
+    </div>
+    <div data-role="content">
+      <form name="loginForm" method="post" action="login" id="loginForm" class="" data-ajax="false">
+      <div data-role="fieldcontain">
+        <label for="txtUsername">
+          用户名</label>
+        <input name="txtUsername" type="text" id="txtUsername" data-mini="true" />
+      </div>
+      <div data-role="fieldcontain">
+        <label for="txtPassword">
+          密码</label>
+        <input name="txtPassword" type="password" id="txtPassword" data-mini="true" />
+      </div>
+      <input type="submit" name="loginButton" value="登录" id="loginButton" value="button-value"
+        data-ajax="false" />
+      </form>
+    </div>
+  </div>
+</body>
+</html>

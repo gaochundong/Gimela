@@ -1,0 +1,191 @@
+﻿<UserControl x:Class="Gimela.Rukbat.GUI.Modules.UserManagement.Views.LoginView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:c="clr-namespace:Gimela.Rukbat.GUI.ValidationRules.Converters;assembly=Gimela.Rukbat.GUI.ValidationRules"
+             xmlns:converters="clr-namespace:Gimela.Presentation.Controls.Converters;assembly=Gimela.Presentation.Controls"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:pwd="clr-namespace:Gimela.Presentation.Controls;assembly=Gimela.Presentation.Controls"
+             xmlns:v="clr-namespace:Gimela.Rukbat.GUI.ValidationRules;assembly=Gimela.Rukbat.GUI.ValidationRules"
+             Style="{DynamicResource AsyncWorkUserControlStyle}"
+             mc:Ignorable="d">
+
+  <UserControl.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/Gimela.Presentation.Skins;component/Brushes/GridBrushes.xaml" />
+      </ResourceDictionary.MergedDictionaries>
+
+      <c:InvalidMultiValidationRuleToBooleanMultiConverter x:Key="InvalidMultiValidationRuleToBooleanMultiConverter" />
+      <converters:ReversedBooleanToVisibilityConverter x:Key="ReversedBooleanToVisibilityConverter" />
+    </ResourceDictionary>
+  </UserControl.Resources>
+
+  <Grid>
+
+    <Grid Width="Auto"
+          Height="Auto"
+          HorizontalAlignment="Stretch"
+          VerticalAlignment="Stretch"
+          Visibility="{Binding Path=LoginResult,
+                               Converter={StaticResource ReversedBooleanToVisibilityConverter}}">
+
+      <Grid Width="Auto"
+            Height="Auto"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch"
+            Panel.ZIndex="0"
+            Background="{DynamicResource MaskGridBackgroundBrush}"
+            Opacity="0.2" />
+
+      <Border Width="Auto"
+              Height="Auto"
+              HorizontalAlignment="Center"
+              VerticalAlignment="Center"
+              BorderThickness="2"
+              CornerRadius="4"
+              Style="{DynamicResource BorderStyle}">
+        <Grid x:Name="bgGrid"
+              Width="500"
+              Height="300"
+              HorizontalAlignment="Center"
+              VerticalAlignment="Center"
+              Style="{DynamicResource GridStyle}">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="90" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="10" />
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="30" />
+            <ColumnDefinition Width="110" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="30" />
+          </Grid.ColumnDefinitions>
+
+          <Label Grid.Row="0"
+                 Grid.Column="0"
+                 Grid.ColumnSpan="4"
+                 Height="40"
+                 HorizontalAlignment="Center"
+                 VerticalAlignment="Center"
+                 Content="{DynamicResource UserManagement_LoginView_Welcome}"
+                 TextBlock.FontSize="16" />
+
+          <Label Grid.Row="1"
+                 Grid.Column="1"
+                 Height="28"
+                 HorizontalAlignment="Right"
+                 VerticalAlignment="Center"
+                 Content="{DynamicResource UserManagement_LoginView_ServerIPAddress}" />
+          <TextBox x:Name="textBoxServerIPAddress"
+                   Grid.Row="1"
+                   Grid.Column="2"
+                   Width="220"
+                   Height="23"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Center"
+                   Style="{DynamicResource TextBoxStyle}"
+                   Tag="{DynamicResource UserManagement_LoginView_PromoteInfoServerIPAddress}">
+            <TextBox.Text>
+              <Binding Mode="TwoWay"
+                       Path="ServerIPAddress"
+                       UpdateSourceTrigger="PropertyChanged">
+                <Binding.ValidationRules>
+                  <v:InvalidIPAddressValidationRule />
+                </Binding.ValidationRules>
+              </Binding>
+            </TextBox.Text>
+          </TextBox>
+
+          <Label Grid.Row="2"
+                 Grid.Column="1"
+                 Height="28"
+                 HorizontalAlignment="Right"
+                 VerticalAlignment="Center"
+                 Content="{DynamicResource UserManagement_LoginView_UserName}" />
+          <TextBox x:Name="textBoxUserName"
+                   Grid.Row="2"
+                   Grid.Column="2"
+                   Width="220"
+                   Height="23"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Center"
+                   Style="{DynamicResource TextBoxStyle}"
+                   Tag="{DynamicResource UserManagement_LoginView_PromoteInfoUserName}">
+            <TextBox.Text>
+              <Binding Mode="TwoWay"
+                       Path="UserName"
+                       UpdateSourceTrigger="PropertyChanged">
+                <Binding.ValidationRules>
+                  <v:InvalidStringLengthValidationRule />
+                </Binding.ValidationRules>
+              </Binding>
+            </TextBox.Text>
+          </TextBox>
+
+          <Label Grid.Row="3"
+                 Grid.Column="1"
+                 Height="28"
+                 HorizontalAlignment="Right"
+                 VerticalAlignment="Center"
+                 Content="{DynamicResource UserManagement_LoginView_Password}" />
+          <PasswordBox Name="passwordBoxPassword"
+                       Grid.Row="3"
+                       Grid.Column="2"
+                       Width="220"
+                       Height="23"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Center"
+                       pwd:PasswordBoxAssistant.BindPassword="True"
+                       pwd:PasswordBoxAssistant.BoundPassword="{Binding Path=Password,
+                                                                        Mode=TwoWay,
+                                                                        UpdateSourceTrigger=PropertyChanged}"
+                       Style="{DynamicResource PasswordBoxStyle}" />
+
+          <Grid Grid.Row="5"
+                Grid.Column="0"
+                Grid.ColumnSpan="4">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="*" />
+              <ColumnDefinition Width="50" />
+              <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Button Name="btnExit"
+                    Grid.Column="0"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Center"
+                    Command="{Binding Path=ExitCommand}"
+                    Content="{DynamicResource UserManagement_LoginView_Exit}"
+                    IsCancel="True"
+                    Style="{DynamicResource ButtonStyle}" />
+            <Button Name="btnLogin"
+                    Grid.Column="2"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center"
+                    Command="{Binding Path=LoginCommand}"
+                    Content="{DynamicResource UserManagement_LoginView_Login}"
+                    IsDefault="True"
+                    Style="{DynamicResource ButtonStyle}">
+              <Button.IsEnabled>
+                <MultiBinding Converter="{StaticResource InvalidMultiValidationRuleToBooleanMultiConverter}" ConverterParameter="ipaddress|stringlength">
+                  <Binding ElementName="textBoxServerIPAddress"
+                           Mode="OneWay"
+                           Path="Text" />
+                  <Binding ElementName="textBoxUserName"
+                           Mode="OneWay"
+                           Path="Text" />
+                </MultiBinding>
+              </Button.IsEnabled>
+            </Button>
+          </Grid>
+        </Grid>
+      </Border>
+    </Grid>
+
+  </Grid>
+</UserControl>

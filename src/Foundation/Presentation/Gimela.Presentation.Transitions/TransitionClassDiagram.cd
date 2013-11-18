@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="Gimela.Presentation.Transitions.ClothTransition" Collapsed="true">
+    <Position X="8" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgABAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Transitions\3D\ClothTransition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gimela.Presentation.Transitions.DoorTransition" Collapsed="true">
+    <Position X="14.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAABBAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Transitions\3D\DoorTransition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gimela.Presentation.Transitions.ExplosionTransition" Collapsed="true">
+    <Position X="10.25" Y="3.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAABBAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Transitions\3D\ExplosionTransition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gimela.Presentation.Transitions.FadeTransition" Collapsed="true">
+    <Position X="1.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAACAAAAARAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Transitions\FadeTransition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gimela.Presentation.Transitions.FlipTransition" Collapsed="true">
+    <Position X="17" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAADBAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Transitions\3D\FlipTransition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gimela.Presentation.Transitions.PageTransition" Collapsed="true">
+    <Position X="19.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgABAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Transitions\3D\PageTransition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gimela.Presentation.Transitions.RotateTransition" Collapsed="true">
+    <Position X="12.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAQAAgACAAAIADBAAAABAAAAAAAAAEAAgAAAAAA=</HashCode>
+      <FileName>Transitions\3D\RotateTransition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gimela.Presentation.Transitions.StoryboardTransition" Collapsed="true">
+    <Position X="3.5" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAgAAAAAABAARAAEAgAABQAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Transitions\StoryboardTransition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gimela.Presentation.Transitions.Transition" Collapsed="true">
+    <Position X="10.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAQAgAAAAAAAAAQAAEACAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Transition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gimela.Presentation.Transitions.Transition3D" Collapsed="true">
+    <Position X="13.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAEAAAAAQABAAgAAAAAAAAICAAAAAAEAAAA=</HashCode>
+      <FileName>Transition3D.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gimela.Presentation.Transitions.TransitionElement" Collapsed="true">
+    <Position X="21.75" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>BAAUAEAgAsAIQAAAAAwEAMAwgCJAQCgRAAAAAAAhIAg=</HashCode>
+      <FileName>TransitionElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gimela.Presentation.Transitions.TransitionSelector" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Selectors\TransitionSelector.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gimela.Presentation.Transitions.TranslateTransition" Collapsed="true">
+    <Position X="5.75" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAABCQAAAARAAAAAAAAAAAAAAAIAAAAAAAAg=</HashCode>
+      <FileName>Transitions\2D\TranslateTransition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gimela.Presentation.Transitions.TwoWayTransitionSelector" Collapsed="true">
+    <Position X="0.5" Y="5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAABACAAQAAAAAAAAEAAAAAAgAAAAAI=</HashCode>
+      <FileName>Selectors\TwoWayTransitionSelector.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="Gimela.Presentation.Transitions.RotateDirection" Collapsed="true">
+    <Position X="21.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAACACAAAAAAAI=</HashCode>
+      <FileName>Enumerations\RotateDirection.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Gimela.Presentation.Transitions.TransitionDirection" Collapsed="true">
+    <Position X="23.5" Y="1.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Enumerations\TransitionDirection.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Microsoft YaHei" Size="9" />
+</ClassDiagram>

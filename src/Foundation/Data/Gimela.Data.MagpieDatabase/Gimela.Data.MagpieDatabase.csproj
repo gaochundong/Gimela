@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{25BE8E8D-4812-4371-9334-861A8EA07211}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Gimela.Data.Magpie</RootNamespace>
+    <AssemblyName>Gimela.Data.MagpieDatabase</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>..\..\..\..\bin\Debug\Gimela.Data.MagpieDatabase.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IMagpieDocumentId.cs" />
+    <Compile Include="MagpieCollection.cs" />
+    <Compile Include="MagpieCollectionSettings.cs" />
+    <Compile Include="Exceptions\MagpieConnectionException.cs" />
+    <Compile Include="MagpieDatabase.cs" />
+    <Compile Include="MagpieDatabaseSettings.cs" />
+    <Compile Include="MagpieDefaults.cs" />
+    <Compile Include="Exceptions\MagpieException.cs" />
+    <Compile Include="MagpieServer.cs" />
+    <Compile Include="MagpieServerAddress.cs" />
+    <Compile Include="MagpieServerSettings.cs" />
+    <Compile Include="MagpieUrl.cs" />
+    <Compile Include="MagpieUrlBuilder.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Gimela.Data.DataStructures\Gimela.Data.DataStructures.csproj">
+      <Project>{068020BB-7170-4FB1-8CF7-D05BBDD08977}</Project>
+      <Name>Gimela.Data.DataStructures</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Gimela.Data.Json\Gimela.Data.Json.csproj">
+      <Project>{148E307A-DD87-4202-AF5C-F9BC5E3CD956}</Project>
+      <Name>Gimela.Data.Json</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

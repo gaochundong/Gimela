@@ -1,0 +1,26 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Color x:Key="LightYellowRankColor1">#FFFFFBD4</Color>
+    <Color x:Key="LightYellowRankColor2">#FFFFF5A0</Color>
+    <Color x:Key="LightYellowRankColor3">#FFFEEF7A</Color>
+    <Color x:Key="LightYellowRankColor4">#FFF5E245</Color>
+    <Color x:Key="LightYellowRankColor5">#FFEFD912</Color>
+    <Color x:Key="LightYellowRankColor6">#FFD1BD00</Color>
+    <Color x:Key="LightYellowRankColor7">#FFA09100</Color>
+
+    <LinearGradientBrush x:Key="LightYellowRankBackgroundBrush" StartPoint="0,0" EndPoint="1,1">
+        <GradientBrush.GradientStops>
+            <GradientStopCollection>
+                <GradientStop Color="{DynamicResource LightYellowRankColor1}" Offset="0" />
+                <GradientStop Color="{DynamicResource LightYellowRankColor2}" Offset="0.1" />
+                <GradientStop Color="{DynamicResource LightYellowRankColor3}" Offset="0.3" />
+                <GradientStop Color="{DynamicResource LightYellowRankColor4}" Offset="0.5" />
+                <GradientStop Color="{DynamicResource LightYellowRankColor5}" Offset="0.7" />
+                <GradientStop Color="{DynamicResource LightYellowRankColor6}" Offset="0.9" />
+                <GradientStop Color="{DynamicResource LightYellowRankColor7}" Offset="1" />
+            </GradientStopCollection>
+        </GradientBrush.GradientStops>
+    </LinearGradientBrush>
+    
+</ResourceDictionary>

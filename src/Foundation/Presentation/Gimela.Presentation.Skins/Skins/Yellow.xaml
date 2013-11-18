@@ -1,0 +1,67 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Color x:Key="ForegroundColor">White</Color>
+    <Color x:Key="DisabledForegroundColor">Gray</Color>
+    <Color x:Key="SelectedForegroundColor">Black</Color>
+
+    <Color x:Key="ReversedForegroundColor">Black</Color>
+    <Color x:Key="ReversedDisabledForegroundColor">Gray</Color>
+    <Color x:Key="ReversedSelectedForegroundColor">White</Color>
+
+    <Color x:Key="ErrorForegroundColor">Red</Color>
+    <Color x:Key="ErrorBorderColor">Red</Color>
+
+    <Color x:Key="MaskBackgroundColor">LightGray</Color>
+    <Color x:Key="MaskForegroundColor">Orange</Color>
+    <Color x:Key="MaskBorderColor">LightGreen</Color>
+    <Color x:Key="MaskBorderSelectedColor">Green</Color>
+    <Color x:Key="MaskContentColor">Yellow</Color>
+    <Color x:Key="MaskContentSelectedColor">Orange</Color>
+
+    <!--RankColor1-->
+    <Color x:Key="ControlMouseOverLightColor">#FFFEE06E</Color>
+    <!--RankColor2-->
+    <Color x:Key="ControlMouseOverMediumColor">#FFE2C454</Color>
+    <!--RankColor3-->
+    <Color x:Key="ControlMouseOverDarkColor">#FFD1AC26</Color>
+
+    <!--RankColor4-->
+    <Color x:Key="ControlLightColor">#FFB18C05</Color>
+    <!--RankColor5-->
+    <Color x:Key="ControlMediumColor">#FF907100</Color>
+    <!--RankColor6-->
+    <Color x:Key="ControlDarkColor">#FF6C5400</Color>
+
+    <!--RankColor5-->
+    <Color x:Key="ControlPressedLightColor">#FF907100</Color>
+    <!--RankColor6-->
+    <Color x:Key="ControlPressedMediumColor">#FF6C5400</Color>
+    <!--RankColor7-->
+    <Color x:Key="ControlPressedDarkColor">#FF483901</Color>
+
+    <!--RankColor3-->
+    <Color x:Key="ControlSelectedBackgroundColor">#FFD1AC26</Color>
+    <!--RankColor4-->
+    <Color x:Key="ControlDisabledColor">#FFB18C05</Color>
+
+    <!--RankColor1-->
+    <Color x:Key="GlyphMouseOver">#FFFEE06E</Color>
+    <!--RankColor2-->
+    <Color x:Key="GlyphColor">#FFE2C454</Color>
+
+    <!--RankColor4-->
+    <Color x:Key="BorderLightColor">#FFB18C05</Color>
+    <!--RankColor5-->
+    <Color x:Key="BorderMediumColor">#FF907100</Color>
+    <!--RankColor6-->
+    <Color x:Key="BorderDarkColor">#FF6C5400</Color>
+
+    <!--RankColor3-->
+    <Color x:Key="BackgroundLightColor">#FFD1AC26</Color>
+    <!--RankColor4-->
+    <Color x:Key="BackgroundMediumColor">#FFB18C05</Color>
+    <!--RankColor5-->
+    <Color x:Key="BackgroundDarkColor">#FF907100</Color>
+
+</ResourceDictionary>

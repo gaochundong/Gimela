@@ -1,0 +1,14 @@
+﻿".\Knifer\rename.exe" -e "VOD" -o "EMT" -d 'E:\Projects\Gimela\tools\ServiceSample' -x "bin;obj" -f -r
+".\Knifer\replace.exe" -f "VOD" -t "EMT" -d 'E:\Projects\Gimela\tools\ServiceSample' -e ".cs,.csproj,.sln,.xaml,.config" -r
+
+".\Knifer\rename.exe" -e "SVS" -o "DPS" -d 'E:\Projects\Gimela\tools\ServiceSample' -x "bin;obj" -f -r
+".\Knifer\replace.exe" -f "SVS" -t "DPS" -d 'E:\Projects\Gimela\tools\ServiceSample' -e ".cs,.csproj,.sln,.xaml,.config" -r
+
+".\Knifer\rmdir.exe" -d "C:\Gimela\Gimela\src\Rukbat\Service\UserProfile" -e "obj" -r
+".\Knifer\rmdir.exe" -d "C:\Gimela\Gimela\src\Rukbat\Service\UserProfile" -e "bin" -r
+
+".\Knifer\rmdir.exe" -d "C:\Gimela\Gimela\src\Rukbat" -e "obj" -r
+".\Knifer\rmdir.exe" -d "C:\Gimela\Gimela\src\Rukbat" -e "bin" -r
+
+".\Knifer\rename.exe" -e "Toolkit" -o "Knifer" -d 'C:\Gimela\Knifer-master' -x "bin;obj" -f -r
+".\Knifer\replace.exe" -f "Toolkit" -t "Knifer" -d 'C:\Gimela\Knifer-master' -e ".cs,.csproj,.sln,.xaml,.config" -r

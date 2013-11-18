@@ -1,0 +1,525 @@
+﻿<UserControl x:Class="Gimela.Rukbat.GUI.Modules.SkinConfiguration.Views.UpdateSkinView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:c="clr-namespace:Gimela.Rukbat.GUI.ValidationRules.Converters;assembly=Gimela.Rukbat.GUI.ValidationRules"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:v="clr-namespace:Gimela.Rukbat.GUI.ValidationRules;assembly=Gimela.Rukbat.GUI.ValidationRules"
+             d:DesignHeight="464"
+             d:DesignWidth="600"
+             mc:Ignorable="d">
+  <UserControl.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/Gimela.Presentation.Skins;component/Colors/BlackColors.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Gimela.Presentation.Skins;component/Colors/BlueColors.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Gimela.Presentation.Skins;component/Colors/CyanColors.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Gimela.Presentation.Skins;component/Colors/GoldColors.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Gimela.Presentation.Skins;component/Colors/GreenColors.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Gimela.Presentation.Skins;component/Colors/PurpleColors.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Gimela.Presentation.Skins;component/Colors/RedColors.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Gimela.Presentation.Skins;component/Colors/SilverColors.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Gimela.Presentation.Skins;component/Colors/VioletColors.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Gimela.Presentation.Skins;component/Colors/YellowColors.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Gimela.Presentation.Skins;component/Colors/CadetBlueColors.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Gimela.Presentation.Skins;component/Colors/CrimsonColors.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Gimela.Presentation.Skins;component/Colors/DodgerBlueColors.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Gimela.Presentation.Skins;component/Colors/GainsboroColors.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Gimela.Presentation.Skins;component/Colors/GoldenrodColors.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Gimela.Presentation.Skins;component/Colors/LightYellowColors.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Gimela.Presentation.Skins;component/Colors/LimeGreenColors.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Gimela.Presentation.Skins;component/Colors/PeruColors.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Gimela.Presentation.Skins;component/Colors/PinkColors.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Gimela.Presentation.Skins;component/Colors/SkyBlueColors.xaml" />
+      </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+  </UserControl.Resources>
+
+  <Grid Style="{DynamicResource GridStyle}">
+    <Grid x:Name="bgGrid" Margin="5,0,5,0">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="50" />
+        <RowDefinition Height="320" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="60" />
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="500" />
+        <ColumnDefinition Width="*" />
+      </Grid.ColumnDefinitions>
+
+      <Label Grid.Row="0"
+             Grid.Column="0"
+             Grid.ColumnSpan="3"
+             Margin="30,0,0,0"
+             HorizontalAlignment="Left"
+             VerticalAlignment="Center"
+             Content="{DynamicResource SkinConfiguration_UpdateSkinView_SelectSkinColor}"
+             FontSize="14"
+             FontWeight="Bold" />
+      <Line Grid.Row="0"
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            Margin="0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center"
+            Stroke="{DynamicResource LineStrokeBrush}"
+            StrokeThickness="2"
+            X1="0"
+            X2="{Binding ElementName=bgGrid,
+                         Path=ActualWidth}"
+            Y1="35"
+            Y2="35" />
+
+      <Grid Grid.Row="1" Grid.Column="1">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="*" />
+          <RowDefinition Height="*" />
+          <RowDefinition Height="*" />
+          <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Row="0" Grid.Column="0">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="10" />
+          </Grid.RowDefinitions>
+          <RadioButton Grid.Row="0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       Command="{Binding Path=ColorSelectedCommand}"
+                       Content="{DynamicResource SkinConfiguration_UpdateSkinView_ColorBlack}"
+                       GroupName="skin"
+                       IsChecked="{Binding IsBlack}" />
+          <Border Grid.Row="1"
+                  Width="60"
+                  Height="35"
+                  Background="{DynamicResource BlackRankBackgroundBrush}"
+                  BorderBrush="{DynamicResource BorderDarkBorderBrush}"
+                  BorderThickness="2" />
+        </Grid>
+        <Grid Grid.Row="0" Grid.Column="1">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="10" />
+          </Grid.RowDefinitions>
+          <RadioButton Grid.Row="0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       Command="{Binding Path=ColorSelectedCommand}"
+                       Content="{DynamicResource SkinConfiguration_UpdateSkinView_ColorBlue}"
+                       GroupName="skin"
+                       IsChecked="{Binding IsBlue}" />
+          <Border Grid.Row="1"
+                  Width="60"
+                  Height="35"
+                  Background="{DynamicResource BlueRankBackgroundBrush}"
+                  BorderBrush="{DynamicResource BorderDarkBorderBrush}"
+                  BorderThickness="2" />
+        </Grid>
+        <Grid Grid.Row="0" Grid.Column="2">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="10" />
+          </Grid.RowDefinitions>
+          <RadioButton Grid.Row="0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       Command="{Binding Path=ColorSelectedCommand}"
+                       Content="{DynamicResource SkinConfiguration_UpdateSkinView_ColorCyan}"
+                       GroupName="skin"
+                       IsChecked="{Binding IsCyan}" />
+          <Border Grid.Row="1"
+                  Width="60"
+                  Height="35"
+                  Background="{DynamicResource CyanRankBackgroundBrush}"
+                  BorderBrush="{DynamicResource BorderDarkBorderBrush}"
+                  BorderThickness="2" />
+        </Grid>
+        <Grid Grid.Row="0" Grid.Column="3">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="10" />
+          </Grid.RowDefinitions>
+          <RadioButton Grid.Row="0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       Command="{Binding Path=ColorSelectedCommand}"
+                       Content="{DynamicResource SkinConfiguration_UpdateSkinView_ColorGold}"
+                       GroupName="skin"
+                       IsChecked="{Binding IsGold}" />
+          <Border Grid.Row="1"
+                  Width="60"
+                  Height="35"
+                  Background="{DynamicResource GoldRankBackgroundBrush}"
+                  BorderBrush="{DynamicResource BorderDarkBorderBrush}"
+                  BorderThickness="2" />
+        </Grid>
+        <Grid Grid.Row="0" Grid.Column="4">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="10" />
+          </Grid.RowDefinitions>
+          <RadioButton Grid.Row="0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       Command="{Binding Path=ColorSelectedCommand}"
+                       Content="{DynamicResource SkinConfiguration_UpdateSkinView_ColorGreen}"
+                       GroupName="skin"
+                       IsChecked="{Binding IsGreen}" />
+          <Border Grid.Row="1"
+                  Width="60"
+                  Height="35"
+                  Background="{DynamicResource GreenRankBackgroundBrush}"
+                  BorderBrush="{DynamicResource BorderDarkBorderBrush}"
+                  BorderThickness="2" />
+        </Grid>
+
+        <Grid Grid.Row="1" Grid.Column="0">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="10" />
+          </Grid.RowDefinitions>
+          <RadioButton Grid.Row="0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       Command="{Binding Path=ColorSelectedCommand}"
+                       Content="{DynamicResource SkinConfiguration_UpdateSkinView_ColorPurple}"
+                       GroupName="skin"
+                       IsChecked="{Binding IsPurple}" />
+          <Border Grid.Row="1"
+                  Width="60"
+                  Height="35"
+                  Background="{DynamicResource PurpleRankBackgroundBrush}"
+                  BorderBrush="{DynamicResource BorderDarkBorderBrush}"
+                  BorderThickness="2" />
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="1">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="10" />
+          </Grid.RowDefinitions>
+          <RadioButton Grid.Row="0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       Command="{Binding Path=ColorSelectedCommand}"
+                       Content="{DynamicResource SkinConfiguration_UpdateSkinView_ColorRed}"
+                       GroupName="skin"
+                       IsChecked="{Binding IsRed}" />
+          <Border Grid.Row="1"
+                  Width="60"
+                  Height="35"
+                  Background="{DynamicResource RedRankBackgroundBrush}"
+                  BorderBrush="{DynamicResource BorderDarkBorderBrush}"
+                  BorderThickness="2" />
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="2">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="10" />
+          </Grid.RowDefinitions>
+          <RadioButton Grid.Row="0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       Command="{Binding Path=ColorSelectedCommand}"
+                       Content="{DynamicResource SkinConfiguration_UpdateSkinView_ColorSilver}"
+                       GroupName="skin"
+                       IsChecked="{Binding IsSilver}" />
+          <Border Grid.Row="1"
+                  Width="60"
+                  Height="35"
+                  Background="{DynamicResource SilverRankBackgroundBrush}"
+                  BorderBrush="{DynamicResource BorderDarkBorderBrush}"
+                  BorderThickness="2" />
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="3">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="10" />
+          </Grid.RowDefinitions>
+          <RadioButton Grid.Row="0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       Command="{Binding Path=ColorSelectedCommand}"
+                       Content="{DynamicResource SkinConfiguration_UpdateSkinView_ColorViolet}"
+                       GroupName="skin"
+                       IsChecked="{Binding IsViolet}" />
+          <Border Grid.Row="1"
+                  Width="60"
+                  Height="35"
+                  Background="{DynamicResource VioletRankBackgroundBrush}"
+                  BorderBrush="{DynamicResource BorderDarkBorderBrush}"
+                  BorderThickness="2" />
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="4">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="10" />
+          </Grid.RowDefinitions>
+          <RadioButton Grid.Row="0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       Command="{Binding Path=ColorSelectedCommand}"
+                       Content="{DynamicResource SkinConfiguration_UpdateSkinView_ColorYellow}"
+                       GroupName="skin"
+                       IsChecked="{Binding IsYellow}" />
+          <Border Grid.Row="1"
+                  Width="60"
+                  Height="35"
+                  Background="{DynamicResource YellowRankBackgroundBrush}"
+                  BorderBrush="{DynamicResource BorderDarkBorderBrush}"
+                  BorderThickness="2" />
+        </Grid>
+
+        <Grid Grid.Row="2" Grid.Column="0">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="10" />
+          </Grid.RowDefinitions>
+          <RadioButton Grid.Row="0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       Command="{Binding Path=ColorSelectedCommand}"
+                       Content="{DynamicResource SkinConfiguration_UpdateSkinView_ColorCadetBlue}"
+                       GroupName="skin"
+                       IsChecked="{Binding IsCadetBlue}" />
+          <Border Grid.Row="1"
+                  Width="60"
+                  Height="35"
+                  Background="{DynamicResource CadetBlueRankBackgroundBrush}"
+                  BorderBrush="{DynamicResource BorderDarkBorderBrush}"
+                  BorderThickness="2" />
+        </Grid>
+        <Grid Grid.Row="2" Grid.Column="1">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="10" />
+          </Grid.RowDefinitions>
+          <RadioButton Grid.Row="0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       Command="{Binding Path=ColorSelectedCommand}"
+                       Content="{DynamicResource SkinConfiguration_UpdateSkinView_ColorCrimson}"
+                       GroupName="skin"
+                       IsChecked="{Binding IsCrimson}" />
+          <Border Grid.Row="1"
+                  Width="60"
+                  Height="35"
+                  Background="{DynamicResource CrimsonRankBackgroundBrush}"
+                  BorderBrush="{DynamicResource BorderDarkBorderBrush}"
+                  BorderThickness="2" />
+        </Grid>
+        <Grid Grid.Row="2" Grid.Column="2">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="10" />
+          </Grid.RowDefinitions>
+          <RadioButton Grid.Row="0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       Command="{Binding Path=ColorSelectedCommand}"
+                       Content="{DynamicResource SkinConfiguration_UpdateSkinView_ColorDodgerBlue}"
+                       GroupName="skin"
+                       IsChecked="{Binding IsDodgerBlue}" />
+          <Border Grid.Row="1"
+                  Width="60"
+                  Height="35"
+                  Background="{DynamicResource DodgerBlueRankBackgroundBrush}"
+                  BorderBrush="{DynamicResource BorderDarkBorderBrush}"
+                  BorderThickness="2" />
+        </Grid>
+        <Grid Grid.Row="2" Grid.Column="3">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="10" />
+          </Grid.RowDefinitions>
+          <RadioButton Grid.Row="0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       Command="{Binding Path=ColorSelectedCommand}"
+                       Content="{DynamicResource SkinConfiguration_UpdateSkinView_ColorGainsboro}"
+                       GroupName="skin"
+                       IsChecked="{Binding IsGainsboro}" />
+          <Border Grid.Row="1"
+                  Width="60"
+                  Height="35"
+                  Background="{DynamicResource GainsboroRankBackgroundBrush}"
+                  BorderBrush="{DynamicResource BorderDarkBorderBrush}"
+                  BorderThickness="2" />
+        </Grid>
+        <Grid Grid.Row="2" Grid.Column="4">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="10" />
+          </Grid.RowDefinitions>
+          <RadioButton Grid.Row="0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       Command="{Binding Path=ColorSelectedCommand}"
+                       Content="{DynamicResource SkinConfiguration_UpdateSkinView_ColorGoldenrod}"
+                       GroupName="skin"
+                       IsChecked="{Binding IsGoldenrod}" />
+          <Border Grid.Row="1"
+                  Width="60"
+                  Height="35"
+                  Background="{DynamicResource GoldenrodRankBackgroundBrush}"
+                  BorderBrush="{DynamicResource BorderDarkBorderBrush}"
+                  BorderThickness="2" />
+        </Grid>
+
+        <Grid Grid.Row="3" Grid.Column="0">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="10" />
+          </Grid.RowDefinitions>
+          <RadioButton Grid.Row="0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       Command="{Binding Path=ColorSelectedCommand}"
+                       Content="{DynamicResource SkinConfiguration_UpdateSkinView_ColorLightYellow}"
+                       GroupName="skin"
+                       IsChecked="{Binding IsLightYellow}" />
+          <Border Grid.Row="1"
+                  Width="60"
+                  Height="35"
+                  Background="{DynamicResource LightYellowRankBackgroundBrush}"
+                  BorderBrush="{DynamicResource BorderDarkBorderBrush}"
+                  BorderThickness="2" />
+        </Grid>
+        <Grid Grid.Row="3" Grid.Column="1">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="10" />
+          </Grid.RowDefinitions>
+          <RadioButton Grid.Row="0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       Command="{Binding Path=ColorSelectedCommand}"
+                       Content="{DynamicResource SkinConfiguration_UpdateSkinView_ColorLimeGreen}"
+                       GroupName="skin"
+                       IsChecked="{Binding IsLimeGreen}" />
+          <Border Grid.Row="1"
+                  Width="60"
+                  Height="35"
+                  Background="{DynamicResource LimeGreenRankBackgroundBrush}"
+                  BorderBrush="{DynamicResource BorderDarkBorderBrush}"
+                  BorderThickness="2" />
+        </Grid>
+        <Grid Grid.Row="3" Grid.Column="2">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="10" />
+          </Grid.RowDefinitions>
+          <RadioButton Grid.Row="0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       Command="{Binding Path=ColorSelectedCommand}"
+                       Content="{DynamicResource SkinConfiguration_UpdateSkinView_ColorPeru}"
+                       GroupName="skin"
+                       IsChecked="{Binding IsPeru}" />
+          <Border Grid.Row="1"
+                  Width="60"
+                  Height="35"
+                  Background="{DynamicResource PeruRankBackgroundBrush}"
+                  BorderBrush="{DynamicResource BorderDarkBorderBrush}"
+                  BorderThickness="2" />
+        </Grid>
+        <Grid Grid.Row="3" Grid.Column="3">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="10" />
+          </Grid.RowDefinitions>
+          <RadioButton Grid.Row="0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       Command="{Binding Path=ColorSelectedCommand}"
+                       Content="{DynamicResource SkinConfiguration_UpdateSkinView_ColorPink}"
+                       GroupName="skin"
+                       IsChecked="{Binding IsPink}" />
+          <Border Grid.Row="1"
+                  Width="60"
+                  Height="35"
+                  Background="{DynamicResource PinkRankBackgroundBrush}"
+                  BorderBrush="{DynamicResource BorderDarkBorderBrush}"
+                  BorderThickness="2" />
+        </Grid>
+        <Grid Grid.Row="3" Grid.Column="4">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="10" />
+          </Grid.RowDefinitions>
+          <RadioButton Grid.Row="0"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       Command="{Binding Path=ColorSelectedCommand}"
+                       Content="{DynamicResource SkinConfiguration_UpdateSkinView_ColorSkyBlue}"
+                       GroupName="skin"
+                       IsChecked="{Binding IsSkyBlue}" />
+          <Border Grid.Row="1"
+                  Width="60"
+                  Height="35"
+                  Background="{DynamicResource SkyBlueRankBackgroundBrush}"
+                  BorderBrush="{DynamicResource BorderDarkBorderBrush}"
+                  BorderThickness="2" />
+        </Grid>
+
+      </Grid>
+
+      <Grid Grid.Row="3"
+            Grid.Column="0"
+            Grid.ColumnSpan="3">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="50" />
+          <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Button Name="btnCancel"
+                Grid.Column="0"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center"
+                Command="{Binding Path=CancelCommand}"
+                Content="{DynamicResource Common_Button_Cancel}"
+                IsCancel="True"
+                Style="{DynamicResource ButtonStyle}" />
+        <Button Name="btnOK"
+                Grid.Column="2"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                Command="{Binding Path=OKCommand}"
+                Content="{DynamicResource Common_Button_OK}"
+                IsDefault="True"
+                Style="{DynamicResource ButtonStyle}" />
+      </Grid>
+
+    </Grid>
+  </Grid>
+
+</UserControl>

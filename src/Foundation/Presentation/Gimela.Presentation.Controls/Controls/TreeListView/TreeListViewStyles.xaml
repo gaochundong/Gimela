@@ -1,0 +1,120 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Gimela.Presentation.Controls">
+
+  <!--  Converter for Indentation of items  -->
+  <local:TreeListViewConverter x:Key="TreeListViewConverter" />
+
+  <!--  Control Template for TreeViewItem's.  -->
+  <ControlTemplate x:Key="TreeListViewItem" TargetType="TreeViewItem">
+    <!--  Grid containing the current information and the subnodes.  -->
+    <StackPanel>
+      <!--  Border wrapping the content presenter.  -->
+      <Border x:Name="Border">
+        <!--  GridViewRowPrsenter containing the current information.  -->
+        <GridViewRowPresenter Columns="{Binding Columns, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=local:TreeListView}}" Content="{TemplateBinding Header}" />
+      </Border>
+      <!--  ItemsPresenter containing the subnodes  -->
+      <ItemsPresenter x:Name="ItemsPresenter" Visibility="Collapsed" />
+    </StackPanel>
+    <ControlTemplate.Triggers>
+      <!--  Trigger used to show the sub items  -->
+      <Trigger Property="IsExpanded" Value="True">
+        <Setter TargetName="ItemsPresenter" Property="Visibility" Value="Visible" />
+      </Trigger>
+      <!--  Trigger used to change the color based on selection  -->
+      <Trigger Property="IsSelected" Value="true">
+        <!--  Change the background color  -->
+        <Setter TargetName="Border" Property="Background" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}" />
+        <!--  Change the foreground color  -->
+        <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}" />
+      </Trigger>
+      <!--  Trigger used to change the color based on selection  -->
+      <MultiTrigger>
+        <MultiTrigger.Conditions>
+          <Condition Property="IsSelected" Value="true" />
+          <Condition Property="IsSelectionActive" Value="false" />
+        </MultiTrigger.Conditions>
+        <!--  Change the background color  -->
+        <Setter TargetName="Border" Property="Background" Value="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" />
+        <!--  Change the foreground color  -->
+        <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" />
+      </MultiTrigger>
+      <!--  Trigger used to change the color based on the status of the item  -->
+      <Trigger Property="IsEnabled" Value="false">
+        <!--  Change the foreground color  -->
+        <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" />
+      </Trigger>
+    </ControlTemplate.Triggers>
+  </ControlTemplate>
+
+  <!--  Control Template for TreeListViewExpander's.  -->
+  <ControlTemplate x:Key="TreeListViewExpander" TargetType="{x:Type local:TreeListViewExpander}">
+    <StackPanel x:Name="ContainerElement" Orientation="Horizontal">
+      <!--  Use a FrameworkElement to indent the button  -->
+      <FrameworkElement Width="{Binding RelativeSource={x:Static RelativeSource.Self}, Converter={StaticResource TreeListViewConverter}}" />
+      <!--  Use a standard toggle button  -->
+      <ToggleButton Width="9"
+                    Height="9"
+                    Margin="1"
+                    VerticalAlignment="Center"
+                    IsChecked="{Binding IsExpanded,
+                                        RelativeSource={RelativeSource Mode=FindAncestor,
+                                                                       AncestorType=TreeViewItem}}" />
+    </StackPanel>
+    <ControlTemplate.Triggers>
+      <!--  Trigger used to show/hide the expand button  -->
+      <DataTrigger Binding="{Binding HasItems, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=TreeViewItem}}" Value="False">
+        <Setter TargetName="ContainerElement" Property="Visibility" Value="Hidden" />
+      </DataTrigger>
+    </ControlTemplate.Triggers>
+  </ControlTemplate>
+
+  <!--  Apply this style to all controls of type 'TreeListView'.  -->
+  <Style TargetType="{x:Type local:TreeListView}">
+    <!--  Set the control template.  -->
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type local:TreeListView}">
+          <ControlTemplate.Resources>
+            <!--  Apply this style to all 'TreeViewItem's.  -->
+            <Style TargetType="TreeViewItem">
+              <Setter Property="Template" Value="{StaticResource TreeListViewItem}" />
+            </Style>
+            <!--  Apply this style to all 'TreeListViewExpander's.  -->
+            <Style TargetType="local:TreeListViewExpander">
+              <Setter Property="Template" Value="{StaticResource TreeListViewExpander}" />
+            </Style>
+          </ControlTemplate.Resources>
+          <!--  Create a standard border around the 'TreeListView'.  -->
+          <Border Background="{TemplateBinding Background}"
+                  BorderBrush="{TemplateBinding BorderBrush}"
+                  BorderThickness="{TemplateBinding BorderThickness}">
+            <!--  ScrollViewer providing horizontal scrolling functionality for both, content and headers.  -->
+            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled">
+              <!--  Grid containing the header row and all the content rows.  -->
+              <Grid>
+                <Grid.RowDefinitions>
+                  <!--  The header row.  -->
+                  <RowDefinition Height="Auto" />
+                  <!--  The content row.  -->
+                  <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <!--  The header row.  -->
+                <GridViewHeaderRowPresenter AllowsColumnReorder="{TemplateBinding AllowsColumnReorder}" Columns="{TemplateBinding Columns}" />
+                <!--  ScrollViewer providing vertical scrolling functionality for the content.  -->
+                <ScrollViewer Grid.Row="1"
+                              HorizontalScrollBarVisibility="Disabled"
+                              VerticalScrollBarVisibility="Auto">
+                  <!--  ItemsPresenter containg the content.  -->
+                  <ItemsPresenter />
+                </ScrollViewer>
+              </Grid>
+            </ScrollViewer>
+          </Border>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+
+</ResourceDictionary>

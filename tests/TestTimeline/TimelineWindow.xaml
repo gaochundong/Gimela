@@ -1,0 +1,59 @@
+﻿<Window x:Class="TestTimeline.TimelineWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:TestTimeline"
+        xmlns:timeline="clr-namespace:Gimela.Presentation.Controls.Timeline;assembly=Gimela.Presentation.Controls"
+        Title="TimelineWindow"
+        Width="1024"
+        Height="768">
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="*" />
+      <RowDefinition Height="30" />
+    </Grid.RowDefinitions>
+    <timeline:Timeline x:Name="timeline"
+                       Grid.Row="0"
+                       End="{Binding End,
+                                     Mode=OneWay}"
+                       Now="{Binding Now,
+                                     Mode=OneWay}"
+                       SelectedTask="{Binding SelectedTask,
+                                              Mode=TwoWay,
+                                              UpdateSourceTrigger=PropertyChanged}"
+                       Start="{Binding Start,
+                                       Mode=OneWay}"
+                       Tasks="{Binding Tasks,
+                                       Mode=OneWay}"
+                       Zoom="{Binding Zoom,
+                                      Mode=TwoWay}"
+                       ZoomPercent="{Binding ZoomPercent,
+                                             Mode=TwoWay,
+                                             UpdateSourceTrigger=PropertyChanged}" />
+    <Grid Grid.Row="1">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="260" />
+        <ColumnDefinition Width="*" />
+      </Grid.ColumnDefinitions>
+      <Slider Name="timelineZoomSlider"
+              Grid.Column="0"
+              Width="250"
+              Height="27"
+              HorizontalAlignment="Left"
+              VerticalAlignment="Center"
+              IsSnapToTickEnabled="true"
+              LargeChange="10"
+              Maximum="99.99"
+              Minimum="0.1"
+              RenderTransformOrigin=".5 .5"
+              SmallChange="1"
+              Style="{DynamicResource SliderStyle}"
+              TickFrequency="1"
+              Value="{Binding ZoomPercent,
+                              Mode=TwoWay,
+                              UpdateSourceTrigger=PropertyChanged}" />
+      <StackPanel Grid.Column="1" Orientation="Horizontal">
+        <TextBox Name="setBindingTextBox" Text="{Binding ZoomPercent, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" />
+      </StackPanel>
+    </Grid>
+  </Grid>
+</Window>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>
+    <Root>$(MSBuildStartupDirectory)</Root>
+  </PropertyGroup>
+
+  <Target Name="Build">
+
+    <!-- Compile -->
+    <ItemGroup>
+	
+	  <ProjectToBuild Include="$(Root)\..\src\Knifer\Gimela.Knifer.CommandLines.sln" />
+	  
+    </ItemGroup>
+    <MSBuild Projects="@(ProjectToBuild)" Targets="Build" Properties="Configuration=Debug;">
+      <Output TaskParameter="TargetOutputs" ItemName="AssembliesBuiltByChildProjects" />
+    </MSBuild>
+	
+  </Target>
+</Project>

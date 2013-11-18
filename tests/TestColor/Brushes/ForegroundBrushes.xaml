@@ -1,0 +1,16 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="../Skins/Shared.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+    <SolidColorBrush x:Key="ForegroundBrush" Color="{StaticResource ForegroundColor}" />
+    <SolidColorBrush x:Key="DisabledForegroundBrush" Color="{StaticResource DisabledForegroundColor}" />
+    <SolidColorBrush x:Key="SelectedForegroundBrush" Color="{StaticResource SelectedForegroundColor}" />
+
+    <SolidColorBrush x:Key="ReversedForegroundBrush" Color="{StaticResource ReversedForegroundColor}" />
+    <SolidColorBrush x:Key="ReversedDisabledForegroundBrush" Color="{StaticResource ReversedDisabledForegroundColor}" />
+    <SolidColorBrush x:Key="ReversedSelectedForegroundBrush" Color="{StaticResource ReversedSelectedForegroundColor}" />
+
+</ResourceDictionary>

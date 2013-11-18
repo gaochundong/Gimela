@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="Gimela.Presentation.Controls.WaitingControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:Gimela.Presentation.Controls"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             d:DesignHeight="100"
+             d:DesignWidth="100"
+             mc:Ignorable="d">
+
+  <Grid>
+    <local:SprocketControl Grid.Row="0"
+                           Grid.Column="0"
+                           Width="100"
+                           Height="100"
+                           Margin="0,0,0,0"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"
+                           Background="Transparent"
+                           Interval="60"
+                           IsIndeterminate="True"
+                           StartAngle="-90"
+                           TickColor="{DynamicResource MaskForegroundColor}"
+                           TickCount="16"
+                           TickWidth="5" />
+  </Grid>
+</UserControl>

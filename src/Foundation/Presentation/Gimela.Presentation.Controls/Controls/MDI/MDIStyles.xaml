@@ -1,0 +1,263 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Gimela.Presentation.Controls">
+
+  <ResourceDictionary.MergedDictionaries>
+    <ResourceDictionary Source="MDIBrushes.xaml" />
+    <ResourceDictionary Source="MDIButtonsBrushes.xaml" />
+    <ResourceDictionary Source="MDIButtonStyles.xaml" />
+  </ResourceDictionary.MergedDictionaries>
+
+  <BooleanToVisibilityConverter x:Key="BoolToVisibility" />
+
+  <Style TargetType="{x:Type local:MDIContainer}">
+    <Setter Property="SnapsToDevicePixels" Value="True" />
+    <Setter Property="Focusable" Value="False" />
+    <Setter Property="IsTabStop" Value="False" />
+    <Setter Property="Background" Value="{DynamicResource MDIContainerBackgroundBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource BorderDarkBorderBrush}" />
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type local:MDIContainer}">
+          <Border Background="{TemplateBinding Background}"
+                  BorderBrush="{TemplateBinding BorderBrush}"
+                  BorderThickness="{TemplateBinding BorderThickness}">
+            <ContentControl Content="{TemplateBinding Content}" />
+          </Border>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+
+  <Style TargetType="{x:Type local:MDIChild}">
+    <Setter Property="SnapsToDevicePixels" Value="True" />
+    <Setter Property="Width" Value="720" />
+    <Setter Property="Height" Value="576" />
+    <Setter Property="MinWidth" Value="150" />
+    <Setter Property="MinHeight" Value="27" />
+    <Setter Property="Background" Value="{DynamicResource MDIChildBackgroundBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource BorderDarkBorderBrush}" />
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type local:MDIChild}">
+          <Border Name="BackgroundBorder"
+                  Background="{DynamicResource MDIChildBackgroundBrush}"
+                  BorderBrush="{DynamicResource BorderDarkBorderBrush}"
+                  BorderThickness="1"
+                  CornerRadius="5,5,0,0">
+            <Grid>
+              <Grid.RowDefinitions>
+                <RowDefinition x:Name="HeaderRow" Height="27" />
+                <RowDefinition x:Name="ContentRow" Height="*" />
+              </Grid.RowDefinitions>
+
+              <Grid Grid.Row="0">
+
+                <!--  标题栏内容  -->
+                <StackPanel Name="HeaderPanel"
+                            Margin="4,0,4,0"
+                            HorizontalAlignment="Left"
+                            Panel.ZIndex="0"
+                            Orientation="Horizontal">
+                  <!--  图标  -->
+                  <Image Name="IconImage"
+                         Width="16"
+                         Height="16"
+                         Margin="2,0,0,0"
+                         HorizontalAlignment="Left"
+                         VerticalAlignment="Center"
+                         Source="{TemplateBinding Icon}"
+                         Stretch="Fill"
+                         Visibility="{TemplateBinding ShowIcon,
+                                                      Converter={StaticResource BoolToVisibility}}" />
+                  <!--  标题  -->
+                  <TextBlock Name="Header"
+                             Grid.Column="1"
+                             Margin="4,0,0,0"
+                             HorizontalAlignment="Left"
+                             VerticalAlignment="Center"
+                             Text="{TemplateBinding Title}"
+                             TextTrimming="CharacterEllipsis"
+                             TextWrapping="NoWrap" />
+                </StackPanel>
+
+                <!--  标题栏按钮  -->
+                <StackPanel Name="ButtonsPanel"
+                            Margin="0,0,10,0"
+                            HorizontalAlignment="Right"
+                            Panel.ZIndex="2"
+                            Orientation="Horizontal">
+                  <!--  最小化  -->
+                  <ToggleButton Name="MinimizeButton"
+                                Margin="0,0,2,0"
+                                Style="{DynamicResource MDIChildMinimizedButtonStyle}" />
+                  <!--  最大化  -->
+                  <ToggleButton Name="MaximizeButton"
+                                Margin="0,0,2,0"
+                                Style="{DynamicResource MDIChildMaximizedButtonStyle}" />
+                  <!--  关闭  -->
+                  <Button Name="CloseButton"
+                          Margin="0,0,0,0"
+                          Style="{DynamicResource MDIChildCloseButtonStyle}" />
+                </StackPanel>
+
+                <!--  标题栏拖拽目标  -->
+                <Thumb Name="DragThumb"
+                       HorizontalAlignment="Stretch"
+                       VerticalAlignment="Stretch"
+                       Panel.ZIndex="1"
+                       Opacity="0" />
+
+              </Grid>
+
+              <!--  内容  -->
+              <!--  默认的背景现在修改为不透明黑色  -->
+              <Border Name="ContentBorder"
+                      Grid.Row="1"
+                      Margin="0"
+                      Background="{TemplateBinding Background}"
+                      BorderBrush="{DynamicResource BorderMediumBorderBrush}"
+                      BorderThickness="0,2,0,0">
+                <ContentControl Content="{TemplateBinding Content}" />
+              </Border>
+
+              <!--  边缘拖拽  -->
+              <Rectangle Name="LeftBorder"
+                         Grid.Row="0"
+                         Grid.RowSpan="2"
+                         Width="1"
+                         HorizontalAlignment="Left"
+                         Fill="{DynamicResource BorderDarkBorderBrush}"
+                         RadiusX="9"
+                         RadiusY="9" />
+              <Rectangle Name="TopBorder"
+                         Grid.Row="0"
+                         Grid.RowSpan="2"
+                         Height="1"
+                         VerticalAlignment="Top"
+                         Fill="{DynamicResource BorderDarkBorderBrush}"
+                         RadiusX="9"
+                         RadiusY="9" />
+              <Rectangle Name="RightBorder"
+                         Grid.Row="0"
+                         Grid.RowSpan="2"
+                         Width="1"
+                         HorizontalAlignment="Right"
+                         Fill="{DynamicResource BorderDarkBorderBrush}"
+                         RadiusX="9"
+                         RadiusY="9" />
+              <Rectangle Name="BottomBorder"
+                         Grid.Row="0"
+                         Grid.RowSpan="2"
+                         Height="1"
+                         VerticalAlignment="Bottom"
+                         Fill="{DynamicResource BorderDarkBorderBrush}"
+                         RadiusX="9"
+                         RadiusY="9" />
+
+              <Thumb Name="ResizeLeft"
+                     Grid.Row="0"
+                     Grid.RowSpan="2"
+                     Width="6"
+                     Margin="0,6,0,6"
+                     HorizontalAlignment="Left"
+                     Cursor="SizeWE"
+                     IsHitTestVisible="{TemplateBinding Resizable}"
+                     Opacity="0" />
+              <Thumb Name="ResizeTop"
+                     Grid.Row="0"
+                     Grid.RowSpan="2"
+                     Height="4"
+                     Margin="6,0,6,0"
+                     VerticalAlignment="Top"
+                     Cursor="SizeNS"
+                     IsHitTestVisible="{TemplateBinding Resizable}"
+                     Opacity="0" />
+              <Thumb Name="ResizeRight"
+                     Grid.Row="0"
+                     Grid.RowSpan="2"
+                     Width="6"
+                     Margin="0,6,0,6"
+                     HorizontalAlignment="Right"
+                     Cursor="SizeWE"
+                     IsHitTestVisible="{TemplateBinding Resizable}"
+                     Opacity="0" />
+              <Thumb Name="ResizeBottom"
+                     Grid.Row="0"
+                     Grid.RowSpan="2"
+                     Height="6"
+                     Margin="6,0,6,0"
+                     VerticalAlignment="Bottom"
+                     Cursor="SizeNS"
+                     IsHitTestVisible="{TemplateBinding Resizable}"
+                     Opacity="0" />
+              <Thumb Name="ResizeTopLeft"
+                     Grid.Row="0"
+                     Grid.RowSpan="2"
+                     Width="6"
+                     Height="6"
+                     HorizontalAlignment="Left"
+                     VerticalAlignment="Top"
+                     Cursor="SizeNWSE"
+                     IsHitTestVisible="{TemplateBinding Resizable}"
+                     Opacity="0" />
+              <Thumb Name="ResizeTopRight"
+                     Grid.Row="0"
+                     Grid.RowSpan="2"
+                     Width="6"
+                     Height="6"
+                     HorizontalAlignment="Right"
+                     VerticalAlignment="Top"
+                     Cursor="SizeNESW"
+                     IsHitTestVisible="{TemplateBinding Resizable}"
+                     Opacity="0" />
+              <Thumb Name="ResizeBottomRight"
+                     Grid.Row="0"
+                     Grid.RowSpan="2"
+                     Width="6"
+                     Height="6"
+                     HorizontalAlignment="Right"
+                     VerticalAlignment="Bottom"
+                     Cursor="SizeNWSE"
+                     IsHitTestVisible="{TemplateBinding Resizable}"
+                     Opacity="0" />
+              <Thumb Name="ResizeBottomLeft"
+                     Grid.Row="0"
+                     Grid.RowSpan="2"
+                     Width="6"
+                     Height="6"
+                     HorizontalAlignment="Left"
+                     VerticalAlignment="Bottom"
+                     Cursor="SizeNESW"
+                     IsHitTestVisible="{TemplateBinding Resizable}"
+                     Opacity="0" />
+
+            </Grid>
+          </Border>
+          <ControlTemplate.Triggers>
+            <Trigger SourceName="IconImage" Property="Source" Value="{x:Null}">
+              <Setter TargetName="IconImage" Property="Width" Value="0" />
+              <Setter TargetName="IconImage" Property="Margin" Value="0" />
+            </Trigger>
+            <Trigger Property="Focused" Value="False">
+              <Setter TargetName="BackgroundBorder" Property="Background" Value="{DynamicResource MDIChildFocusedBackgroundBrush}" />
+            </Trigger>
+            <Trigger Property="WindowState" Value="Maximized">
+              <Setter Property="Resizable" Value="False" />
+              <Setter TargetName="HeaderRow" Property="Height" Value="0" />
+              <Setter TargetName="BackgroundBorder" Property="BorderThickness" Value="0,0,0,0" />
+              <Setter TargetName="BackgroundBorder" Property="CornerRadius" Value="0" />
+              <Setter TargetName="ContentBorder" Property="BorderThickness" Value="0,2,0,0" />
+              <Setter TargetName="ContentBorder" Property="Margin" Value="0" />
+              <Setter TargetName="LeftBorder" Property="Visibility" Value="Hidden" />
+              <Setter TargetName="TopBorder" Property="Visibility" Value="Hidden" />
+              <Setter TargetName="RightBorder" Property="Visibility" Value="Hidden" />
+              <Setter TargetName="BottomBorder" Property="Visibility" Value="Hidden" />
+            </Trigger>
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+
+</ResourceDictionary>

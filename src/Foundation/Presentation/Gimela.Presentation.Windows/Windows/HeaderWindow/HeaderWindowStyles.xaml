@@ -1,0 +1,136 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Gimela.Presentation.Windows"
+                    xmlns:resizer="clr-namespace:Gimela.Presentation.Controls;assembly=Gimela.Presentation.Controls"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+
+  <ResourceDictionary.MergedDictionaries>
+    <ResourceDictionary Source="pack://application:,,,/Gimela.Presentation.Skins;component/Styles/Styles.xaml" />
+    <ResourceDictionary Source="pack://application:,,,/Gimela.Presentation.Skins;component/Styles/ToolTipStyles.xaml" />
+    <ResourceDictionary Source="pack://application:,,,/Gimela.Presentation.Controls;component/Themes/Generic.xaml" />
+    <ResourceDictionary Source="HeaderWindowBrushes.xaml" />
+    <ResourceDictionary Source="HeaderWindowButtonStyles.xaml" />
+    <ResourceDictionary Source="HeaderWindowMenuStyles.xaml" />
+  </ResourceDictionary.MergedDictionaries>
+
+  <BooleanToVisibilityConverter x:Key="BoolToVisibilityConverter" />
+
+  <Style TargetType="{x:Type local:HeaderWindow}">
+    <Setter Property="WindowStyle" Value="None" />
+    <Setter Property="ResizeMode" Value="NoResize" />
+    <Setter Property="Background" Value="{DynamicResource HeaderWindowBackgroundBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource BorderDarkBorderBrush}" />
+    <Setter Property="BorderThickness" Value="2" />
+    <Setter Property="VerticalContentAlignment" Value="Stretch" />
+    <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type local:HeaderWindow}">
+          <Border Background="{TemplateBinding Background}"
+                  BorderBrush="{TemplateBinding BorderBrush}"
+                  BorderThickness="{TemplateBinding BorderThickness}"
+                  SnapsToDevicePixels="True">
+            <Grid>
+              <Grid.RowDefinitions>
+                <RowDefinition Height="27" />
+                <RowDefinition Height="*" />
+              </Grid.RowDefinitions>
+
+              <!--  标题栏  -->
+              <Grid Name="PART_HeaderContainer"
+                    Grid.Row="0"
+                    Background="Transparent">
+
+                <!--  应用图标 应用标题  -->
+                <StackPanel Margin="4,0,4,0"
+                            HorizontalAlignment="Left"
+                            Orientation="Horizontal"
+                            Visibility="{Binding RelativeSource={x:Static RelativeSource.TemplatedParent},
+                                                 Path=IsShowDefaultHeader,
+                                                 Converter={StaticResource BoolToVisibilityConverter}}">
+                  <Image x:Name="HeaderImage"
+                         Width="24"
+                         Height="24"
+                         HorizontalAlignment="Left"
+                         VerticalAlignment="Center"
+                         Source="{TemplateBinding Icon}" />
+                  <TextBlock Margin="4,0,4,0"
+                             HorizontalAlignment="Left"
+                             VerticalAlignment="Center"
+                             FontSize="14"
+                             Foreground="{DynamicResource ForegroundBrush}"
+                             Text="{TemplateBinding Title}"
+                             TextWrapping="NoWrap" />
+                  <!--  业务菜单  -->
+                  <Menu x:Name="PART_Menu"
+                        Style="{StaticResource HeaderWindowMenuStyle}"
+                        Visibility="{Binding RelativeSource={x:Static RelativeSource.TemplatedParent},
+                                             Path=IsShowMenu,
+                                             Converter={StaticResource BoolToVisibilityConverter}}" />
+                </StackPanel>
+
+                <!--  最小化 最大化 关闭 按钮  -->
+                <StackPanel Margin="0,0,10,0"
+                            HorizontalAlignment="Right"
+                            Orientation="Horizontal">
+                  <Button x:Name="PART_MinimizeButton"
+                          Style="{StaticResource HeaderWindowMinimizeButtonStyle}"
+                          Visibility="{Binding RelativeSource={x:Static RelativeSource.TemplatedParent},
+                                               Path=CanResize,
+                                               Converter={StaticResource BoolToVisibilityConverter}}" />
+                  <ToggleButton x:Name="PART_RestoreButton"
+                                Style="{StaticResource HeaderWindowRestoreButtonStyle}"
+                                Visibility="{Binding RelativeSource={x:Static RelativeSource.TemplatedParent},
+                                                     Path=CanResize,
+                                                     Converter={StaticResource BoolToVisibilityConverter}}" />
+                  <Button x:Name="PART_CloseButton" Style="{StaticResource HeaderWindowCloseButtonStyle}" />
+                </StackPanel>
+
+              </Grid>
+
+              <!--  内部容器  -->
+              <Border x:Name="PART_ContentBorder"
+                      Grid.Row="1"
+                      Margin="8,0,8,8"
+                      BorderBrush="{DynamicResource BorderMediumBorderBrush}"
+                      BorderThickness="2">
+                <Grid x:Name="PART_ChildContainer" ClipToBounds="True">
+                  <AdornerDecorator>
+                    <ContentPresenter Margin="{TemplateBinding Padding}"
+                                      HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                      VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                  </AdornerDecorator>
+                </Grid>
+              </Border>
+
+              <!--  窗体大小控制  -->
+              <resizer:Resizer x:Name="PART_ResizerContainers"
+                               Grid.RowSpan="2"
+                               IsShowResizeGrip="{TemplateBinding IsShowResizeGrip}"
+                               Visibility="Hidden">
+                <resizer:Resizer.Resizable>
+                  <resizer:WindowResizable TargetWindow="{Binding RelativeSource={x:Static RelativeSource.TemplatedParent}}" />
+                </resizer:Resizer.Resizable>
+              </resizer:Resizer>
+
+            </Grid>
+          </Border>
+          <ControlTemplate.Triggers>
+            <MultiTrigger>
+              <MultiTrigger.Conditions>
+                <Condition Property="CanResize" Value="True" />
+                <Condition Property="WindowState" Value="Normal" />
+              </MultiTrigger.Conditions>
+              <Setter TargetName="PART_ResizerContainers" Property="Visibility" Value="Visible" />
+            </MultiTrigger>
+            <Trigger SourceName="HeaderImage" Property="Source" Value="{x:Null}">
+              <Setter TargetName="HeaderImage" Property="Width" Value="0" />
+              <Setter TargetName="HeaderImage" Property="Margin" Value="0" />
+            </Trigger>
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+
+</ResourceDictionary>

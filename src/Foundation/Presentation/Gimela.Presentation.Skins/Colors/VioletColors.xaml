@@ -1,0 +1,26 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Color x:Key="VioletRankColor1">#FFF2A1BE</Color>
+    <Color x:Key="VioletRankColor2">#FFE27C9F</Color>
+    <Color x:Key="VioletRankColor3">#FFBE4E72</Color>
+    <Color x:Key="VioletRankColor4">#FF9D2E53</Color>
+    <Color x:Key="VioletRankColor5">#FF811E3C</Color>
+    <Color x:Key="VioletRankColor6">#FF65122C</Color>
+    <Color x:Key="VioletRankColor7">#FF4B081C</Color>
+
+    <LinearGradientBrush x:Key="VioletRankBackgroundBrush" StartPoint="0,0" EndPoint="1,1">
+        <GradientBrush.GradientStops>
+            <GradientStopCollection>
+                <GradientStop Color="{DynamicResource VioletRankColor1}" Offset="0" />
+                <GradientStop Color="{DynamicResource VioletRankColor2}" Offset="0.1" />
+                <GradientStop Color="{DynamicResource VioletRankColor3}" Offset="0.3" />
+                <GradientStop Color="{DynamicResource VioletRankColor4}" Offset="0.5" />
+                <GradientStop Color="{DynamicResource VioletRankColor5}" Offset="0.7" />
+                <GradientStop Color="{DynamicResource VioletRankColor6}" Offset="0.9" />
+                <GradientStop Color="{DynamicResource VioletRankColor7}" Offset="1" />
+            </GradientStopCollection>
+        </GradientBrush.GradientStops>
+    </LinearGradientBrush>
+    
+</ResourceDictionary>

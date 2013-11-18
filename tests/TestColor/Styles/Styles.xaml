@@ -1,0 +1,22 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="BorderStyles.xaml"/>
+        <ResourceDictionary Source="ButtonStyles.xaml"/>
+        <ResourceDictionary Source="ComboBoxItemStyles.xaml"/>
+        <ResourceDictionary Source="ComboBoxStyles.xaml"/>
+        <ResourceDictionary Source="ContextMenuStyles.xaml"/>
+        <ResourceDictionary Source="GridStyles.xaml"/>
+        <ResourceDictionary Source="LabelStyles.xaml"/>
+        <ResourceDictionary Source="ListViewItemStyles.xaml"/>
+        <ResourceDictionary Source="ListViewStyles.xaml"/>
+        <ResourceDictionary Source="MenuItemStyles.xaml"/>
+        <ResourceDictionary Source="PasswordBoxStyles.xaml"/>
+        <ResourceDictionary Source="SliderStyles.xaml"/>
+        <ResourceDictionary Source="ScrollBarStyles.xaml"/>
+        <ResourceDictionary Source="TextBoxStyles.xaml"/>
+        <ResourceDictionary Source="ToolTipStyles.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+</ResourceDictionary> 

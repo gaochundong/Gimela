@@ -1,0 +1,20 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+  <SolidColorBrush x:Key="MDIChildButtonEllipseStrokeBrush" Color="{DynamicResource BorderMediumColor}" />
+
+  <SolidColorBrush x:Key="MDIChildCloseButtonEllipseFillBrush" Color="#E3F07751" />
+  <SolidColorBrush x:Key="MDIChildCloseButtonEllipseFillMouseOverBrush" Color="#DFE33628" />
+  <SolidColorBrush x:Key="MDIChildCloseButtonIconFillBrush" Color="#FFEEEEEE" />
+  <SolidColorBrush x:Key="MDIChildCloseButtonIconFillMouseOverBrush" Color="#FFEEEEEE" />
+
+  <SolidColorBrush x:Key="MDIChildMinimizeButtonEllipseFillBrush" Color="{DynamicResource ControlLightColor}" />
+  <SolidColorBrush x:Key="MDIChildMinimizeButtonEllipseFillMouseOverBrush" Color="{DynamicResource ControlMouseOverMediumColor}" />
+  <SolidColorBrush x:Key="MDIChildMinimizeButtonIconFillBrush" Color="#FFEEEEEE" />
+  <SolidColorBrush x:Key="MDIChildMinimizeButtonIconFillMouseOverBrush" Color="#FFEEEEEE" />
+
+  <SolidColorBrush x:Key="MDIChildMaximizeButtonEllipseFillBrush" Color="{DynamicResource ControlLightColor}" />
+  <SolidColorBrush x:Key="MDIChildMaximizeButtonEllipseFillMouseOverBrush" Color="{DynamicResource ControlMouseOverMediumColor}" />
+  <SolidColorBrush x:Key="MDIChildMaximizeButtonIconFillBrush" Color="#FFEEEEEE" />
+  <SolidColorBrush x:Key="MDIChildMaximizeButtonIconFillMouseOverBrush" Color="#FFEEEEEE" />
+
+</ResourceDictionary>

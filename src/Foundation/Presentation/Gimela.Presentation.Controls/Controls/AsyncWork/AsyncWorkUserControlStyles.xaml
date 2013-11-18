@@ -1,0 +1,41 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:coverters="clr-namespace:Gimela.Presentation.Controls.Converters"
+                    xmlns:ctrl="clr-namespace:Gimela.Presentation.Controls">
+
+  <ResourceDictionary.MergedDictionaries>
+    <ResourceDictionary Source="pack://application:,,,/Gimela.Presentation.Skins;component/Brushes/GridBrushes.xaml" />
+  </ResourceDictionary.MergedDictionaries>
+
+  <coverters:StatusToAnimationVisibilityConverter x:Key="StatusToAnimationVisibilityConverter" />
+
+  <Style x:Key="AsyncWorkUserControlStyle" TargetType="{x:Type UserControl}">
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type UserControl}">
+          <Grid>
+            <ContentPresenter Panel.ZIndex="0" />
+            <Grid x:Name="animationGrid"
+                  Width="Auto"
+                  Height="Auto"
+                  HorizontalAlignment="Stretch"
+                  VerticalAlignment="Stretch"
+                  Panel.ZIndex="2000"
+                  Visibility="{Binding Path=Status,
+                                       Converter={StaticResource StatusToAnimationVisibilityConverter}}">
+              <Grid Width="Auto"
+                    Height="Auto"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Stretch"
+                    Panel.ZIndex="0"
+                    Background="{DynamicResource MaskGridBackgroundBrush}"
+                    Opacity="0.2" />
+              <ctrl:WaitingControl x:Name="animation" Panel.ZIndex="1" />
+            </Grid>
+          </Grid>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+
+</ResourceDictionary>

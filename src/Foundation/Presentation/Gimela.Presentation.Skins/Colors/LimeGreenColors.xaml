@@ -1,0 +1,26 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Color x:Key="LimeGreenRankColor1">#FF8CF292</Color>
+    <Color x:Key="LimeGreenRankColor2">#FF61D867</Color>
+    <Color x:Key="LimeGreenRankColor3">#FF43BA49</Color>
+    <Color x:Key="LimeGreenRankColor4">#FF2BA431</Color>
+    <Color x:Key="LimeGreenRankColor5">#FF07AA11</Color>
+    <Color x:Key="LimeGreenRankColor6">#FF028609</Color>
+    <Color x:Key="LimeGreenRankColor7">#FF016507</Color>
+
+    <LinearGradientBrush x:Key="LimeGreenRankBackgroundBrush" StartPoint="0,0" EndPoint="1,1">
+        <GradientBrush.GradientStops>
+            <GradientStopCollection>
+                <GradientStop Color="{DynamicResource LimeGreenRankColor1}" Offset="0" />
+                <GradientStop Color="{DynamicResource LimeGreenRankColor2}" Offset="0.1" />
+                <GradientStop Color="{DynamicResource LimeGreenRankColor3}" Offset="0.3" />
+                <GradientStop Color="{DynamicResource LimeGreenRankColor4}" Offset="0.5" />
+                <GradientStop Color="{DynamicResource LimeGreenRankColor5}" Offset="0.7" />
+                <GradientStop Color="{DynamicResource LimeGreenRankColor6}" Offset="0.9" />
+                <GradientStop Color="{DynamicResource LimeGreenRankColor7}" Offset="1" />
+            </GradientStopCollection>
+        </GradientBrush.GradientStops>
+    </LinearGradientBrush>
+    
+</ResourceDictionary>

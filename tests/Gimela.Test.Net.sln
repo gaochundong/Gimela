@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestTcpClient", "TestTcpClient\TestTcpClient.csproj", "{AB102642-E3E7-406D-9A4E-44CD9F0C2A22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestTcpServer", "TestTcpServer\TestTcpServer.csproj", "{5B06B61E-18CC-4C3C-9D49-BAFCD96F060C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestUdpPacketSplitter", "TestUdpPacketSplitter\TestUdpPacketSplitter.csproj", "{5AB7A0BF-1A5A-4944-B72D-BEA9F76313A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestHttpServer", "TestHttpServer\TestHttpServer.csproj", "{DFAA95B4-206E-4E48-9CCC-DD3504C28195}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AB102642-E3E7-406D-9A4E-44CD9F0C2A22}.Debug|x86.ActiveCfg = Debug|x86
+		{AB102642-E3E7-406D-9A4E-44CD9F0C2A22}.Debug|x86.Build.0 = Debug|x86
+		{AB102642-E3E7-406D-9A4E-44CD9F0C2A22}.Release|x86.ActiveCfg = Release|x86
+		{AB102642-E3E7-406D-9A4E-44CD9F0C2A22}.Release|x86.Build.0 = Release|x86
+		{5B06B61E-18CC-4C3C-9D49-BAFCD96F060C}.Debug|x86.ActiveCfg = Debug|x86
+		{5B06B61E-18CC-4C3C-9D49-BAFCD96F060C}.Debug|x86.Build.0 = Debug|x86
+		{5B06B61E-18CC-4C3C-9D49-BAFCD96F060C}.Release|x86.ActiveCfg = Release|x86
+		{5B06B61E-18CC-4C3C-9D49-BAFCD96F060C}.Release|x86.Build.0 = Release|x86
+		{5AB7A0BF-1A5A-4944-B72D-BEA9F76313A9}.Debug|x86.ActiveCfg = Debug|x86
+		{5AB7A0BF-1A5A-4944-B72D-BEA9F76313A9}.Debug|x86.Build.0 = Debug|x86
+		{5AB7A0BF-1A5A-4944-B72D-BEA9F76313A9}.Release|x86.ActiveCfg = Release|x86
+		{5AB7A0BF-1A5A-4944-B72D-BEA9F76313A9}.Release|x86.Build.0 = Release|x86
+		{DFAA95B4-206E-4E48-9CCC-DD3504C28195}.Debug|x86.ActiveCfg = Debug|x86
+		{DFAA95B4-206E-4E48-9CCC-DD3504C28195}.Debug|x86.Build.0 = Debug|x86
+		{DFAA95B4-206E-4E48-9CCC-DD3504C28195}.Release|x86.ActiveCfg = Release|x86
+		{DFAA95B4-206E-4E48-9CCC-DD3504C28195}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

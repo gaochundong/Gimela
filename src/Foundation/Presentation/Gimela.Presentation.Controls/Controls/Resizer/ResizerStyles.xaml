@@ -1,0 +1,85 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Gimela.Presentation.Controls">
+
+  <BooleanToVisibilityConverter x:Key="BoolToVisibilityConverter" />
+
+  <Style TargetType="{x:Type local:Resizer}">
+    <Setter Property="Background" Value="Transparent" />
+    <Setter Property="MinWidth" Value="10" />
+    <Setter Property="MinHeight" Value="10" />
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type local:Resizer}">
+          <Grid>
+            <Grid.Resources>
+              <Style TargetType="{x:Type Thumb}">
+                <Setter Property="Background" Value="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type local:Resizer}}, Path=Background}" />
+                <Setter Property="Template">
+                  <Setter.Value>
+                    <ControlTemplate>
+                      <Rectangle Fill="{TemplateBinding Background}" />
+                    </ControlTemplate>
+                  </Setter.Value>
+                </Setter>
+              </Style>
+            </Grid.Resources>
+            <Thumb x:Name="PART_LeftResizer"
+                   Width="{TemplateBinding StraightResizeBarSize}"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Stretch"
+                   Cursor="SizeWE" />
+            <Thumb x:Name="PART_TopResizer"
+                   Height="{TemplateBinding StraightResizeBarSize}"
+                   HorizontalAlignment="Stretch"
+                   VerticalAlignment="Top"
+                   Cursor="SizeNS" />
+            <Thumb x:Name="PART_RightResizer"
+                   Width="{TemplateBinding StraightResizeBarSize}"
+                   HorizontalAlignment="Right"
+                   VerticalAlignment="Stretch"
+                   Cursor="SizeWE" />
+            <Thumb x:Name="PART_BottomResizer"
+                   Height="{TemplateBinding StraightResizeBarSize}"
+                   HorizontalAlignment="Stretch"
+                   VerticalAlignment="Bottom"
+                   Cursor="SizeNS" />
+
+            <ResizeGrip Width="{TemplateBinding SlantResizeBarSize}"
+                        Height="{TemplateBinding SlantResizeBarSize}"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Bottom"
+                        Visibility="{Binding RelativeSource={x:Static RelativeSource.TemplatedParent},
+                                             Path=IsShowResizeGrip,
+                                             Converter={StaticResource BoolToVisibilityConverter}}" />
+            <Thumb x:Name="PART_BottomRightResizer"
+                   Width="{TemplateBinding SlantResizeBarSize}"
+                   Height="{TemplateBinding SlantResizeBarSize}"
+                   HorizontalAlignment="Right"
+                   VerticalAlignment="Bottom"
+                   Cursor="SizeNWSE" />
+            <Thumb x:Name="PART_TopRightResizer"
+                   Width="{TemplateBinding SlantResizeBarSize}"
+                   Height="{TemplateBinding SlantResizeBarSize}"
+                   HorizontalAlignment="Right"
+                   VerticalAlignment="Top"
+                   Cursor="SizeNESW" />
+            <Thumb x:Name="PART_TopLeftResizer"
+                   Width="{TemplateBinding SlantResizeBarSize}"
+                   Height="{TemplateBinding SlantResizeBarSize}"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top"
+                   Cursor="SizeNWSE" />
+            <Thumb x:Name="PART_BottomLeftResizer"
+                   Width="{TemplateBinding SlantResizeBarSize}"
+                   Height="{TemplateBinding SlantResizeBarSize}"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Bottom"
+                   Cursor="SizeNESW" />
+          </Grid>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+
+</ResourceDictionary>

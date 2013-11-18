@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>
+    <Root>$(MSBuildStartupDirectory)</Root>
+  </PropertyGroup>
+
+  <Target Name="Build">
+
+    <!-- Compile -->
+    <ItemGroup>
+	
+	  <ProjectToBuild Include="$(Root)\..\src\Foundation\Common\Gimela.Common.sln" />
+	  <ProjectToBuild Include="$(Root)\..\src\Foundation\Infrastructure\Gimela.Infrastructure.sln" />
+	  <ProjectToBuild Include="$(Root)\..\src\Foundation\Management\Gimela.Management.sln" />
+	  <ProjectToBuild Include="$(Root)\..\src\Foundation\Security\Gimela.Security.sln" />
+	  <ProjectToBuild Include="$(Root)\..\src\Foundation\Tasks\Gimela.Tasks.sln" />
+	  <ProjectToBuild Include="$(Root)\..\src\Foundation\Text\Gimela.Text.sln" />
+	  <ProjectToBuild Include="$(Root)\..\src\Foundation\Net\Gimela.Net.sln" />
+	  <ProjectToBuild Include="$(Root)\..\src\Foundation\ServiceModel\Gimela.ServiceModel.sln" />
+	  <ProjectToBuild Include="$(Root)\..\src\Foundation\Data\Gimela.Data.sln" />
+	  <ProjectToBuild Include="$(Root)\..\src\Foundation\Presentation\Gimela.Presentation.sln" />
+	  <ProjectToBuild Include="$(Root)\..\src\Foundation\Media\Gimela.Media.sln" />
+	  <ProjectToBuild Include="$(Root)\..\src\Foundation\Streaming\Gimela.Streaming.sln" />
+	  
+	  <ProjectToBuild Include="$(Root)\..\src\Crust\Gimela.Crust.sln" />
+	  
+    </ItemGroup>
+    <MSBuild Projects="@(ProjectToBuild)" Targets="Build" Properties="Configuration=Debug;">
+      <Output TaskParameter="TargetOutputs" ItemName="AssembliesBuiltByChildProjects" />
+    </MSBuild>
+	
+  </Target>
+</Project>

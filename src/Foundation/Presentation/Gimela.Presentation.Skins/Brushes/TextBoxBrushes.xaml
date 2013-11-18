@@ -1,0 +1,25 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <SolidColorBrush x:Key="TextBoxErrorForegroundBrush" Color="{DynamicResource ErrorForegroundColor}" />
+    <SolidColorBrush x:Key="TextBoxErrorBorderBrush" Color="{DynamicResource ErrorBorderColor}" />
+    
+    <SolidColorBrush x:Key="TextBoxBackgroundBrush" Color="{DynamicResource ReversedSelectedForegroundColor}" />
+    <SolidColorBrush x:Key="TextBoxBorderBackgroundBrush" Color="{DynamicResource ReversedSelectedForegroundColor}" />
+    <SolidColorBrush x:Key="TextBoxBorderDisabledBorderBrush" Color="{DynamicResource BorderDarkColor}" />
+    
+    <LinearGradientBrush x:Key="TextBoxBorderBorderBrush" StartPoint="0,0" EndPoint="0,1">
+        <LinearGradientBrush.GradientStops>
+            <GradientStopCollection>
+                <GradientStop Color="{DynamicResource BorderMediumColor}" Offset="0" />
+                <GradientStop Color="{DynamicResource BorderLightColor}" Offset="0.5" />
+                <GradientStop Color="{DynamicResource BorderMediumColor}" Offset="1" />
+            </GradientStopCollection>
+        </LinearGradientBrush.GradientStops>
+    </LinearGradientBrush>
+
+    <SolidColorBrush x:Key="TextBoxInformationTextForegroundBrush" Color="{DynamicResource BorderDarkColor}" />
+    <SolidColorBrush x:Key="TextBoxSelectionBrushBrush" Color="{DynamicResource ControlLightColor}" />
+    <SolidColorBrush x:Key="TextBoxCaretBrushBrush" Color="{DynamicResource BorderDarkColor}" />
+    
+</ResourceDictionary>

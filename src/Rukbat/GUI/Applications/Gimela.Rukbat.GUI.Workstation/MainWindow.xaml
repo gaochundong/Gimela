@@ -1,0 +1,51 @@
+﻿<win:HeaderWindow x:Class="Gimela.Rukbat.GUI.Workstation.MainWindow"
+                  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                  xmlns:login="clr-namespace:Gimela.Rukbat.GUI.Modules.UserManagement.Views;assembly=Gimela.Rukbat.GUI.Modules.UserManagement"
+                  xmlns:mdi="clr-namespace:Gimela.Presentation.Controls;assembly=Gimela.Presentation.Controls"
+                  xmlns:win="clr-namespace:Gimela.Presentation.Windows;assembly=Gimela.Presentation.Windows"
+                  x:Name="mainWindow"
+                  Title="OptimalVision™"
+                  Width="1024"
+                  Height="768"
+                  MinWidth="720"
+                  MinHeight="576"
+                  AllowsTransparency="False"
+                  CanResize="True"
+                  IsShowDefaultHeader="True"
+                  IsShowMenu="True"
+                  IsShowResizeGrip="True"
+                  Loaded="OnLoaded"
+                  Opacity="1"
+                  WindowStartupLocation="CenterScreen"
+                  WindowState="Normal"
+                  WindowStyle="None">
+  <!--
+    如果需要设置半透明效果，需要设置Window的属性：
+    AllowsTransparency="True"
+    Opacity="0.95"
+  -->
+  <Grid>
+    <Grid>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="*" />
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*" />
+      </Grid.ColumnDefinitions>
+
+      <login:LoginView x:Name="loginView"
+                       Grid.Row="0"
+                       Grid.Column="0"
+                       HorizontalAlignment="Stretch"
+                       VerticalAlignment="Stretch"
+                       Panel.ZIndex="2" />
+      <mdi:MDIContainer Name="container"
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Panel.ZIndex="1" />
+
+    </Grid>
+  </Grid>
+
+</win:HeaderWindow>

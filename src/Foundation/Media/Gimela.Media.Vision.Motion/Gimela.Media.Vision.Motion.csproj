@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F5C98E85-596C-447D-AE4D-B87607333AFA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Gimela.Media.Vision.Motion</RootNamespace>
+    <AssemblyName>Gimela.Media.Vision.Motion</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DocumentationFile>..\..\..\..\bin\Debug\Gimela.Media.Vision.Motion.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MotionProcessorType.cs" />
+    <Compile Include="MotionDetectorType.cs" />
+    <Compile Include="MotionProcessors\BlobCountingObjectsProcessing.cs" />
+    <Compile Include="MotionDetectors\CustomFrameDifferenceDetector.cs" />
+    <Compile Include="MotionProcessors\GridMotionAreaProcessing.cs" />
+    <Compile Include="IMotionDetector.cs" />
+    <Compile Include="IMotionProcessing.cs" />
+    <Compile Include="MotionProcessors\MotionAreaHighlighting.cs" />
+    <Compile Include="MotionProcessors\MotionBorderHighlighting.cs" />
+    <Compile Include="MotionDetector.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MotionDetectors\SimpleBackgroundModelingDetector.cs" />
+    <Compile Include="MotionDetectors\TwoFramesDifferenceDetector.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Gimela.Media.Imaging\Gimela.Media.Imaging.csproj">
+      <Project>{9C5B2986-F210-4A9E-BB3A-6A1F9BA36AFF}</Project>
+      <Name>Gimela.Media.Imaging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Gimela.Media.Utilities\Gimela.Media.Utilities.csproj">
+      <Project>{163029EB-02D6-439A-B149-94990E560E5A}</Project>
+      <Name>Gimela.Media.Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

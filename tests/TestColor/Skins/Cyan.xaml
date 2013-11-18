@@ -1,0 +1,57 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Color x:Key="ForegroundColor">White</Color>
+    <Color x:Key="DisabledForegroundColor">White</Color>
+    <Color x:Key="SelectedForegroundColor">Black</Color>
+
+    <Color x:Key="ReversedForegroundColor">Black</Color>
+    <Color x:Key="ReversedDisabledForegroundColor">Black</Color>
+    <Color x:Key="ReversedSelectedForegroundColor">White</Color>
+
+    <!--RankColor1-->
+    <Color x:Key="ControlMouseOverLightColor">#FFCDE5DF</Color>
+    <!--RankColor2-->
+    <Color x:Key="ControlMouseOverMediumColor">#FFA9C7BF</Color>
+    <!--RankColor3-->
+    <Color x:Key="ControlMouseOverDarkColor">#FF89AAA0</Color>
+
+    <!--RankColor4-->
+    <Color x:Key="ControlLightColor">#FF698D81</Color>
+    <!--RankColor5-->
+    <Color x:Key="ControlMediumColor">#FF4C6F62</Color>
+    <!--RankColor6-->
+    <Color x:Key="ControlDarkColor">#FF325247</Color>
+
+    <!--RankColor5-->
+    <Color x:Key="ControlPressedLightColor">#FF4C6F62</Color>
+    <!--RankColor6-->
+    <Color x:Key="ControlPressedMediumColor">#FF325247</Color>
+    <!--RankColor7-->
+    <Color x:Key="ControlPressedDarkColor">#FF1D342C</Color>
+
+    <!--RankColor3-->
+    <Color x:Key="ControlSelectedBackgroundColor">#FF89AAA0</Color>
+    <!--RankColor4-->
+    <Color x:Key="ControlDisabledColor">#FF698D81</Color>
+
+    <!--RankColor1-->
+    <Color x:Key="GlyphMouseOver">#FFCDE5DF</Color>
+    <!--RankColor2-->
+    <Color x:Key="GlyphColor">#FFA9C7BF</Color>
+
+    <!--RankColor4-->
+    <Color x:Key="BorderLightColor">#FF698D81</Color>
+    <!--RankColor5-->
+    <Color x:Key="BorderMediumColor">#FF4C6F62</Color>
+    <!--RankColor6-->
+    <Color x:Key="BorderDarkColor">#FF325247</Color>
+
+    <!--RankColor3-->
+    <Color x:Key="BackgroundLightColor">#FF89AAA0</Color>
+    <!--RankColor4-->
+    <Color x:Key="BackgroundMediumColor">#FF698D81</Color>
+    <!--RankColor5-->
+    <Color x:Key="BackgroundDarkColor">#FF4C6F62</Color>
+
+</ResourceDictionary>

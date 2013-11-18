@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{32F0B5A9-7D59-443F-BB86-9BC47CB4A371}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Gimela.Rukbat.DPS.ServiceImplementation</RootNamespace>
+    <AssemblyName>Gimela.Rukbat.DPS.ServiceImplementation</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\..\..\Bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Gimela.Common.ExceptionHandling, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Gimela.Infrastructure.ResourceLocation, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Gimela.ServiceModel.ManagedDiscovery, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Gimela.ServiceModel.ManagedHosting, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Gimela.ServiceModel.ManagedService, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DeviceProfileService.Interface.cs" />
+    <Compile Include="DeviceProfileService.ManagedService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Business Logic\Gimela.Rukbat.DPS.BusinessEntities\Gimela.Rukbat.DPS.BusinessEntities.csproj">
+      <Project>{FA650D80-51D1-4678-9131-7333200B4E63}</Project>
+      <Name>Gimela.Rukbat.DPS.BusinessEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Business Logic\Gimela.Rukbat.DPS.BusinessLogic\Gimela.Rukbat.DPS.BusinessLogic.csproj">
+      <Project>{BCB53643-C8FE-44BE-A009-8BA7D94393AC}</Project>
+      <Name>Gimela.Rukbat.DPS.BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Resource Access\Gimela.Rukbat.DPS.DataAccess\Gimela.Rukbat.DPS.DataAccess.csproj">
+      <Project>{0A039E0A-10A8-4980-9989-539AE529B01E}</Project>
+      <Name>Gimela.Rukbat.DPS.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Gimela.Rukbat.DPS.Contracts\Gimela.Rukbat.DPS.Contracts.csproj">
+      <Project>{E992EDF2-7A8A-4834-A200-5A0D1AAD7FC6}</Project>
+      <Name>Gimela.Rukbat.DPS.Contracts</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

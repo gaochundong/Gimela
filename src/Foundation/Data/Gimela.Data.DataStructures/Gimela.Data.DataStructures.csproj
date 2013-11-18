@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{068020BB-7170-4FB1-8CF7-D05BBDD08977}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Gimela.Data.DataStructures</RootNamespace>
+    <AssemblyName>Gimela.Data.DataStructures</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>..\..\..\..\bin\Debug\Gimela.Data.DataStructures.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BPlusTree\BPlusTreeObject.cs" />
+    <Compile Include="BPlusTree\BPlusTreeString.cs" />
+    <Compile Include="BPlusTree\BPlusTreeBytes.cs" />
+    <Compile Include="BPlusTree\Interfaces\IObjectTree.cs" />
+    <Compile Include="Collections\BidirectionalCollection.cs" />
+    <Compile Include="BinaryTree\BinaryTree.cs" />
+    <Compile Include="BPlusTree\BPlusTreeNodeIndicator.cs" />
+    <Compile Include="BPlusTree\BPlusTreeNode.cs" />
+    <Compile Include="BPlusTree\Interfaces\ILongTree.cs" />
+    <Compile Include="BPlusTree\Interfaces\IByteTree.cs" />
+    <Compile Include="BPlusTree\Interfaces\IStringTree.cs" />
+    <Compile Include="BPlusTree\Storage\LinkedFileBlockFlag.cs" />
+    <Compile Include="BPlusTree\Exceptions\BPlusTreeBadKeyValueException.cs" />
+    <Compile Include="BPlusTree\Exceptions\BPlusTreeException.cs" />
+    <Compile Include="BPlusTree\Exceptions\BPlusTreeKeyNotFoundException.cs" />
+    <Compile Include="BPlusTree\BPlusTreeLong.cs" />
+    <Compile Include="BPlusTree\Storage\BlockFile.cs" />
+    <Compile Include="BPlusTree\Exceptions\BlockFileException.cs" />
+    <Compile Include="BPlusTree\Storage\StoredHelper.cs" />
+    <Compile Include="BPlusTree\Interfaces\IIndexTree.cs" />
+    <Compile Include="BPlusTree\Storage\LinkedFile.cs" />
+    <Compile Include="BPlusTree\Exceptions\LinkedFileException.cs" />
+    <Compile Include="Collections\FirstSecondPair.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="BinaryTree\BinaryTreeNode.cs" />
+    <Compile Include="BPlusTree\Storage\StoredConstants.cs" />
+    <Compile Include="Collections\RoundRobinCollection.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

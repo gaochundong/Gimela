@@ -1,0 +1,287 @@
+﻿<UserControl x:Class="Gimela.Rukbat.GUI.Modules.PublishMedia.Views.PublishedCameraConfigurationView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:c="clr-namespace:Gimela.Rukbat.GUI.ValidationRules.Converters;assembly=Gimela.Rukbat.GUI.ValidationRules"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:v="clr-namespace:Gimela.Rukbat.GUI.ValidationRules;assembly=Gimela.Rukbat.GUI.ValidationRules"
+             d:DesignHeight="494"
+             d:DesignWidth="726"
+             Style="{DynamicResource AsyncWorkUserControlStyle}"
+             mc:Ignorable="d">
+  <UserControl.Resources>
+    <c:InvalidMultiValidationRuleToBooleanMultiConverter x:Key="InvalidMultiValidationRuleToBooleanMultiConverter" />
+    <c:CheckPortAvailableResultTypeToImageSourceConverter x:Key="CheckPortAvailableResultTypeToImageSourceConverter" />
+    <c:CheckPortAvailableResultTypeToDescriptionConverter x:Key="CheckPortAvailableResultTypeToDescriptionConverter" />
+    <c:CheckPortAvailableResultTypeToVisibilityConverter x:Key="CheckPortAvailableResultTypeToVisibilityConverter" />
+  </UserControl.Resources>
+
+  <Grid Style="{DynamicResource GridStyle}">
+    <Grid x:Name="bgGrid" Margin="5,0,5,0">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="50" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="70" />
+      </Grid.RowDefinitions>
+
+      <Label Grid.Row="0"
+             Grid.Column="0"
+             Grid.ColumnSpan="2"
+             Margin="30,0,0,0"
+             HorizontalAlignment="Left"
+             VerticalAlignment="Center"
+             Content="{DynamicResource PublishMedia_PublishedCameraConfigurationView_ConfigPublishDestination}"
+             FontSize="14"
+             FontWeight="Bold" />
+      <Line Grid.Row="0"
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            Margin="0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center"
+            Stroke="{DynamicResource LineStrokeBrush}"
+            StrokeThickness="2"
+            X1="0"
+            X2="{Binding ElementName=bgGrid,
+                         Path=ActualWidth}"
+            Y1="35"
+            Y2="35" />
+
+      <Grid Grid.Row="1" Grid.Column="0">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="40" />
+          <RowDefinition Height="40" />
+          <RowDefinition Height="40" />
+          <RowDefinition Height="80" />
+          <RowDefinition Height="40" />
+          <RowDefinition Height="40" />
+          <RowDefinition Height="40" />
+          <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="50" />
+          <ColumnDefinition Width="170" />
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="50" />
+        </Grid.ColumnDefinitions>
+
+        <Label Name="textInputPrompt"
+               Grid.Row="0"
+               Grid.Column="0"
+               Grid.ColumnSpan="3"
+               HorizontalAlignment="Left"
+               VerticalAlignment="Center"
+               Content="{DynamicResource PublishMedia_PublishedCameraConfigurationView_PromptTypeIntoDestination}" />
+
+        <Label Name="textSelectedCameraIdTitle"
+               Grid.Row="1"
+               Grid.Column="1"
+               HorizontalAlignment="Right"
+               VerticalAlignment="Center"
+               Content="{DynamicResource PublishMedia_PublishedCameraConfigurationView_SelectedCameraId}" />
+        <Label Name="textSelectedCameraId"
+               Grid.Row="1"
+               Grid.Column="2"
+               HorizontalAlignment="Left"
+               VerticalAlignment="Center"
+               Content="{Binding SelectedCamera.Id}" />
+
+        <Label Name="textSelectedCameraNameTitle"
+               Grid.Row="2"
+               Grid.Column="1"
+               HorizontalAlignment="Right"
+               VerticalAlignment="Center"
+               Content="{DynamicResource PublishMedia_PublishedCameraConfigurationView_SelectedCameraName}" />
+        <Label Name="textSelectedCameraName"
+               Grid.Row="2"
+               Grid.Column="2"
+               HorizontalAlignment="Left"
+               VerticalAlignment="Center"
+               Content="{Binding SelectedCamera.Name}" />
+
+        <Label Name="textSelectedCameraThumbnailTitle"
+               Grid.Row="3"
+               Grid.Column="1"
+               HorizontalAlignment="Right"
+               VerticalAlignment="Center"
+               Content="{DynamicResource PublishMedia_PublishedCameraConfigurationView_SelectedCameraThumbnail}" />
+        <StackPanel Name="panelSelectedCameraThumbnail"
+                    Grid.Row="3"
+                    Grid.Column="2"
+                    Margin="13, 0, 0, 0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center"
+                    Orientation="Horizontal">
+          <Image Width="90"
+                Height="66"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                Source="{Binding SelectedCamera.ThumbnailSource}">
+            <Image.ToolTip>
+              <StackPanel>
+                <Image Width="640"
+                      Height="480"
+                      Margin="1"
+                      HorizontalAlignment="Left"
+                      VerticalAlignment="Center"
+                      Source="{Binding SelectedCamera.ThumbnailSource}" />
+              </StackPanel>
+            </Image.ToolTip>
+          </Image>
+        </StackPanel>
+
+        <Label Name="textSelectedServiceNameTitle"
+               Grid.Row="4"
+               Grid.Column="1"
+               HorizontalAlignment="Right"
+               VerticalAlignment="Center"
+               Content="{DynamicResource PublishMedia_PublishedCameraConfigurationView_SelectedServiceName}" />
+        <Label Name="textSelectedServiceName"
+               Grid.Row="4"
+               Grid.Column="2"
+               HorizontalAlignment="Left"
+               VerticalAlignment="Center"
+               Content="{Binding SelectedService.HostName}" />
+
+        <Label Name="textSelectedServiceUriTitle"
+               Grid.Row="5"
+               Grid.Column="1"
+               HorizontalAlignment="Right"
+               VerticalAlignment="Center"
+               Content="{DynamicResource PublishMedia_PublishedCameraConfigurationView_SelectedServiceUri}" />
+        <Label Name="textSelectedServiceUri"
+               Grid.Row="5"
+               Grid.Column="2"
+               HorizontalAlignment="Left"
+               VerticalAlignment="Center"
+               Content="{Binding SelectedService.Uri}" />
+
+        <Label Name="textDestinationPort"
+               Grid.Row="6"
+               Grid.Column="1"
+               HorizontalAlignment="Right"
+               VerticalAlignment="Center"
+               Content="{DynamicResource PublishMedia_PublishedCameraConfigurationView_DestinationPort}" />
+        <Label Grid.Row="6"
+               Grid.Column="1"
+               Margin="0"
+               HorizontalAlignment="Right"
+               VerticalAlignment="Center"
+               Content="*"
+               Foreground="{DynamicResource ErrorForegroundBrush}" />
+        <Grid Grid.Row="6"
+              Grid.Column="2"
+              Margin="13,0,0,0">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+          </Grid.ColumnDefinitions>
+          <StackPanel Grid.Column="0"
+                    Orientation="Horizontal">
+            <TextBox x:Name="textBoxDestinationPort"
+                   Width="250"
+                   Height="23"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Center"
+                   Style="{DynamicResource TextBoxStyle}"
+                   Tag="{DynamicResource PublishMedia_PublishedCameraConfigurationView_PromptDestinationPort}">
+              <TextBox.Text>
+                <Binding Mode="TwoWay"
+                       Path="DestinationPort"
+                       UpdateSourceTrigger="PropertyChanged">
+                  <Binding.ValidationRules>
+                    <v:InvalidGreaterThanZeroIntegerValidationRule />
+                    <v:InvalidStringNullOrEmptyValidationRule />
+                  </Binding.ValidationRules>
+                </Binding>
+              </TextBox.Text>
+            </TextBox>
+          </StackPanel>
+          
+          <Grid Grid.Column="1"
+              Margin="5,0,0,0">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="Auto" />
+              <ColumnDefinition Width="5" />
+              <ColumnDefinition Width="20" />
+              <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Button Name="btnCheckPortAvailable"
+                  Grid.Row="0"
+                  Grid.Column="0"
+                  Width="60"
+                  Height="23"
+                  HorizontalAlignment="Left"
+                  VerticalAlignment="Center"
+                  Command="{Binding Path=CheckPortAvailableCommand}"
+                  Content="{DynamicResource PublishMedia_PublishedCameraConfigurationView_CheckPortAvailable}"
+                  Style="{DynamicResource ButtonStyle}"
+                  ToolTip="{DynamicResource PublishMedia_PublishedCameraConfigurationView_CheckPortAvailableTooltip}">
+              <Button.IsEnabled>
+                <MultiBinding Converter="{StaticResource InvalidMultiValidationRuleToBooleanMultiConverter}" ConverterParameter="greaterthanzerointeger">
+                  <Binding ElementName="textBoxDestinationPort"
+                       Mode="OneWay"
+                       Path="Text" />
+                </MultiBinding>
+              </Button.IsEnabled>
+            </Button>
+            <Image Grid.Row="0"
+                 Grid.Column="2"
+                 Width="20"
+                 Height="20"
+                 HorizontalAlignment="Left"
+                 VerticalAlignment="Center"
+                 Source="{Binding CheckPortAvailableResult,
+                                  Converter={StaticResource CheckPortAvailableResultTypeToImageSourceConverter}}"
+                 Visibility="{Binding CheckPortAvailableResult,
+                                      Converter={StaticResource CheckPortAvailableResultTypeToVisibilityConverter}}" />
+            <Label Grid.Row="0"
+                 Grid.Column="3"
+                 Margin="0,0,0,0"
+                 HorizontalAlignment="Left"
+                 VerticalAlignment="Center"
+                 Content="{Binding CheckPortAvailableResult,
+                                   Converter={StaticResource CheckPortAvailableResultTypeToDescriptionConverter}}"
+                 Visibility="{Binding CheckCameraNameResult,
+                                      Converter={StaticResource CheckPortAvailableResultTypeToVisibilityConverter}}" />
+          </Grid>
+        </Grid>
+
+      </Grid>
+      
+      <Grid Grid.Row="2" Grid.Column="0">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="50" />
+          <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Button Name="btnCancel"
+                Grid.Column="0"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center"
+                Command="{Binding Path=CancelCommand}"
+                Content="{DynamicResource Common_Button_Cancel}"
+                IsCancel="True"
+                Style="{DynamicResource ButtonStyle}" />
+        <Button Name="btnOK"
+                Grid.Column="2"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                Command="{Binding Path=OKCommand}"
+                Content="{DynamicResource Common_Button_OK}"
+                IsDefault="True"
+                Style="{DynamicResource ButtonStyle}">
+          <Button.IsEnabled>
+            <MultiBinding Converter="{StaticResource InvalidMultiValidationRuleToBooleanMultiConverter}" ConverterParameter="greaterthanzerointeger|checkportavailable">
+              <Binding ElementName="textBoxDestinationPort"
+                       Mode="OneWay"
+                       Path="Text" />
+              <Binding Mode="OneWay" Path="CheckPortAvailableResult" />
+            </MultiBinding>
+          </Button.IsEnabled>
+        </Button>
+      </Grid>
+
+    </Grid>
+  </Grid>
+</UserControl>

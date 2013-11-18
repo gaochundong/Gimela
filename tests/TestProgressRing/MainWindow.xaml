@@ -1,0 +1,41 @@
+﻿<Window x:Class="TestProgressRing.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="clr-namespace:Gimela.Presentation.Controls;assembly=Gimela.Presentation.Controls"
+        Title="MainWindow"
+        Width="525"
+        Height="350">
+  <!--
+    <Window.Resources>
+    <ResourceDictionary>
+    <ResourceDictionary.MergedDictionaries>
+    <ResourceDictionary Source="pack://application:,,,/Gimela.Presentation.Controls;component/Controls/ProgressRing/ProgressRingStyles.xaml" />
+    <ResourceDictionary Source="pack://application:,,,/Gimela.Presentation.Controls;component/Controls/ProgressIndicator/ProgressIndicatorStyles.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+    </Window.Resources>
+  -->
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="*" />
+      <RowDefinition Height="*" />
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="*" />
+    </Grid.ColumnDefinitions>
+    <controls:ProgressRing Grid.Row="0"
+                           Grid.Column="0"
+                           Width="100"
+                           Height="100"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"
+                           IsActive="True" />
+    <controls:ProgressIndicator Grid.Row="0"
+                                Grid.Column="1"
+                                Width="180"
+                                Height="15" />
+    <!--  ProgressColour="Red" />  -->
+    <controls:WaitingControl Grid.Row="1" Grid.Column="0" />
+  </Grid>
+</Window>

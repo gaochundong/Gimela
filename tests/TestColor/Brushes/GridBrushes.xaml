@@ -1,0 +1,20 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="../Skins/Shared.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+    <LinearGradientBrush x:Key="GridBackgroundBrush" StartPoint="0,0" EndPoint="1,1">
+        <GradientBrush.GradientStops>
+            <GradientStopCollection>
+                <GradientStop Color="{StaticResource BackgroundDarkColor}" Offset="0" />
+                <GradientStop Color="{StaticResource BackgroundMediumColor}" Offset="0.25" />
+                <GradientStop Color="{StaticResource BackgroundLightColor}" Offset="0.5" />
+                <GradientStop Color="{StaticResource BackgroundMediumColor}" Offset="0.75" />
+                <GradientStop Color="{StaticResource BackgroundDarkColor}" Offset="1" />
+            </GradientStopCollection>
+        </GradientBrush.GradientStops>
+    </LinearGradientBrush>
+
+</ResourceDictionary>

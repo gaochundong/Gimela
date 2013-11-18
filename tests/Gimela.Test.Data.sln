@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestMagpieDatabase", "TestMagpieDatabase\TestMagpieDatabase.csproj", "{66930C3C-ACB3-4B74-A386-9ABCAFFF9DF3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestSparrowDatabase", "TestSparrowDatabase\TestSparrowDatabase.csproj", "{C9A044A7-ACD1-466E-A266-64E640FAFCB8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestBPlusTree", "TestBPlusTree\TestBPlusTree.csproj", "{CC2786E8-CD44-4F60-8456-7C17625077ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestDynamicJson", "TestDynamicJson\TestDynamicJson.csproj", "{77AEF8A6-85B7-4E27-8118-B54BF0268931}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestJson", "TestJson\TestJson.csproj", "{E07ACC27-D533-4481-AD71-1249FCA1C5CB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestMapping", "TestMapping\TestMapping.csproj", "{7136482F-B7F0-42A7-91E7-EE789ABDAF39}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{66930C3C-ACB3-4B74-A386-9ABCAFFF9DF3}.Debug|x86.ActiveCfg = Debug|x86
+		{66930C3C-ACB3-4B74-A386-9ABCAFFF9DF3}.Debug|x86.Build.0 = Debug|x86
+		{66930C3C-ACB3-4B74-A386-9ABCAFFF9DF3}.Release|x86.ActiveCfg = Release|x86
+		{66930C3C-ACB3-4B74-A386-9ABCAFFF9DF3}.Release|x86.Build.0 = Release|x86
+		{C9A044A7-ACD1-466E-A266-64E640FAFCB8}.Debug|x86.ActiveCfg = Debug|x86
+		{C9A044A7-ACD1-466E-A266-64E640FAFCB8}.Debug|x86.Build.0 = Debug|x86
+		{C9A044A7-ACD1-466E-A266-64E640FAFCB8}.Release|x86.ActiveCfg = Release|x86
+		{C9A044A7-ACD1-466E-A266-64E640FAFCB8}.Release|x86.Build.0 = Release|x86
+		{CC2786E8-CD44-4F60-8456-7C17625077ED}.Debug|x86.ActiveCfg = Debug|x86
+		{CC2786E8-CD44-4F60-8456-7C17625077ED}.Debug|x86.Build.0 = Debug|x86
+		{CC2786E8-CD44-4F60-8456-7C17625077ED}.Release|x86.ActiveCfg = Release|x86
+		{CC2786E8-CD44-4F60-8456-7C17625077ED}.Release|x86.Build.0 = Release|x86
+		{77AEF8A6-85B7-4E27-8118-B54BF0268931}.Debug|x86.ActiveCfg = Debug|x86
+		{77AEF8A6-85B7-4E27-8118-B54BF0268931}.Debug|x86.Build.0 = Debug|x86
+		{77AEF8A6-85B7-4E27-8118-B54BF0268931}.Release|x86.ActiveCfg = Release|x86
+		{77AEF8A6-85B7-4E27-8118-B54BF0268931}.Release|x86.Build.0 = Release|x86
+		{E07ACC27-D533-4481-AD71-1249FCA1C5CB}.Debug|x86.ActiveCfg = Debug|x86
+		{E07ACC27-D533-4481-AD71-1249FCA1C5CB}.Debug|x86.Build.0 = Debug|x86
+		{E07ACC27-D533-4481-AD71-1249FCA1C5CB}.Release|x86.ActiveCfg = Release|x86
+		{E07ACC27-D533-4481-AD71-1249FCA1C5CB}.Release|x86.Build.0 = Release|x86
+		{7136482F-B7F0-42A7-91E7-EE789ABDAF39}.Debug|x86.ActiveCfg = Debug|x86
+		{7136482F-B7F0-42A7-91E7-EE789ABDAF39}.Debug|x86.Build.0 = Debug|x86
+		{7136482F-B7F0-42A7-91E7-EE789ABDAF39}.Release|x86.ActiveCfg = Release|x86
+		{7136482F-B7F0-42A7-91E7-EE789ABDAF39}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

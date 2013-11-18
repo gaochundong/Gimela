@@ -1,0 +1,78 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <LinearGradientBrush x:Key="MessageBoxWindowRectangleStrokeBrush" StartPoint="0,0" EndPoint="1,1">
+        <GradientBrush.GradientStops>
+            <GradientStopCollection>
+                <GradientStop Color="{DynamicResource BorderMediumColor}" Offset="0" />
+                <GradientStop Color="{DynamicResource BorderLightColor}" Offset="1" />
+            </GradientStopCollection>
+        </GradientBrush.GradientStops>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="MessageBoxWindowRectangleFillBrush" StartPoint="0,0" EndPoint="1,1">
+        <GradientBrush.GradientStops>
+            <GradientStopCollection>
+                <GradientStop Color="{DynamicResource BackgroundDarkColor}" Offset="0" />
+                <GradientStop Color="{DynamicResource BackgroundMediumColor}" Offset="0.25" />
+                <GradientStop Color="{DynamicResource BackgroundLightColor}" Offset="0.5" />
+                <GradientStop Color="{DynamicResource BackgroundMediumColor}" Offset="0.75" />
+                <GradientStop Color="{DynamicResource BackgroundDarkColor}" Offset="1" />
+            </GradientStopCollection>
+        </GradientBrush.GradientStops>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="MessageBoxWindowHeaderChromeBorderBrush" StartPoint="0,0" EndPoint="1,1">
+        <GradientBrush.GradientStops>
+            <GradientStopCollection>
+                <GradientStop Color="{DynamicResource BorderMediumColor}" Offset="0" />
+                <GradientStop Color="{DynamicResource BorderLightColor}" Offset="0.4" />
+                <GradientStop Color="{DynamicResource BorderMediumColor}" Offset="1" />
+            </GradientStopCollection>
+        </GradientBrush.GradientStops>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="MessageBoxWindowHeaderChromeBackgroundBrush" StartPoint="0,0" EndPoint="1,1">
+        <GradientBrush.GradientStops>
+            <GradientStopCollection>
+                <GradientStop Color="{DynamicResource BackgroundDarkColor}" Offset="0" />
+                <GradientStop Color="{DynamicResource BackgroundLightColor}" Offset="0.25" />
+                <GradientStop Color="{DynamicResource BackgroundLightColor}" Offset="0.5" />
+                <GradientStop Color="{DynamicResource BackgroundMediumColor}" Offset="0.75" />
+                <GradientStop Color="{DynamicResource BackgroundDarkColor}" Offset="1" />
+            </GradientStopCollection>
+        </GradientBrush.GradientStops>
+    </LinearGradientBrush>
+
+    <SolidColorBrush x:Key="MessageBoxWindowTitleTextBlockForegroundBrush" Color="{DynamicResource ForegroundColor}" />
+
+    <SolidColorBrush x:Key="MessageBoxWindowMessageBorderBorderBrush" Color="{DynamicResource BorderMediumColor}" />
+    <SolidColorBrush x:Key="MessageBoxWindowMessageBorderBackgroundBrush" Color="{DynamicResource BackgroundLightColor}" />
+   
+    <SolidColorBrush x:Key="MessageBoxWindowMessageTextBlockForegroundBrush" Color="{DynamicResource ForegroundColor}" />
+    <SolidColorBrush x:Key="MessageBoxWindowDetailTextBlockForegroundBrush" Color="{DynamicResource ForegroundColor}" />
+
+    <LinearGradientBrush x:Key="MessageBoxWindowDetailBorderBorderBrush" StartPoint="0,0" EndPoint="1,1">
+        <GradientBrush.GradientStops>
+            <GradientStopCollection>
+                <GradientStop Color="{DynamicResource BorderMediumColor}" Offset="0" />
+                <GradientStop Color="{DynamicResource BorderLightColor}" Offset="1" />
+            </GradientStopCollection>
+        </GradientBrush.GradientStops>
+    </LinearGradientBrush>
+
+    <SolidColorBrush x:Key="MessageBoxWindowDetailBorderBackgroundBrush" Color="{DynamicResource BackgroundLightColor}" />
+
+    <SolidColorBrush x:Key="MessageBoxWindowCloseButtonEllipseStrokeBrush" Color="{DynamicResource BorderMediumColor}" />
+    <SolidColorBrush x:Key="MessageBoxWindowCloseButtonEllipseFillBrush" Color="{DynamicResource ControlLightColor}" />
+    <SolidColorBrush x:Key="MessageBoxWindowCloseButtonEllipseFillMouseOverBrush" Color="{DynamicResource ControlMouseOverMediumColor}" />
+    <SolidColorBrush x:Key="MessageBoxWindowCloseButtonIconFillBrush" Color="#FFEEEEEE" />
+    <SolidColorBrush x:Key="MessageBoxWindowCloseButtonIconFillMouseOverBrush" Color="#FFEEEEEE" />
+
+    <SolidColorBrush x:Key="MessageBoxWindowDetailExpanderToggleButtonRectangleStrokeBrush" Color="{DynamicResource BorderMediumColor}" />
+    <SolidColorBrush x:Key="MessageBoxWindowDetailExpanderToggleButtonRectangleFillBrush" Color="{DynamicResource ControlLightColor}" />
+    <SolidColorBrush x:Key="MessageBoxWindowDetailExpanderToggleButtonRectangleFillMouseOverBrush" Color="{DynamicResource ControlMouseOverMediumColor}" />
+    <SolidColorBrush x:Key="MessageBoxWindowDetailExpanderToggleButtonArrowFillBrush" Color="#FFEEEEEE" />
+    <SolidColorBrush x:Key="MessageBoxWindowDetailExpanderToggleButtonArrowFillMouseOverBrush" Color="#FFEEEEEE" />
+    
+</ResourceDictionary>

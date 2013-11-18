@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gimela.Media.Video", "Gimela.Media.Video\Gimela.Media.Video.csproj", "{737FC6C1-A1FF-436F-9FC0-8A113D3C295C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gimela.Media.Video.DirectShow", "Gimela.Media.Video.DirectShow\Gimela.Media.Video.DirectShow.csproj", "{C081A2A7-0075-47D9-8FC6-DC43010B42CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gimela.Media.Imaging", "Gimela.Media.Imaging\Gimela.Media.Imaging.csproj", "{9C5B2986-F210-4A9E-BB3A-6A1F9BA36AFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gimela.Media.Vision.Motion", "Gimela.Media.Vision.Motion\Gimela.Media.Vision.Motion.csproj", "{F5C98E85-596C-447D-AE4D-B87607333AFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gimela.Media.Utilities", "Gimela.Media.Utilities\Gimela.Media.Utilities.csproj", "{163029EB-02D6-439A-B149-94990E560E5A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gimela.Media.Video.VFW", "Gimela.Media.Video.VFW\Gimela.Media.Video.VFW.csproj", "{C4A15A4F-85A5-4CBB-8E82-7E462F9FBE5B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{737FC6C1-A1FF-436F-9FC0-8A113D3C295C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{737FC6C1-A1FF-436F-9FC0-8A113D3C295C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{737FC6C1-A1FF-436F-9FC0-8A113D3C295C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{737FC6C1-A1FF-436F-9FC0-8A113D3C295C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C081A2A7-0075-47D9-8FC6-DC43010B42CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C081A2A7-0075-47D9-8FC6-DC43010B42CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C081A2A7-0075-47D9-8FC6-DC43010B42CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C081A2A7-0075-47D9-8FC6-DC43010B42CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C5B2986-F210-4A9E-BB3A-6A1F9BA36AFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C5B2986-F210-4A9E-BB3A-6A1F9BA36AFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C5B2986-F210-4A9E-BB3A-6A1F9BA36AFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C5B2986-F210-4A9E-BB3A-6A1F9BA36AFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5C98E85-596C-447D-AE4D-B87607333AFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5C98E85-596C-447D-AE4D-B87607333AFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5C98E85-596C-447D-AE4D-B87607333AFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5C98E85-596C-447D-AE4D-B87607333AFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{163029EB-02D6-439A-B149-94990E560E5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{163029EB-02D6-439A-B149-94990E560E5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{163029EB-02D6-439A-B149-94990E560E5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{163029EB-02D6-439A-B149-94990E560E5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4A15A4F-85A5-4CBB-8E82-7E462F9FBE5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4A15A4F-85A5-4CBB-8E82-7E462F9FBE5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4A15A4F-85A5-4CBB-8E82-7E462F9FBE5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4A15A4F-85A5-4CBB-8E82-7E462F9FBE5B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

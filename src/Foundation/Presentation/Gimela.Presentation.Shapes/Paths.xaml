@@ -1,0 +1,52 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!--十字-->
+    <Path x:Key="CrossMark" Data="M 0 3.5 L 7 3.5 M 3.5 0 L 3.5 7" />
+    
+    <!--对号-->
+    <Path x:Key="CheckMark" Data="M 0 3 L 3 6 M 3 6 L 7 0" />
+    
+    <!--叉号-->
+    <Path x:Key="SlashCrossMark" Data="M 0 0 L 7 7 M 0 7 L 7 0" />
+
+    <!--左斜线-->
+    <Path x:Key="LeftSlashMark" Data="M 0 7 L 7 0" />
+
+    <!--右斜线-->
+    <Path x:Key="RightSlashMark" Data="M 0 0 L 7 7" />
+
+    <!--指向右下的箭头-->
+    <Path x:Key="LowerRightArrowMark" Data="M 0 0 L 10 10 M 10 0 L 0 10" />
+
+    <!--羊角-->
+    <Path x:Key="CleatMark" Data="M 0 5 L 3 10 10 0" />
+
+    <!--眼睛-->
+    <Path x:Key="EyeMark" Data="M 0 2.5 A 5 2.5 0 1 1 5 5 L 5 8 M 5 10 L 5 10" />
+
+    <!--左三角-->
+    <Path x:Key="LeftTriangleMark" Data="M 4 0 L 4 8 L 0 4 Z" />
+
+    <!--右三角-->
+    <Path x:Key="RightTriangleMark" Data="M 0 0 L 4 4 L 0 8 Z" />
+
+    <!--上三角-->
+    <Path x:Key="UpTriangleMark" Data="M 0 4 L 8 4 L 4 0 Z" />
+
+    <!--下三角-->
+    <Path x:Key="DownTriangleMark" Data="M 0 0 L 4 4 L 8 0 Z" />
+
+    <!--左斜线多条-->
+    <Path x:Key="MultiLeftSlashMark" Data="F1 M0,4 4,0Z M0,8 8,0Z M0,12 12,0Z M0,16 16,0Z M0,20 20,0Z M0,24 24,0Z M0,28 28,0Z M0,32 32,0Z M0,36 36,0Z M0,40 40,0Z" />
+
+    <!--右斜线多条-->
+    <Path x:Key="MultiRightSlashMark" Data="F1 M0,36 4,40Z M0,32 8,40Z M0,28 12,40Z M0,24 16,40Z M0,20 20,40Z M0,16 24,40Z M0,12 28,40Z M0,8 32,40Z M0,4 36,40Z M0,0 40,40Z" />
+
+    <!--左箭头-->
+    <Path x:Key="LeftArrowMark" Data="F1 M 4.931641,6.428711 L 9.064453,6.428711 L 9.064453,1.836914 L 4.931641,1.836914 L 4.931641,0.000000 L 0.000000,4.131836 L 4.931641,8.262695 L 4.931641,6.428711 Z" />
+
+    <!--下尖号-->
+    <Path x:Key="DownNeedleMark" Data="M 1,1.5 L 4.5,5 L 8,1.5" />
+
+</ResourceDictionary>

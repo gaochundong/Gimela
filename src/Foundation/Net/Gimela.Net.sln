@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gimela.Net.Rtp", "Gimela.Net.Rtp\Gimela.Net.Rtp.csproj", "{3AA56636-4662-41D1-B4E1-408CB9D8340E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gimela.Net.Sockets", "Gimela.Net.Sockets\Gimela.Net.Sockets.csproj", "{6A67650E-7DB8-45A6-B656-02095CA0D816}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gimela.Net.Http", "Gimela.Net.Http\Gimela.Net.Http.csproj", "{363D4A84-957E-4CDA-ACB7-EEDE603FDD81}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3AA56636-4662-41D1-B4E1-408CB9D8340E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AA56636-4662-41D1-B4E1-408CB9D8340E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AA56636-4662-41D1-B4E1-408CB9D8340E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AA56636-4662-41D1-B4E1-408CB9D8340E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A67650E-7DB8-45A6-B656-02095CA0D816}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A67650E-7DB8-45A6-B656-02095CA0D816}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A67650E-7DB8-45A6-B656-02095CA0D816}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A67650E-7DB8-45A6-B656-02095CA0D816}.Release|Any CPU.Build.0 = Release|Any CPU
+		{363D4A84-957E-4CDA-ACB7-EEDE603FDD81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{363D4A84-957E-4CDA-ACB7-EEDE603FDD81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{363D4A84-957E-4CDA-ACB7-EEDE603FDD81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{363D4A84-957E-4CDA-ACB7-EEDE603FDD81}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,51 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:controls="clr-namespace:Gimela.Presentation.Controls"
+                    xmlns:timeline="clr-namespace:Gimela.Presentation.Controls.Timeline">
+
+  <timeline:TaskTimeToGridLengthConverter x:Key="TaskTimeToGridLengthConverter" />
+
+  <DataTemplate x:Key="taskDataTemplate">
+    <Grid Opacity="0.8">
+      <Grid x:Name="taskGrid">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition>
+            <ColumnDefinition.Width>
+              <MultiBinding Converter="{StaticResource TaskTimeToGridLengthConverter}">
+                <MultiBinding.Bindings>
+                  <Binding Path="DataContext.StartTime" RelativeSource="{RelativeSource Mode=Self}" />
+                  <Binding Path="DataContext.TimeSpan" RelativeSource="{RelativeSource Mode=Self}" />
+                </MultiBinding.Bindings>
+              </MultiBinding>
+            </ColumnDefinition.Width>
+          </ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Border x:Name="taskBorder"
+                Grid.Row="0"
+                Grid.Column="0"
+                Height="23"
+                MinWidth="0"
+                Background="{DynamicResource TimelineTaskBorderBackgroundBrush}"
+                BorderBrush="{DynamicResource TimelineTaskBorderBorderBrush}"
+                BorderThickness="2"
+                CornerRadius="0,0,0,0">
+          <Border.ToolTip>
+            <ToolTip>
+              <Binding Path="DataContext.TipText" RelativeSource="{RelativeSource Mode=Self}" />
+            </ToolTip>
+          </Border.ToolTip>
+        </Border>
+      </Grid>
+    </Grid>
+    <DataTemplate.Triggers>
+      <DataTrigger Binding="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ListBoxItem}}, Path=IsSelected}" Value="True">
+        <Setter TargetName="taskBorder" Property="Background" Value="{DynamicResource TimelineTaskBorderSelectedBackgroundBrush}" />
+        <Setter TargetName="taskBorder" Property="BorderBrush" Value="{DynamicResource TimelineTaskBorderSelectedBorderBrush}" />
+      </DataTrigger>
+    </DataTemplate.Triggers>
+  </DataTemplate>
+
+</ResourceDictionary>
