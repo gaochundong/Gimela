@@ -2,6 +2,10 @@ Gimela
 ======
 Open source intelligent IP video surveillance system.
 
+Important Notes
+===============
+This is my toy system, which would not work as your expectation.
+
 Instroduction
 =============
 + [Opensource IP Video Surveillance System Part1 : Introduction](http://www.cnblogs.com/gaochundong/p/opensource_ip_video_surveillance_system_part_1_introduction.html)
