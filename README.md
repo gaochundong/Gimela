@@ -5,67 +5,67 @@ Open source intelligent IP video surveillance system.
 
 Referenced Libraries
 ====================
-AForge.NET +http://www.aforgenet.com/
-Accord.NET +http://accord-framework.net/
-NAudio +http://naudio.codeplex.com/
-nVLC +http://www.codeproject.com/Articles/109639/nVLC
-Speex +http://speex.org/
-C# WebServer +http://webserver.codeplex.com/
-FFmpeg +http://www.ffmpeg.org/
-FFmpeg.NET +http://ffmpegdotnet.codeplex.com/
-Flowplayer +http://flowplayer.org/
-iSpy
-ZoneMinder
-ONVIF Device Manager
-Google GData
-GMap.NET
-Json.NET
-Dynamic Json
-Hammock
-AutoMapper
-SocialKit / LightRest
-Microsoft Enterprise Library
-Microsoft Unity
-System.Data.SQLite
-RavenDB
-RaptorDB
-MongoDB
-MongoDB C# Driver
-Windows Presentation Foundation (WPF)
-MVVM Light Toolkit
-Caliburn.Micro
-MEFedMVVM
-MVVM Foundation
-Phoenix MVVM
-WPF MediaKit
-WPF Multiple Document Interface (MDI)
-MDI Container for WPF
-AvalonDock
-WPF Google Map Control
-WPFSpark
-WPF 3DTools
-Odyssey WPF Controls
-Extended WPF Toolkit™ Community Edition
-Calendar Control in WPF
-patterns & practices: Prism
-Facebook Developer Toolkit
-Microsoft Health Common User Interface (CUI)
-Mahapps.Metroa UI Toolkit for WPF
-Spark View Engine
-ReactiveUI
-CommonServiceLocator
-Ninject
-StructureMap
-NetMQ
-FunnelWeb
-Quartz.NET
-Task Scheduler Engine
-SuperSocket
-CommonLibrary.NET
-NSubstitute
++ [AForge.NET](http://www.aforgenet.com/)
++ [Accord.NET](http://accord-framework.net/)
++ [NAudio](http://naudio.codeplex.com/)
++ [nVLC](http://www.codeproject.com/Articles/109639/nVLC)
++ [Speex](http://speex.org/)
++ [C# WebServer](http://webserver.codeplex.com/)
++ [FFmpeg](http://www.ffmpeg.org/)
++ [FFmpeg.NET](http://ffmpegdotnet.codeplex.com/)
++ [Flowplayer](http://flowplayer.org/)
++ [iSpy](http://www.ispyconnect.com/)
++ [ZoneMinder](http://www.zoneminder.com/)
++ [ONVIF Device Manager](http://sourceforge.net/projects/onvifdm/)
++ [Google GData](https://developers.google.com/gdata/)
++ [GMap.NET](http://gmapdotnet.codeplex.com/)
++ [Json.NET](http://json.codeplex.com/)
++ [Dynamic Json](http://dynamicjson.codeplex.com/)
++ [Hammock](https://github.com/danielcrenna/hammock)
++ [AutoMapper](http://automapper.org/)
++ [SocialKit / LightRest](http://lightrest.codeplex.com/)
++ [Microsoft Enterprise Library](http://msdn.microsoft.com/en-us/library/ff648951.aspx)
++ [Microsoft Unity](https://unity.codeplex.com/)
++ [System.Data.SQLite](http://system.data.sqlite.org/)
++ [RavenDB](http://ravendb.net/)
++ [RaptorDB](http://raptordb.codeplex.com/)
++ [MongoDB](http://www.mongodb.org/)
++ [MongoDB C# Driver](http://docs.mongodb.org/ecosystem/tutorial/use-csharp-driver/)
++ [Windows Presentation Foundation (WPF)](http://wpf.codeplex.com/)
++ [MVVM Light Toolkit](http://mvvmlight.codeplex.com/)
++ [Caliburn.Micro](http://caliburnmicro.codeplex.com/)
++ [MEFedMVVM](http://mefedmvvm.codeplex.com/)
++ [MVVM Foundation](http://mvvmfoundation.codeplex.com/)
++ [Phoenix MVVM](http://phoenixframework.codeplex.com/)
++ [WPF MediaKit](http://wpfmediakit.codeplex.com/)
++ [WPF Multiple Document Interface (MDI)](http://wpfmdi.codeplex.com/)
++ [MDI Container for WPF](http://mdicontainer.codeplex.com/)
++ [AvalonDock](http://avalondock.codeplex.com/)
++ [WPF Google Map Control](http://wpfgooglemap.codeplex.com/)
++ [WPFSpark](http://wpfspark.codeplex.com/)
++ [WPF 3DTools](http://3dtools.codeplex.com/)
++ [Odyssey WPF Controls](http://odyssey.codeplex.com/)
++ [Extended WPF Toolkit™ Community Edition](http://wpftoolkit.codeplex.com/)
++ [Calendar Control in WPF](http://wpfcalendarcontrol.codeplex.com/)
++ [patterns & practices: Prism](http://compositewpf.codeplex.com/)
++ [Facebook Developer Toolkit](http://facebooktoolkit.codeplex.com/)
++ [Microsoft Health Common User Interface (CUI)](http://mscui.codeplex.com/)
++ [Mahapps.Metroa UI Toolkit for WPF](http://mahapps.com/MahApps.Metro/)
++ [Spark View Engine](http://sparkviewengine.codeplex.com/)
++ [ReactiveUI](http://www.reactiveui.net/)
++ [CommonServiceLocator](http://commonservicelocator.codeplex.com/)
++ [Ninject](http://www.ninject.org/)
++ [StructureMap](http://docs.structuremap.net/)
++ [NetMQ](https://github.com/zeromq/netmq)
++ [FunnelWeb](http://www.funnelweblog.com/)
++ [Quartz.NET](http://www.quartz-scheduler.net/)
++ [Task Scheduler Engine](http://taskschedulerengine.codeplex.com/)
++ [SuperSocket](http://supersocket.codeplex.com/)
++ [CommonLibrary.NET](http://commonlibrarynet.codeplex.com/)
++ [NSubstitute](http://nsubstitute.github.io/)
 
 Copyright and license
----------------------
+=====================
 
 Copyright (c) 2011-2012 Dennis Gao
 All rights reserved.
