@@ -67,7 +67,7 @@ Referenced Libraries
 Copyright and license
 =====================
 
-Copyright (c) 2011-2012 Dennis Gao
+Copyright (c) 2011-2013 Dennis Gao
 All rights reserved.
 
 Licensed under the BSD License.
