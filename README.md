@@ -4,7 +4,7 @@ Open source intelligent IP video surveillance system.
 
 Important Notes
 ===============
-This is an experimental system which is created during my free time and could just work in some way, so it may not work as your expectation.
+This is an experimental system which is created in my spare free time and could just work in some way, so it may not work as your expectation.
 
 Instroduction
 =============
