@@ -4,7 +4,7 @@ Gimela is an open source intelligent IP video surveillance system.
 
 Important Notes
 ===============
-This is an experimental system which was created in my spare time. Based on that, it can work in some way, and then it may not work as your expectation.
+This is an experimental system which was created in my spare time. So based on that, it can work in some way, and then it may not work as your expectation.
 
 Instroduction
 =============
